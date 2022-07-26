@@ -1,5 +1,33 @@
 @use '../../util-styles/' as util;
 
 .skill-container{
-    @include util.size(auto, 100px, 0, 0);
+    @include util.size(300px, 300px, 0, 10px);
+
+    perspective: 600px;
+    background: cyan;
+
+    .scene{
+        @include util.size(100%, 100%, 0, 0);
+        background-color: blue;
+        position: relative;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+
+        .child-faces{
+            @include util.size(100%, 100%, 0, 0);
+
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .front-face{}
+        .back-face{
+            color: blanchedalmond;
+            text-align: center;
+            font-size: 70px;
+            transform: rotateY( 180deg );
+        }
+        &:hover{
+            transform: rotateY(180deg);
+        }
+    }
 }

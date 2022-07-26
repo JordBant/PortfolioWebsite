@@ -1,8 +1,8 @@
 import '../icon-styles.scss'
 
-const GulpIcon = () => {
+const GulpIcon = ({className}) => {
   return (
-    <svg id="Layer_1" data-name="Layer 1" fill='#000000' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.44 512.19" className='gulp-logo skill'>
+    <svg id="Layer_1" data-name="Layer 1" fill='#000000' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.44 512.19" className={`skill child-faces front-face`}>
         <defs></defs>
         <title>gulp-js</title>
         <g id="Page-1">
