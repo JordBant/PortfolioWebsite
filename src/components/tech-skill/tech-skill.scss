@@ -1,0 +1,5 @@
+@use '../../util-styles/' as util;
+
+.skill-container{
+    @include util.size(auto, 100px, 0, 0);
+}

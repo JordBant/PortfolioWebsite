@@ -13,3 +13,8 @@
     justify-self: $self-self_ju;
     align-self: $self-self_al; 
 }
+
+@mixin logoStyles($fill) {
+    fill: $black;
+    
+}
