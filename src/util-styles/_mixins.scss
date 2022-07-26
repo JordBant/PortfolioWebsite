@@ -14,7 +14,27 @@
     align-self: $self-self_al; 
 }
 
+// Mixin should be applied on the highest level parent svg tag 
 @mixin logoStyles($fill) {
     fill: $black;
-    
 }
+
+/* 
+--------------------------------
+General Skill card mixin should:
+--------------------------------
+
+1.) Set color of icon to a light blueish-gray
+2.) Set all icons to be the same responsive size
+3.) Set the cards to all have the flip animation
+
+------------------------
+Animation mixin should:
+------------------------
+
+1.) Change color of icon to brand color and grow by scale(1.2)
+2.) Flip along its X-axis to reveal the name of the technology and a left-side growing 
+    underline under the text in 
+    the same color of its brand color
+
+*/
