@@ -1,6 +1,6 @@
 @use '../../util-styles/' as util;
 
 // General Styles //
-.skill{
+.icon{
     @include util.skillCard(util.$GULP-RED)
 }
