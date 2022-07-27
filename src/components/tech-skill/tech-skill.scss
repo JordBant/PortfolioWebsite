@@ -1,14 +1,14 @@
 @use '../../util-styles/' as util;
 
 .skill-container{
-    @include util.size(300px, 300px, 0, 10px);
+    @include util.size(150px, 100px, 0, 10px);
 
     perspective: 600px;
-    background: cyan;
+    // background: cyan;
 
     .scene{
         @include util.size(100%, 100%, 0, 0);
-        background-color: blue;
+        // background-color: blue;
         position: relative;
         transition: transform 0.5s;
         transform-style: preserve-3d;
@@ -19,15 +19,20 @@
             position: absolute;
             backface-visibility: hidden;
         }
-        .front-face{}
+        .front-face{
+            opacity: 1;
+        }
         .back-face{
-            color: blanchedalmond;
+            color: black;
             text-align: center;
             font-size: 70px;
             transform: rotateY( 180deg );
         }
         &:hover{
             transform: rotateY(180deg);
+            .front-face{
+                opacity: 0;
+            }
         }
     }
 }
