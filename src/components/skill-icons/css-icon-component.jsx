@@ -1,6 +1,6 @@
 const CSSIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className= 'icon card-face'  viewBox="0 0 296297 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#e8e7e5" className= 'icon card-face'  viewBox="0 0 296297 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
         <defs>
             <linearGradient id="id4" gradientUnits="userSpaceOnUse" x1="54128.7" y1="79355.5" x2="240318" y2="79355.5">
                 <stop offset="0" stop-color="#e8e7e5"/>
@@ -41,9 +41,9 @@ const CSSIcon = () => {
                 <path mask="url(#id0)" fill="url(#id6)" d="M61887 135497l2857 35524 83295-35614V99617z"/>
                 <path mask="url(#id2)" fill="url(#id7)" d="M240318 61186l-92278 38431v35790l88604-37883z"/>
                 <path fill="url(#id5)" d="M62019 135497l2858 35524 127806 407-2859 47365-42055 11840-40428-10208-2450-29399H67327l4900 56756 75950 22457 75538-22050 9800-112692z"/>
-                <path class="fil6" d="M148040 135497H61888l2857 35524 83295 266v-35790zm0 95022l-408 114-40422-10208-2450-29399H67197l4899 56756 75944 22457v-39720z"/>
+                <path d="M148040 135497H61888l2857 35524 83295 266v-35790zm0 95022l-408 114-40422-10208-2450-29399H67197l4899 56756 75944 22457v-39720z"/>
                 <path fill="url(#id4)" d="M54129 61186h186189l-3674 36339H58620l-4491-36339z"/>
-                <path class="fil6" d="M148040 61186H54129l4491 36339h89420z"/>
+                <path d="M148040 61186H54129l4491 36339h89420z"/>
             </g>
         </g>
     </svg>

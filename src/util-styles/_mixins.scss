@@ -17,11 +17,10 @@
 }
 
 // Mixin should be applied on the highest level parent svg tag 
-@mixin skillCard($fill) {
+@mixin skillCard() {
     @include size(100px, 100px, 0, 0);
     transition: 0.5s all ease-in-out;
     opacity: 1;
-    fill: $fill;
 
     &:hover{
         opacity: 0;

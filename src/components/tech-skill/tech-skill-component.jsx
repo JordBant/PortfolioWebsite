@@ -1,9 +1,9 @@
-import './tech-skill.scss'
 import SkillCard from '../skill-icons/skillCard-component'
+import './tech-skill.scss'
 
 const TechSkill = () => {
   return (
-    <SkillCard icon = 'gulp' />
+    <SkillCard skillName = 'Node.js' />
   )
 }
 

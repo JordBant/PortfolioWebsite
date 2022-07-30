@@ -2,5 +2,5 @@
 
 // General Styles //
 .icon{
-    @include util.skillCard(util.$GULP-RED)
+    @include util.skillCard()
 }

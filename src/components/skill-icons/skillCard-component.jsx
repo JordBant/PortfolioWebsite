@@ -8,21 +8,22 @@ import NodeIcon from "./node-icon-component"
 import ReactIcon from "./react-icon-component"
 import SASSIcon from "./sass-icon-component"
 
-const SkillCard = ({skillName, icon}) => {
-    
-    const renderIcon = (iconName) => {
+const SkillCard = ({skillName}) => {
+    const renderIcon = () => {
+        const icon = skillName.toLowerCase()
+
         // eslint-disable-next-line default-case
-        switch (iconName) {
+        switch (icon) {
             case 'css':
                 return <CSSIcon/>
 
-            case 'express':
+            case 'express.js':
                 return <ExpressIcon/>
 
             case 'git':
                 return <GitIcon/>
 
-            case 'gulp':
+            case 'gulp.js':
                 return <GulpIcon/>
 
             case 'html':
@@ -31,10 +32,10 @@ const SkillCard = ({skillName, icon}) => {
             case 'javascript':
                 return <JSIcon/>
 
-            case 'node':
+            case 'node.js':
                 return <NodeIcon/>
 
-            case 'react':
+            case 'react.js':
                 return <ReactIcon/>
                 
             case 'sass':
@@ -45,8 +46,8 @@ const SkillCard = ({skillName, icon}) => {
     return (
     <div className="skill-container">
         <div className="scene">
-            { renderIcon(icon) }
-            <p className="back-face" skillName = {skillName}> {skillName} </p>
+            { renderIcon() }
+            <p className="card-face back-face" skillName = {skillName}> {skillName} </p>
         </div>
     </div>
   )
