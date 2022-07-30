@@ -1,5 +1,9 @@
 @use '../../util-styles/' as util;
 
+.icon{
+    @include util.skillCard()
+}
+
 .skill-container{
     @include util.size(150px, 100px, 0, 10px);
 
@@ -20,13 +24,15 @@
             backface-visibility: hidden;
         }
         .front-face{
-            opacity: 1;
+            @include util.skillCard();
         }
         .back-face{
-            color: black;
-            text-align: center;
+            @include util.flex(center, center, NULL, NULL, NULL);
+            color: white;
+            border-bottom: 0;
             font-size: 70px;
             transform: rotateY( 180deg );
+            font-size: 40px;
         }
         &:hover{
             transform: rotateY(180deg);

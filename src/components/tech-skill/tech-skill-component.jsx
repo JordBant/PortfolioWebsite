@@ -3,7 +3,7 @@ import './tech-skill.scss'
 
 const TechSkill = () => {
   return (
-    <SkillCard skillName = 'Node.js' />
+    <SkillCard skillName = 'React.js' />
   )
 }
 
