@@ -1,6 +1,6 @@
 const CSSIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="icon face"  viewBox="0 0 296297 333333" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+    <svg xmlns="http://www.w3.org/2000/svg" className= 'icon card-face'  viewBox="0 0 296297 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
         <defs>
             <linearGradient id="id4" gradientUnits="userSpaceOnUse" x1="54128.7" y1="79355.5" x2="240318" y2="79355.5">
                 <stop offset="0" stop-color="#e8e7e5"/>
@@ -15,7 +15,7 @@ const CSSIcon = () => {
                 <stop offset=".388" stop-color="#d1d3d4"/>
                 <stop offset="1" stop-color="#d1d3d4"/>
             </linearGradient>
-            <linearGradient id="id7" gradientUnits="userSpaceOnUse" xlink:href="#id6" x1="194179" y1="61185.8" x2="194179" y2="135407"/>
+            <linearGradient id="id7" gradientUnits="userSpaceOnUse" x1="194179" y1="61185.8" x2="194179" y2="135407"/>
                 <mask id="id0">
                     <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="104963" y1="99616.9" x2="104963" y2="171021">
                         <stop offset="0" stop-opacity="0" stop-color="#fff"/>
