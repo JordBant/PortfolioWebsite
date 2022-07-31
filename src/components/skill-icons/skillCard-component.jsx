@@ -7,6 +7,7 @@ import JSIcon from "./javascript-icon-component"
 import NodeIcon from "./node-icon-component"
 import ReactIcon from "./react-icon-component"
 import SASSIcon from "./sass-icon-component"
+import './skill-card.scss'
 
 let fontColor
 const SkillCard = ({skillName}) => {

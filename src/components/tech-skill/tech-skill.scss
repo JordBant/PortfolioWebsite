@@ -1,44 +1,18 @@
 @use '../../util-styles/' as util;
 
-.icon{
-    @include util.skillCard()
-}
+.tech-skill-wrapper{
+    @include util.size(100%, auto, 0, 0);
+    @include util.flex(center, center, NULL, NULL, NULL);
+    border: 2px solid red;
 
-.skill-container{
-    @include util.size(150px, 100px, 0, 10px);
-
-    perspective: 600px;
-    // background: cyan;
-
-    .scene{
+    .viewCV-container{
         @include util.size(100%, 100%, 0, 0);
-        // background-color: blue;
-        position: relative;
-        transition: transform 0.5s;
-        transform-style: preserve-3d;
+        @include util.flex(center, center, NULL, NULL, NULL);
+        border: 2px solid blue;
+    }
 
-        .card-face{
-            @include util.size(100%, 100%, 0, 0);
-
-            position: absolute;
-            backface-visibility: hidden;
-        }
-        .front-face{
-            @include util.skillCard();
-        }
-        .back-face{
-            @include util.flex(center, center, NULL, NULL, NULL);
-            color: white;
-            border-bottom: 0;
-            font-size: 70px;
-            transform: rotateY( 180deg );
-            font-size: 40px;
-        }
-        &:hover{
-            transform: rotateY(180deg);
-            .front-face{
-                opacity: 0;
-            }
-        }
+    .skills-list{
+        @include util.size(100%, auto, 0, 0);
+        border: 2px solid GREEN;
     }
 }
