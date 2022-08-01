@@ -1,7 +1,7 @@
 @use '../../util-styles/' as util;
 
 .tech-skill-wrapper{
-    @include util.size(100%, auto, 0, 0);
+    @include util.size(100%, 100vh, 0, 0);
     @include util.flex(center, center, NULL, NULL, NULL);
     border: 2px solid red;
 
@@ -12,7 +12,13 @@
     }
 
     .skills-list{
-        @include util.size(100%, auto, 0, 0);
+        @include util.size(80%, auto, 0, 0 20px 0 0);
+
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0.7em;
         border: 2px solid GREEN;
     }
 }

@@ -1,10 +1,9 @@
 @use '../../util-styles/' as util;
 
 .skill-container{
-    @include util.size(150px, 100px, 0, 10px);
-
+    @include util.size(150px, 100px, 0, 0);
     perspective: 600px;
-    // background: cyan;
+    background: cyan;
 
     .scene{
         @include util.size(100%, 100%, 0, 0);
@@ -15,12 +14,13 @@
 
         .card-face{
             @include util.size(100%, 100%, 0, 0);
-
             position: absolute;
             backface-visibility: hidden;
         }
         .front-face{
             @include util.skillCard();
+            @include util.size(100%, 90%, 0, 0);
+            border: 2px red solid;
         }
         .back-face{
             @include util.flex(center, center, NULL, NULL, NULL);
