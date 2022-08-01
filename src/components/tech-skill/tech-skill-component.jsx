@@ -10,16 +10,19 @@ const TechSkill = () => {
         <div className="viewCV bswr" > <p className="title">View Resume in Browser</p> </div>
       </div>
 
-      <div className="skills-list">
-        <SkillCard skillName = 'HTML' />
-        <SkillCard skillName = 'CSS' />
-        <SkillCard skillName = 'Javascript' />
-        <SkillCard skillName = 'React.js' />
-        <SkillCard skillName = 'SASS' />
-        <SkillCard skillName = 'Node.js' />
-        <SkillCard skillName = 'Gulp.js' />
-        <SkillCard skillName = 'Git' />
-        <SkillCard skillName = 'Express.js' />
+      <div className="skills-container">
+
+        <div className="skills-list">
+          <SkillCard skillName = 'HTML' />
+          <SkillCard skillName = 'CSS' />
+          <SkillCard skillName = 'Javascript' />
+          <SkillCard skillName = 'React.js' />
+          <SkillCard skillName = 'SASS' />
+          <SkillCard skillName = 'Node.js' />
+          <SkillCard skillName = 'Gulp.js' />
+          <SkillCard skillName = 'Git' />
+          <SkillCard skillName = 'Express.js' />
+        </div>
       </div>
 
     </section>

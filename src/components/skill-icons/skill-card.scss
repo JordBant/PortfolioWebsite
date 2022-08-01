@@ -3,7 +3,6 @@
 .skill-container{
     @include util.size(150px, 100px, 0, 0);
     perspective: 600px;
-    background: cyan;
 
     .scene{
         @include util.size(100%, 100%, 0, 0);

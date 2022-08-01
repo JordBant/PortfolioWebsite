@@ -4,21 +4,37 @@
     @include util.size(100%, 100vh, 0, 0);
     @include util.flex(center, center, NULL, NULL, NULL);
     border: 2px solid red;
+    background: util.$BKGR-SEC;
 
     .viewCV-container{
         @include util.size(100%, 100%, 0, 0);
         @include util.flex(center, center, NULL, NULL, NULL);
         border: 2px solid blue;
+        
+        .viewCV{
+            @include util.size(100%, 100%, 0, 0);
+            @include util.flex(center, center, NULL, NULL, NULL);
+            .title{
+                @include util.size(50%, auto, 0, 0);
+                color: white;
+                text-align: center;
+                font-size: 2.4em;
+            }
+        }
     }
 
-    .skills-list{
-        @include util.size(80%, auto, 0, 0 20px 0 0);
-
-        display: grid;
-        justify-items: center;
-        align-content: center;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 0.7em;
-        border: 2px solid GREEN;
+    .skills-container{
+        @include util.size(70%, 100%, 0, 0);
+        @include util.flex(center, center, column, NULL, NULL);
+        
+        .skills-list{
+            @include util.size(100%, 50%, 0, 0 20px);
+            display: grid;
+            justify-items: center;
+            align-content: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 0.7em;
+            // border: 2px solid red;
+        }
     }
 }
