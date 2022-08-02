@@ -2,8 +2,10 @@
 
 .page-title{
     // border: 2px solid red;
-    @include util.setFont (3em util.$FONT-PAGE-TITLES, 400, white);
-    padding: 20px;
+    @include util.setFont (9em util.$FONT-PAGE-TITLES, 400, white);
+    position: absolute;
+    top: 5%;
+    padding-right: 20px;
     align-self: flex-end;
     color: white;
 }

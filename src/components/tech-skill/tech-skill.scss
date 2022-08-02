@@ -10,7 +10,9 @@
     .viewCV-container{
         @include util.size(100%, 100%, 0, 0);
         @include util.flex(center, center, NULL, NULL, NULL);
+        background-color: aqua;
         border: 2px solid blue;
+        z-index: 10;
         
         .viewCV{
             @include util.size(100%, 100%, 0, 0);
@@ -32,8 +34,11 @@
     }
 
     .skills-container{
-        @include util.size(70%, 100%, 0, 0);
-        @include util.flex(center, center, column, NULL, NULL);
+        @include util.size(70%, 75%, 0, 0);
+        @include util.flex(center, center, column, NULL, flex-end);
+        border: 20px solid red;
+        position: relative;
+
         .skills-list{
             @include util.size(100%, 50%, 0, 0 20px);
             display: grid;
@@ -41,7 +46,7 @@
             align-content: center;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 2em;
-            // border: 2px solid red;
+            z-index: 10;
         }
     }
 }
