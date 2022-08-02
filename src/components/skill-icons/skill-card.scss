@@ -19,7 +19,6 @@
         .front-face{
             @include util.skillCard();
             @include util.size(100%, 90%, 0, 0);
-            border: 2px red solid;
         }
         .back-face{
             @include util.flex(center, center, NULL, NULL, NULL);

@@ -1,10 +1,11 @@
 @use '../../util-styles/' as util;
 
 .tech-skill-wrapper{
+    background: util.$BKGR-SEC;
+
     @include util.size(100%, 100vh, 0, 0);
     @include util.flex(center, center, NULL, NULL, NULL);
-    border: 2px solid red;
-    background: util.$BKGR-SEC;
+    overflow: hidden;
 
     .viewCV-container{
         @include util.size(100%, 100%, 0, 0);
@@ -14,6 +15,13 @@
         .viewCV{
             @include util.size(100%, 100%, 0, 0);
             @include util.flex(center, center, NULL, NULL, NULL);
+            border: 2px solid yellow;
+            overflow: hidden;
+
+            &:hover{
+                cursor: pointer;
+            }
+
             .title{
                 @include util.size(50%, auto, 0, 0);
                 color: white;
@@ -26,14 +34,18 @@
     .skills-container{
         @include util.size(70%, 100%, 0, 0);
         @include util.flex(center, center, column, NULL, NULL);
-        
+
+        .page-title{
+            color: white;
+            border: 2px solid red;
+        }
         .skills-list{
             @include util.size(100%, 50%, 0, 0 20px);
             display: grid;
             justify-items: center;
             align-content: center;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 0.7em;
+            grid-gap: 2em;
             // border: 2px solid red;
         }
     }
