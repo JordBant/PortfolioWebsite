@@ -9,11 +9,17 @@ const TechSkill = () => {
       <div className="viewCV-container">
 
         <div className="viewCV dwnld">
-           <p className="title">Download Resume PDF</p> 
+           <p className="title">
+            {/* Download Resume PDF */}
+            onHover play Download gif
+          </p> 
         </div>
 
         <div className="viewCV bswr" >
-          <p className="title">View Resume in Browser</p> 
+          <p className="title">
+            {/* View Resume in Browser */}
+            onHover play In Browser gif
+          </p> 
         </div>
 
       </div>
@@ -21,7 +27,7 @@ const TechSkill = () => {
       <div className="skills-container">
 
         <PageTitle pageTitleName = 'Skills' />
-        
+
         <div className="skills-list">
           <SkillCard skillName = 'HTML' />
           <SkillCard skillName = 'CSS' />

@@ -16,6 +16,12 @@
     align-self: $self-self_al; 
 }
 
+@mixin setFont($family-size, $weight, $font-color){
+    font: $family-size;
+    font-weight: $weight;
+    color: $font-color;
+}
+
 // Mixin should be applied on the highest level parent svg tag 
 @mixin skillCard() {
     transition: 0.5s all ease-in-out;
