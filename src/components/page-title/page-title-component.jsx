@@ -2,7 +2,9 @@ import './page-title.scss'
 
 const PageTitle = ({pageTitleName}) => {
     return (
-    <h1 className="page-title"> {`<${pageTitleName}/>`}</h1>
+        <div className="page-title-container">
+            <h1 className="page-title"> {`<${pageTitleName}/>`}</h1>
+        </div>
     )
 }
 
