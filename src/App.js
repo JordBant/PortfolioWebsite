@@ -1,10 +1,12 @@
-import TechSkill from "./components/tech-skill/tech-skill-component";
+import Credentials from "./components/routes/Credentials/credentials-page-component";
 import './App.scss'
+import About from "./components/routes/About/about-page-component";
 
 const App = () => {
   return (
     <div className="App">
-      <TechSkill/>
+      <About/>
+      <Credentials/>
     </div>
   );
 }

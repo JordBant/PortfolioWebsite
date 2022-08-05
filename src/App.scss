@@ -6,5 +6,7 @@
 
 .App{
     @include util.flex(center, center, column, NULL, NULL);
-    @include util.size(100vw, 100vh, 0, 0);
+    @include util.size(100vw, NULL, 0, 0);
+    background: util.$BKGR-SEC;
+    min-height: 100vh;
 }

@@ -7,11 +7,11 @@
     top: 0;
     right: 0;
     position: absolute;
+    transform: rotate(270deg);
     
     .page-title{
         // Will slide in from right and will have perspective effects onScroll 
         @include util.setFont(10em util.$FONT-PAGE-TITLE, 400, rgba(255, 255, 255, 0.5));
         text-align: center;
-        transform: rotate(270deg);
     }
 }
