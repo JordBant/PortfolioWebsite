@@ -1,0 +1,5 @@
+@use '../../../util-styles/' as util;
+
+.nav-link{
+    @include util.setFont()
+}

@@ -1,0 +1,8 @@
+@use '../../../util-styles/' as util;
+
+.project-main{
+    @include util.size(100%, 100vh, 0, 0);
+    background: util.$BKGR-SEC;
+    border:  5px solid rgb(123, 139, 19);
+}
+

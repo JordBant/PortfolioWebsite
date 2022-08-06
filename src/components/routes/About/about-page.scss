@@ -1,0 +1,29 @@
+@use '../../../util-styles/' as util ;
+
+.about-body-container{
+    @include util.size(100vw, 100vh, 0, 0);
+    background: util.$BKGR-LOADING;
+
+    .about-body{
+        @include util.size(auto, 100%, 0, 100px);
+        @include util.flex(center, flex-start, column, NULL, NULL);
+        
+        .about-salutations{
+            @include util.setFont(6em util.$FONT-PAGE-TITLE, 700, util.$TEXT-PRIM);
+            .name{
+                @include util.setFont(1.25em util.$FONT-MY-NAME, 700, util.$TEXT-PRIM);
+            }
+        }
+
+        .about-body-text{
+            @include util.setFont(2em util.$FONT-PAGE-TITLE, 700, util.$TEXT-PRIM);
+            @include util.size(50%, auto, 30px 0, 0);
+            border: 2px solid red;
+        }
+        .about-cta{
+            @include util.flex(center, center, NULL, NULL, NULL);
+            @include util.size(50%, auto, 0, 0);
+            border: 2px solid red;
+        }
+    }
+}
