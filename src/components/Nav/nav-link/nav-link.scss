@@ -1,5 +1,6 @@
 @use '../../../util-styles/' as util;
 
 .nav-link{
-    @include util.setFont()
+    @include util.setFont(2em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
+    // on scroll as nav bar shrinks, shrink font to 1.5em
 }

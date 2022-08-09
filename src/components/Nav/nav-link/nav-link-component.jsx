@@ -3,7 +3,7 @@ import './nav-link.scss'
 
 const NavLink = ({linkName}) => {
   return (
-    <li className="nav-item"> {linkName} </li>
+    <li className="nav-link"> {linkName} </li>
   )
 }
 

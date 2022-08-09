@@ -2,7 +2,7 @@ import React from 'react'
 
 const CTAButton = () => {
   return (
-    <button></button>
+    <button className='cta-buttin'></button>
   )
 }
 
