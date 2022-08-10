@@ -1,8 +1,9 @@
 import React from 'react'
+import './cta-button.scss'
 
 const CTAButton = () => {
   return (
-    <button className='cta-buttin'></button>
+    <button className='cta-button'> Let's Connect </button>
   )
 }
 

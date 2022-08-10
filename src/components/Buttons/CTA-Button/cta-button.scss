@@ -1,0 +1,9 @@
+@use '../../../util-styles/' as util;
+
+.cta-button{
+    @include util.size(auto, auto, 0, 20px);
+    @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, white);
+
+    border-radius: 100px;
+    background-color: black;
+}

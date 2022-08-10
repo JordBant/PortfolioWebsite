@@ -3,14 +3,14 @@
 .nav-bar{
     @include util.size(100%, auto, 0, 20px);
     @include util.flex(flex-start, center, NULL, NULL, NULL);
-    border: 2px solid red;
+    // border: 2px solid red;
     top: 0;
     position: fixed;
 
     .nav-list{
         @include util.size(45%, auto, 0, 0);
         @include util.flex(space-evenly, center, NULL, NULL, NULL);
-        border: 4px solid cyan;
+        // border: 4px solid cyan;
         list-style: none;
     }
 }

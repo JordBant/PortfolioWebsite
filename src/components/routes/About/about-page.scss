@@ -18,12 +18,15 @@
         .about-body-text{
             @include util.setFont(1.7em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
             @include util.size(50%, auto, 30px 0, 0);
-            border: 2px solid red;
+            // border: 2px solid red;
         }
         .about-cta{
             @include util.flex(center, center, NULL, NULL, NULL);
-            @include util.size(50%, auto, 0, 0);
-            border: 2px solid red;
+            @include util.size(auto, auto, 0, 0);
+            border: 2px solid cyan;
+            & > *{
+                margin: 0 10px;
+            }
         }
     }
 }
