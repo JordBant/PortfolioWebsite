@@ -4,22 +4,25 @@ import './nav-bar.scss'
 
 const NavBar = () => {
 
-  const childrenMountAnimation = {
-    visible: { opacity: 1 },
+  const container = {
     hidden: { opacity: 0 },
-    transition: {
-      delayChildren: 0.5,
-      staggerDirection: -1
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        staggerDirection: -1,
+        delayChildren: 0.3
+      }
     }
   }
 
   return (
     <nav className="nav-bar">
         <motion.ul 
-        className="nav-list"
-        initial="hidden"
-        animate="visible"
-        variants={childrenMountAnimation}
+          className="nav-list"
+          variants={container}
+          initial="hidden"
+          animate="show"
         >
             <NavLink linkName= 'About' />
             <NavLink linkName= 'Skills' />
