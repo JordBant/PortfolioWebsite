@@ -2,7 +2,7 @@
 
 .nav-bar{
     @include util.size(100%, auto, 0, 20px);
-    @include util.flex(flex-start, center, NULL, NULL, NULL);
+    @include util.flex(flex-end, center, NULL, NULL, NULL);
     // border: 2px solid red;
     top: 0;
     position: fixed;
