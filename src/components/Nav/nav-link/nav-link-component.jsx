@@ -6,7 +6,7 @@ const NavLink = ({linkName}) => {
   const itemAnime = {
     hidden: { 
       opacity: 0,
-      x: 20
+      x: 100
     },
     show: { 
       opacity: 1,
