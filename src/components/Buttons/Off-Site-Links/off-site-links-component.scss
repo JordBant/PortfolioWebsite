@@ -1,0 +1,9 @@
+@use '../../../util-styles/' as util;
+
+.offsite-link{
+    @include util.size(auto, auto, 0, 0);
+    // border: 2px solid red;
+    .offsite-link-icon{
+        @include util.size(45px, auto, 0, 0);
+    }
+}

@@ -3,10 +3,10 @@
 .page-title-container{
     @include util.size(auto, 100%, NULL, NULL);
     @include util.flex(center, center, NULL, NULL, NULL);
-    border: 2px solid orange;
     top: 0;
     right: 0;
     position: absolute;
+    transform: rotate(180deg);
     writing-mode: vertical-lr;
     
     .page-title{

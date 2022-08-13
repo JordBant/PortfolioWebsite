@@ -7,9 +7,12 @@
     .about-body{
         @include util.size(auto, 100%, 0, 100px);
         @include util.flex(center, flex-start, column, NULL, NULL);
-        
+
+        & > *{ margin: 20px 0; }
+
         .about-salutations{
             @include util.setFont(6em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
+            
             .name{
                 @include util.setFont(1.25em util.$FONT-MY-NAME, 200, util.$TEXT-PRIM);
             }
@@ -18,12 +21,10 @@
         .about-body-text{
             @include util.setFont(1.7em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
             @include util.size(50%, auto, 30px 0, 0);
-            // border: 2px solid red;
         }
         .about-cta{
             @include util.flex(center, center, NULL, NULL, NULL);
-            @include util.size(auto, auto, 0, 0);
-            border: 2px solid cyan;
+            @include util.size(auto, auto, NULL, 0);
             & > *{
                 margin: 0 10px;
             }
