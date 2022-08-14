@@ -1,9 +1,10 @@
 import React from 'react'
 import Github from '../../Icon-Component/github-component'
 import LinkedIn from '../../Icon-Component/linkdIn-component'
+import { motion } from 'framer-motion'
 import './off-site-links-component.scss'
 
-const OffSiteLinkBtn = ({linkIcon}) => {
+const OffSiteLinkBtn = ({linkIcon, animate, variant, initial}) => {
   const linkTo = 'nowhere yet'
   const switchIcon = (icon) => {
     // eslint-disable-next-line default-case
@@ -15,11 +16,16 @@ const OffSiteLinkBtn = ({linkIcon}) => {
     }
   }
   return (
-    <a href= {linkTo} className = "offsite-link">
+    <motion.a href = {linkTo} 
+    className = "offsite-link"
+    variant = {variant} 
+    animate = {animate}
+    initial = {initial}
+    >
       {
         switchIcon(linkIcon)
       }
-    </a>
+    </motion.a>
   )
 }
 export default OffSiteLinkBtn

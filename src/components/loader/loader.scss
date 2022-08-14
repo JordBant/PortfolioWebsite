@@ -1,0 +1,23 @@
+@use '../../util-styles/' as util;
+
+.loader{
+    @include util.flex(center, center, column, NULL, NULL);
+    @include util.size(100vw, 100vh, 0, 0);
+    background-image: util.$BKGR-LOADING;
+
+    &::before{
+        @include util.size(100%, 100%, 0, 0);
+
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        background-image: util.$BKGR-INIT;
+        z-index: 2;
+        animation: transitionOpacity 1.8s 1s forwards;
+    }
+}
+
+@keyframes transitionOpacity {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}

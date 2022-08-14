@@ -55,11 +55,9 @@ const SkillCard = ({skillName}) => {
 
     return (
     <div className="skill-container">
-        <div className="scene">
-            { renderIcon() }
-            <p className = 'card-face back-face' style={ { textShadow: `0 0 4px ${fontColor}` } }> {skillName} </p>
-            {/* className = 'card-face back-face' */}
-        </div>
+        { renderIcon() }
+        <p className = 'side-text' style={ { textShadow: `0 0 4px ${fontColor}` } }> {skillName} </p>
+        {/* className = 'card-face back-face' */}  
     </div>
   )
 }

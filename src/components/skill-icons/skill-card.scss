@@ -2,37 +2,19 @@
 
 .skill-container{
     @include util.size(100%, clamp(70px, 8vw, 110px), 0, 0);
-    perspective: 600px;
 
-    .scene{
-        @include util.size(100%, 100%, 0, 0);
-        // background-color: blue;
-        position: relative;
-        transition: transform 0.5s;
-        transform-style: preserve-3d;
-
-        .card-face{
-            @include util.size(100%, 100%, 0, 0);
-            position: absolute;
-            backface-visibility: hidden;
-        }
-        .front-face{
-            @include util.skillCard();
-            @include util.size(100%, 90%, 0, 0);
-        }
-        .back-face{
-            @include util.flex(center, center, NULL, NULL, NULL);
-            color: white;
-            border-bottom: 0;
-            font-size: 70px;
-            transform: rotateY( 180deg );
-            font-size: 40px;
-        }
-        &:hover{
-            transform: rotateY(180deg);
-            .front-face{
-                opacity: 0;
-            }
-        }
+    .front-face{
+        @include util.size(40%, 100%, 0, 0);
+        border: 2px solid red;
+    }
+    .side-text{
+        @include util.flex(center, center, NULL, NULL, NULL);
+        color: white;
+        border-bottom: 0;
+        font-size: 70px;
+        font-size: 40px;
+    }
+    &:hover{
+        
     }
 }

@@ -34,15 +34,7 @@
 
 
 // Mixin should be applied on the highest level parent svg tag 
-@mixin skillCard() {
-    transition: 0.5s all ease-in-out;
-    position: absolute;
-    opacity: 1;
 
-    &:hover{
-        opacity: 0;
-    }
-}
 
 /* 
 --------------------------------

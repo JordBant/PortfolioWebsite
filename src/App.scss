@@ -7,6 +7,5 @@
 .App{
     @include util.flex(center, center, column, NULL, NULL);
     @include util.size(100vw, NULL, 0, 0);
-    background: util.$BKGR-PRIM;
     min-height: 100vh;
 }

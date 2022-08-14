@@ -4,16 +4,20 @@ import About from "./components/routes/About/about-page-component";
 import NavBar from "./components/Nav/nav-bar/nav-bar-component";
 import Projects from "./components/routes/Projects/projects";
 import Contact from "./components/routes/Contact/contact";
+import Loader from "./components/Loader/loader-component";
 
 const App = () => {
   return (
-    <div className="App">
-      <NavBar/>
-      <About/>
-      <Credentials/>
-      <Projects/>
-      <Contact/>
-    </div>
+    <>
+      <div className="App">
+        <Loader/>
+        {/* <NavBar/>
+        <About/>
+        <Credentials/>
+        <Projects/>
+        <Contact/> */}
+      </div>
+    </>
   );
 }
 

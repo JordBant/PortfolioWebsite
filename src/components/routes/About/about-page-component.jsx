@@ -7,37 +7,72 @@ import './about-page.scss'
 import PageTitle from '../../Page-Title/page-title-component'
 
 const AboutCTA = () => {
+    const container = {
+        hidden: {
+            opacity: 0
+        },
+        show: {
+            opacity: 1,
+            transition:{
+                staggerChildren: 0.7,
+                delayChildren: 0.7,
+                ease: [0.6,0.01,-0.05,0.95],
+                duration: 2.25
+            }
+        }
+    }
+    
     return(
-        <div className="about-cta">
-            <CTAButton/>
+        <motion.div variants={container} animate = "show" initial = "hidden" className="about-cta">
+            <CTAButton />
             <OffSiteLinkBtn linkIcon = "Github" />
             <OffSiteLinkBtn linkIcon = "LinkedIn" />
-        </div>
+        </motion.div>
     )
 }
 
 const AboutBody = () => {
     const container = {
-        hidden: { opacity: 0 },
+        hidden: { 
+            opacity: 0,
+         },
         show: {
-          opacity: 1,
-          transition: {
-            staggerChildren: 0.2,
-            staggerDirection: -1,
-            delayChildren: 0.5,
-          }
+            opacity: 1,
+            transition:{
+                staggerChildren: 0.5,
+                delayChildren: 4
+            },
         }
       }
 
+    const item = {
+    hidden: {
+        opacity: 0,
+        y: -100
+        },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            ease:[0.6,0.01,-0.05,0.95],
+            duration: 1.6,
+        }
+        }
+    }
+
     return(
     <div className='about-body-container'>
-        <motion.div className="about-body">
-            <h1 className="about-salutations"> I'm <span className="name">Jordon</span> </h1>
-            <p className="about-body-text">
+        <motion.div className="about-body"
+        variants={container}
+        initial="hidden"
+        animate="show"
+        >
+            <motion.h1 animate = "show" initial = "hidden" variants = {item}  className="about-salutations"> I'm <span className="name">Jordon</span> </motion.h1>
+            <motion.p  animate = "show" initial = "hidden" variants = {item} className="about-body-text">
                 I am a Frontend Web Developer with a Bachelors of Science in Computer Science. 
                 I have a strong drive and passion for creating robust and beautiful, 
                 but performant web applications and websites. 
-            </p>
+            </motion.p>
             <AboutCTA/>
         </motion.div>
     </div>
