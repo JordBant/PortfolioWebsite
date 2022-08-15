@@ -1,49 +1,34 @@
 @use '../../../util-styles/' as util;
 
-.cta-button-wrapper{
-    @include util.size(auto, auto, 0, 0);
-    // border: 2px solid red;
-    // overflow: hidden;
+.cta-button{
+    @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, white);
+    @include util.size(250px, auto, 0, 20px);
     border-radius: 100px;
-    position: relative;
+    border: 2px solid black;
     background-color: black;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    transition: 0.3s ease-in-out all;
 
-    .cta-button{
-        @include util.size(auto, auto, 0, 20px);
-        z-index: 9999;
-        border-radius: 100px;
-        border: 2px solid red;
-        background-color: transparent;
-        cursor: pointer;
-
-
-        .inner-btn{
-            @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, white);
-        }
-    }
+    cursor: pointer;
 
     &::before{
         $circle-dim: 275px;
-        @include util.pseudoMask(rgb(255, 255, 255));
-        @include util.size($circle-dim, $circle-dim, 0, 0);
-
-        border-radius: 50%;
-        border: 2px solid red;
-        transform: translate(80%, -30%);
-        transition: all .5s ease-in-out;
+        @include util.pseudoMask(rgba(255, 255, 255, 0.2));
+        @include util.size(100%, 130%, 0, 0);
+    
+        border-top-left-radius: 100%;
+        transition: all 0.25s cubic-bezier(0.17, 0.09, 0, 1.15);
+        left: 100%;
         z-index: 1;
     }
-
     &:hover{
-        .inner-btn{
-            color: black;
-        }
-        &::before{
-            transform: translate(-10%, -30%);
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0);
+        &::before {
+            left: 0;
+            border-top-left-radius: 0;
         }
     }
-}
-
-@keyframes castUnder{
-    
 }
