@@ -2,43 +2,48 @@
 
 .cta-button-wrapper{
     @include util.size(auto, auto, 0, 0);
-    border: 2px solid red;
+    // border: 2px solid red;
     // overflow: hidden;
     border-radius: 100px;
     position: relative;
     background-color: black;
-    z-index: 1;
-
 
     .cta-button{
         @include util.size(auto, auto, 0, 20px);
-        z-index: 1;
-    
-        cursor: pointer;
+        z-index: 9999;
         border-radius: 100px;
-        border: none;
+        border: 2px solid red;
         background-color: transparent;
+        cursor: pointer;
 
 
         .inner-btn{
             @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, white);
-            z-index: 1000;
         }
     }
 
-    &::after{
+    &::before{
+        $circle-dim: 275px;
         @include util.pseudoMask(rgb(255, 255, 255));
-        transform: translateX(100%);
-        transition: all 0.2s ease-in-out;
-        overflow: hidden;
+        @include util.size($circle-dim, $circle-dim, 0, 0);
+
+        border-radius: 50%;
+        border: 2px solid red;
+        transform: translate(80%, -30%);
+        transition: all .5s ease-in-out;
+        z-index: 1;
     }
 
     &:hover{
         .inner-btn{
             color: black;
         }
-        &::after{
-            transform: translateX(0);
+        &::before{
+            transform: translate(-10%, -30%);
         }
     }
+}
+
+@keyframes castUnder{
+    
 }

@@ -24,7 +24,6 @@
 
 @mixin pseudoMask($shade){
     content: '';
-    @include size(100%, 100%, NULL, NULL);
     position: absolute;
     inset: 0 0 0 0;
     background: $shade;
