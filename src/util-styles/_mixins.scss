@@ -22,16 +22,13 @@
     color: $font-color;
 }
 
-@mixin glassArea($shade){
-    &::after{
-        content: '';
-        @include size(100%, 100%, NULL, NULL);
-        position: absolute;
-        inset: 0 0 0 0;
-        background: $shade;
-    }
+@mixin pseudoMask($shade){
+    content: '';
+    @include size(100%, 100%, NULL, NULL);
+    position: absolute;
+    inset: 0 0 0 0;
+    background: $shade;
 }
-
 
 // Mixin should be applied on the highest level parent svg tag 
 

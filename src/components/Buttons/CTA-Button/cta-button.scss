@@ -1,16 +1,44 @@
 @use '../../../util-styles/' as util;
 
-.cta-button{
-    @include util.size(auto, auto, 0, 20px);
-    @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, white);
-
-    cursor: pointer;
+.cta-button-wrapper{
+    @include util.size(auto, auto, 0, 0);
+    border: 2px solid red;
+    // overflow: hidden;
     border-radius: 100px;
-    border: 4px solid black;
+    position: relative;
     background-color: black;
+    z-index: 1;
+
+
+    .cta-button{
+        @include util.size(auto, auto, 0, 20px);
+        z-index: 1;
+    
+        cursor: pointer;
+        border-radius: 100px;
+        border: none;
+        background-color: transparent;
+
+
+        .inner-btn{
+            @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, white);
+            z-index: 1000;
+        }
+    }
+
+    &::after{
+        @include util.pseudoMask(rgb(255, 255, 255));
+        transform: translateX(100%);
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+    }
 
     &:hover{
-        background-color: antiquewhite;
-        color: black;
+        .inner-btn{
+            color: black;
+        }
+        &::after{
+            transform: translateX(0);
+        }
     }
 }

@@ -4,12 +4,16 @@ import './cta-button.scss'
 
 const CTAButton = ({variants, animate, initial}) => {
   return (
-    <motion.button 
-    className='cta-button'
-    variants={variants}
-    animate = {animate}
-    initial = {initial}
-    > Let's Connect </motion.button>
+    <div className='cta-button-wrapper' >
+      <motion.button 
+      className='cta-button'
+      variants={variants}
+      animate = {animate}
+      initial = {initial}
+      >  
+      <h1 className="inner-btn">Let's Connect</h1>
+      </motion.button>
+    </div>
   )
 }
 
