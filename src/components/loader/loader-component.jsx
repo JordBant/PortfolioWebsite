@@ -8,6 +8,7 @@ const Loader = () => {
     const [isActive, setActive] = useState(false);
     const active = isActive ? 'active' : '';
 
+    // For loading icon
     useEffect(() => {
         setTimeout(() => {
             setActive(true)

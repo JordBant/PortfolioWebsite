@@ -31,7 +31,7 @@ const AboutCTA = () => {
     )
 }
 
-const AboutBody = () => {
+const AboutBody = ({backgroundActive}) => {
     const container = {
         hidden: { 
             opacity: 0,
@@ -61,7 +61,7 @@ const AboutBody = () => {
     }
 
     return(
-    <div className='about-body-container'>
+    <div className={`about-body-container ${backgroundActive}`}>
         <motion.div className="about-body"
         variants={container}
         initial="hidden"
@@ -79,10 +79,10 @@ const AboutBody = () => {
     )
 }
 
-const About = () => {
+const About = ({backgroundActive}) => {
   return (
     <>
-        <AboutBody/>
+        <AboutBody backgroundActive = {backgroundActive} />
         <PageTitle pageTitleName = "About" />
     </>
   )

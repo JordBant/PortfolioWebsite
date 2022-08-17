@@ -3,6 +3,7 @@
 .about-body-container{
     @include util.size(100vw, 100vh, 0, 0);
     background: util.$BKGR-PRIM;
+    background-size: 400% 400%;
 
     .about-body{
         @include util.size(auto, 100%, 0, 100px);
@@ -30,4 +31,20 @@
             }
         }
     }
+}
+
+.background-active{
+	animation: BackgroundAnime 15s ease infinite;
+}
+
+@keyframes BackgroundAnime { 
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

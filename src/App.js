@@ -9,12 +9,16 @@ import Loader from "./components/Loader/loader-component";
 
 const App = () => {
   const [loading, setLoading] = useState(true)
+  const [backGroundAnime, setBackGrndAnime] = useState(false)
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
+    setTimeout(() => { 
+      setLoading(false) 
+      setBackGrndAnime(true)
     }, 5500)
   }, [])
   
+  const backgroundActive = backGroundAnime ? 'background-active' : ''
+
   return (
     <>
       <div className="App">
@@ -25,7 +29,7 @@ const App = () => {
           :
           <>
             <NavBar/>
-            <About/>
+            <About backgroundActive= { backgroundActive }/>
             <Credentials/>
             <Projects/>
             <Contact/>
