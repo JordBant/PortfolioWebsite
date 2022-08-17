@@ -2,11 +2,14 @@
 
 .nav-link{
     @include util.setFont(2em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
+    padding: 5px;
     position: relative;
     overflow: hidden;
 
+    cursor: pointer;
+
     &::before{
-        @include util.pseudoMask(black);
+        @include util.pseudoMask(#ffffff8e);
         @include util.size(100%, 2px, 0, 0);
 
         transition: 0.2s ease-in-out all;
@@ -16,7 +19,6 @@
 
     &:hover, &:focus{
         &::before{
-            @include util.pseudoMask(black);
             @include util.size(100%, 2px, 0, 0);
             top: 95%;
             left: 0;

@@ -13,6 +13,7 @@ let fontColor
 const SkillCard = ({skillName}) => {
     const renderIcon = () => {
         const icon = skillName.toLowerCase()
+
         // eslint-disable-next-line default-case
         switch (icon) {
             case 'css':
@@ -54,9 +55,11 @@ const SkillCard = ({skillName}) => {
     }
 
     return (
-    <div className="skill-container">
+    <div className="icon-container">
         { renderIcon() }
-        <p className = 'side-text' style={ { textShadow: `0 0 4px ${fontColor}` } }> {skillName} </p>
+        <div className="text-container">
+            <p className = 'side-text'> {skillName} </p>
+        </div>
         {/* className = 'card-face back-face' */}  
     </div>
   )
