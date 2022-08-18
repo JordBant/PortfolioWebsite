@@ -3,26 +3,47 @@
 .icon-container{
     @include util.size(100%, clamp(70px, 8vw, 110px), 0, 0);
     @include util.flex(center, center, NULL, NULL, NULL);
-    border: 2px solid green;
 
     .front-face{
         @include util.size(40%, 100%, 0, 0);
+        // border: 2px solid green;
         transition: 0.5s all cubic-bezier(.23,.75,.28,.9);
     }
-    
-    // .side-text{
-    //     @include util.size(100%, auto, 0, 0);        
-    //     transition: 0.7s all cubic-bezier(.23,.75,.28,.9);
-    //     color: white;
-    //     border-bottom: 0;
-    //     font-size: 40px;
-    //     border: 2px solid green;
-    //     overflow: hidden;
-    // }
 
+    .text-container{
+        @include util.size(0, 70%, 0, 0);
+        @include util.flex(center, center, NULL, NULL, NULL);
+        // border: 2px solid red;
+        transition: 0.5s all cubic-bezier(.23,.75,.28,.9);
+        overflow: hidden;
+
+        .y-line{
+            @include util.size(0, 0, 4px, 0);
+            transition: 0.3s all cubic-bezier(.23,.75,.28,.9);
+            transition-delay: 0.3s;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(255, 123, 0);
+        }
+        .side-text{
+            transition: 0.7s all cubic-bezier(.23,.75,.28,.9);
+            color: white;
+            position: relative;
+            font-size: 40px;
+            // border: 2px solid green;
+        }
+    }
+
+    
     &:hover{
+        .y-line{
+            @include util.size(3px, 100%, NULL, 0);
+        }
         .front-face{
             width: 30%;
+        }
+        .text-container{
+            width: 60%;
         }
     }
 }
