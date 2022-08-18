@@ -18,17 +18,15 @@
         overflow: hidden;
 
         .y-line{
-            @include util.size(0, 0, 4px, 0);
+            @include util.size(0, 0, 5px, 0);
             transition: 0.3s all cubic-bezier(.23,.75,.28,.9);
-            transition-delay: 0.3s;
+            transition-delay: 0.2s;
             border: none;
             border-radius: 20px;
-            background-color: rgb(255, 123, 0);
         }
         .side-text{
             transition: 0.7s all cubic-bezier(.23,.75,.28,.9);
             color: white;
-            position: relative;
             font-size: 40px;
             // border: 2px solid green;
         }
@@ -43,7 +41,7 @@
             width: 30%;
         }
         .text-container{
-            width: 60%;
+            width: auto;
         }
     }
 }
