@@ -1,47 +1,48 @@
 @use '../../util-styles/' as util;
 
 .icon-container{
-    @include util.size(100%, clamp(70px, 8vw, 110px), 0, 0);
+    @include util.size(50%, clamp(70px, 8vw, 110px), 0, 0);
     @include util.flex(center, center, NULL, NULL, NULL);
+    position: relative;
 
-    .front-face{
-        @include util.size(40%, 100%, 0, 0);
-        // border: 2px solid green;
-        transition: 0.5s all cubic-bezier(.23,.75,.28,.9);
-    }
+    .content-wrapper{
+        @include util.flex(flex-end, center, NULL, NULL, NULL);
+        @include util.size(auto, 80%, 0, 0);
 
-    .text-container{
-        @include util.size(0, 70%, 0, 0);
-        @include util.flex(center, center, NULL, NULL, NULL);
-        // border: 2px solid red;
-        transition: 0.5s all cubic-bezier(.23,.75,.28,.9);
-        overflow: hidden;
-
+        .card-face{
+            @include util.size(70%, auto, 0, 0);
+            transition: 0.5s all cubic-bezier(.23,.75,.28,.9);
+        }
+    
         .y-line{
-            @include util.size(0, 0, 5px, 0);
+            @include util.size(0, 0, 0 7px, 0);
             transition: 0.3s all cubic-bezier(.23,.75,.28,.9);
-            transition-delay: 0.2s;
             border: none;
             border-radius: 20px;
         }
-        .side-text{
-            transition: 0.7s all cubic-bezier(.23,.75,.28,.9);
-            color: white;
-            font-size: 40px;
-            // border: 2px solid green;
-        }
     }
 
-    
+    .side-text{
+        // @include util.size(0, auto, 0, 0);
+        transition: 0.3s all cubic-bezier(.23,.75,.28,.9);
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        opacity: 0;
+        left: 75%;
+    }
     &:hover{
-        .y-line{
-            @include util.size(3px, 100%, NULL, 0);
+        .content-wrapper{
+            left: 0;
+            .y-line{ 
+                @include util.size(3px, 100%, NULL, 0); 
+            }
         }
-        .front-face{
-            width: 30%;
-        }
-        .text-container{
+        .side-text{
             width: auto;
+            overflow: visible;
+            left: 100%;
+            opacity: 1;
         }
     }
 }

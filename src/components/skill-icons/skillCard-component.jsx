@@ -56,12 +56,11 @@ const SkillCard = ({skillName}) => {
 
     return (
     <div className="icon-container">
-        { renderIcon() }
-        <div className="text-container">
-            <hr className="y-line" style = {{ background: `${fontColor}` } }
-                />
-            <p className = 'side-text'> {skillName} </p>
+        <div className="content-wrapper">
+            { renderIcon() }
+            <hr className="y-line" style = {{ background: `${fontColor}` }}/>
         </div>
+        <p className = 'side-text'> {skillName} </p>
     </div>
   )
 }

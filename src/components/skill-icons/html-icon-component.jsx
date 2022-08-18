@@ -2,7 +2,7 @@ import React from 'react'
 
 const HTMLIcon = () => {
   return (
-    <svg className= 'front-face card-face' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 108.35 122.88">
+    <svg className= 'card-face' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 108.35 122.88">
         <g>
           <polygon fill="#e44b25" points="108.35,0 98.48,110.58 54.11,122.88 9.86,110.6 0,0 108.35,0"/>
           <polygon fill="#f16427" className="st1" points="54.17,113.48 90.03,103.54 98.46,9.04 54.17,9.04 54.17,113.48"/>
