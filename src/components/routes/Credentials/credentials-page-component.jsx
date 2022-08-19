@@ -1,12 +1,14 @@
 import PageTitle from '../../Page-Title/page-title-component'
 import ViewCredentials from '../../View-Credentials/view-credentials-component'
 import SkillCard from '../../Skill-Icons/skillCard-component'
+import CustomCursor from '../../Custom-Cursor/custom-cursor-components'
 import './credentials-page.scss'
 
 const Credentials = () => {
   return (
     <section className='tech-skill-wrapper' >
       <div className="view-credential-container">
+        <CustomCursor />
         <ViewCredentials viewType= 'download'  />
         <ViewCredentials viewType= 'browser'  />
       </div>
