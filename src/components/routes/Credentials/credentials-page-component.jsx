@@ -8,15 +8,14 @@ const Credentials = () => {
   return (
     <section className='tech-skill-wrapper' >
       <div className="view-credential-container">
-        <CustomCursor />
-        <ViewCredentials viewType= 'download'  />
-        <ViewCredentials viewType= 'browser'  />
+        {/* <CustomCursor /> */}
+        <ViewCredentials />
       </div>
 
       <div className="skill-icon-container">
         <PageTitle pageTitleName = 'Skills' />
+
         <div className="skill-icon-list">
-          
           <SkillCard skillName = 'HTML' />
           <SkillCard skillName = 'CSS' />
           <SkillCard skillName = 'Javascript' />
