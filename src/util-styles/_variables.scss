@@ -1,36 +1,39 @@
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('../../public/Fonts/glacial-indifference/GlacialIndifference-Regular.otf');
+}
+
 $BKGR-INIT: white;
 
-$BKGR-PRIM: 
-radial-gradient(at 56% 32%, hsla(359,93%,65%,1) 0px, transparent 50%),
-radial-gradient(at 12% 2%, hsla(192,71%,66%,1) 0px, transparent 50%),
-radial-gradient(at 53% 82%, hsla(230,70%,62%,1) 0px, transparent 50%),
-radial-gradient(at 7% 53%, hsla(239,81%,63%,1) 0px, transparent 50%),
-radial-gradient(at 85% 63%, hsla(207,88%,51%,1) 0px, transparent 50%),
-radial-gradient(at 60% 8%, hsla(24,68%,66%,1) 0px, transparent 50%),
-radial-gradient(at 75% 96%, hsla(216,90%,75%,1) 0px, transparent 50%),
-radial-gradient(at 30% 76%, hsla(259,78%,73%,1) 0px, transparent 50%),
-radial-gradient(at 33% 54%, hsla(131,83%,71%,1) 0px, transparent 50%),
-radial-gradient(at 58% 69%, hsla(360,66%,63%,1) 0px, transparent 50%),
-radial-gradient(at 8% 79%, hsla(227,89%,61%,1) 0px, transparent 50%),
-radial-gradient(at 93% 20%, hsla(261,100%,41%,1) 0px, transparent 50%);
+$BKGR-PRIM: linear-gradient(142deg, rgba(0,0,0,1) 33%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 55%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 73%);
+
+// linear-gradient(142deg, rgba(27,24,24,1) 34%, rgba(214,214,214,1) 34%, rgba(255,255,255,1) 59%, rgba(0,0,0,1) 59%, rgba(0,0,0,1) 84%, rgba(255,255,255,1) 84%, rgba(255,255,255,1) 99%, rgba(0,0,0,1) 99%);
+
+// radial-gradient(at 56% 32%, hsla(359,93%,65%,1) 0px, transparent 50%),
+// radial-gradient(at 12% 2%, hsla(192,71%,66%,1) 0px, transparent 50%),
+// radial-gradient(at 53% 82%, hsla(230,70%,62%,1) 0px, transparent 50%),
+// radial-gradient(at 7% 53%, hsla(239,81%,63%,1) 0px, transparent 50%),
+// radial-gradient(at 85% 63%, hsla(207,88%,51%,1) 0px, transparent 50%),
+// radial-gradient(at 60% 8%, hsla(24,68%,66%,1) 0px, transparent 50%),
+// radial-gradient(at 75% 96%, hsla(216,90%,75%,1) 0px, transparent 50%),
+// radial-gradient(at 30% 76%, hsla(259,78%,73%,1) 0px, transparent 50%),
+// radial-gradient(at 33% 54%, hsla(131,83%,71%,1) 0px, transparent 50%),
+// radial-gradient(at 58% 69%, hsla(360,66%,63%,1) 0px, transparent 50%),
+// radial-gradient(at 8% 79%, hsla(227,89%,61%,1) 0px, transparent 50%),
+// radial-gradient(at 93% 20%, hsla(261,100%,41%,1) 0px, transparent 50%);
+
 
 $BKGR-SEC: hsl(240, 19%, 23%);
 $TEXT-PRIM: hsl(0, 0%, 100%);
-$TEXT-SEC: hsla(208,67%,80%,1);
 
 $ICON-INACTIVE: hsla(210, 26%, 37%, 0.601);
-$GULP-RED: #da4446;
-$GIT-RED: #f05233;
 
 $HTML-SHADE1: #e44b25;
 $HTML-SHADE2: #f16427;
 $HTML-FONT-COLOR1: #ebebeb;
 $HTML-FONT-COLOR2: #ffffff;
-
-$JS-YELLOW: #f7dd1d;
-$REACT-BLUE: #00d9ff;
-$SASS-PINK: #cf6399;
+$FONT-BLEND-ALT: difference;
 
 $FONT-ABOUT-PARAGRAPH: 'Uchen', serif;
-$FONT-PAGE-TITLE: 'Source Code Pro', monospace;
+$FONT-PAGE-TITLE: 'Glacial Indifference', monospace;
 $FONT-MY-NAME: 'Oleo Script Swash Caps', cursive;

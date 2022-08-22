@@ -1,11 +1,12 @@
 @use '../../../util-styles/' as util;
 
 .cta-button{
-    @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, white);
+    @include util.setFont(1.5em util.$FONT-PAGE-TITLE, 400, NULL);
     @include util.size(250px, auto, 0, 20px);
     border-radius: 100px;
+    mix-blend-mode: util.$FONT-BLEND-ALT;
     border: 2px solid black;
-    background-color: black;
+    background-color: rgb(253, 253, 253);
     position: relative;
     overflow: hidden;
     z-index: 10;

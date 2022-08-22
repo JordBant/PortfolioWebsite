@@ -9,10 +9,13 @@
         @include util.size(auto, 100%, 0, 100px);
         @include util.flex(center, flex-start, column, NULL, NULL);
 
-        & > *{ margin: 20px 0; }
+        & > *{ 
+            margin: 20px 0; 
+        }
 
         .about-salutations{
             @include util.setFont(6em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
+            mix-blend-mode: util.$FONT-BLEND-ALT;
             
             .name{
                 @include util.setFont(1.25em util.$FONT-MY-NAME, 200, util.$TEXT-PRIM);
@@ -22,10 +25,12 @@
         .about-body-text{
             @include util.setFont(1.7em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
             @include util.size(50%, auto, 30px 0, 0);
+            mix-blend-mode: util.$FONT-BLEND-ALT;
         }
         .about-cta{
             @include util.flex(center, center, NULL, NULL, NULL);
             @include util.size(auto, auto, NULL, 0);
+            mix-blend-mode: util.$FONT-BLEND-ALT;
             & > *{
                 margin: 0 10px;
             }
@@ -34,17 +39,14 @@
 }
 
 .background-active{
-	animation: BackgroundAnime 30s ease infinite;
+	animation: BackgroundAnime 45s ease infinite;
 }
 
 @keyframes BackgroundAnime { 
     0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
+		background-position: 0% 25%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 75% 100%;
 	}
 }

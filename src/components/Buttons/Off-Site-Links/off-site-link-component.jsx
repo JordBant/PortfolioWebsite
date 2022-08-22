@@ -1,6 +1,6 @@
 import React from 'react'
-import Github from '../../Icon-Component/github-component'
-import LinkedIn from '../../Icon-Component/linkdIn-component'
+import Github from '../../Icons/github-component'
+import LinkedIn from '../../Icons/linkdIn-component'
 import { motion } from 'framer-motion'
 import './off-site-links-component.scss'
 
