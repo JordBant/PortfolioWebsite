@@ -2,7 +2,14 @@
 
 .offsite-link{
     @include util.size(auto, auto, 0, 0);
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+
     .offsite-link-icon{
         @include util.size(45px, auto, 0, 0);
+        mix-blend-mode: difference;
+    }
+
+    &:hover{
+        transform: translateY(-7px);
     }
 }

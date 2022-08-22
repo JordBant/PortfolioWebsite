@@ -1,7 +1,7 @@
 @use '../../../util-styles/' as util;
 
 .nav-link{
-    @include util.setFont(2em util.$FONT-PAGE-TITLE, 400, util.$TEXT-PRIM);
+    @include util.setFont(2em util.$FONT-PRIM, 400, util.$TEXT-PRIM);
     padding: 5px;
     position: relative;
     overflow: hidden;

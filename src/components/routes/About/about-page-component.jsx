@@ -54,9 +54,9 @@ const AboutBody = ({backgroundActive}) => {
         opacity: 1,
         y: 0,
         transition: {
-            ease:[0.6,0.01,-0.05,0.95],
-            duration: 1.6,
-        }
+                ease:[0.6,0.01,-0.05,0.95],
+                duration: 1.6,
+            }
         }
     }
 
@@ -67,7 +67,7 @@ const AboutBody = ({backgroundActive}) => {
         initial="hidden"
         animate="show"
         >
-            <motion.h1 animate = "show" initial = "hidden" variants = {item}  className="about-salutations"> I'm <span className="name">Jordon</span> </motion.h1>
+            <motion.h1 animate = "show" initial = "hidden" variants = {item}  className="about-salutations"> I'm Jordon </motion.h1>
                 <motion.p  animate = "show" initial = "hidden" variants = {item} className="about-body-text">
                     I am a Frontend Web Developer with a Bachelors of Science in Computer Science. 
                     I have a strong drive for creating robust, beautiful and 

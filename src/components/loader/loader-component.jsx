@@ -19,7 +19,7 @@ const Loader = () => {
     <div className='loader'>
         <span className={`loader-icon ${active}`}>
             <Triangle 
-            color= "#ffffff"
+            color= "#000000"
             height={dimensions} 
             width={dimensions} 
             />

@@ -1,11 +1,15 @@
 @font-face {
-    font-family: 'Glacial Indifference';
+    font-family: 'Glacial Indifference Reg';
     src: url('../../public/Fonts/glacial-indifference/GlacialIndifference-Regular.otf');
+}
+@font-face {
+    font-family: 'Glacial Indifference Bold';
+    src: url('../../public/Fonts/glacial-indifference/GlacialIndifference-Bold.otf');
 }
 
 $BKGR-INIT: white;
 
-$BKGR-PRIM: linear-gradient(142deg, rgba(0,0,0,1) 33%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 55%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 73%);
+$BKGR-PRIM: linear-gradient(90deg, rgba(0,0,0,1) 52%, rgba(255,255,255,1) 52%);
 
 // linear-gradient(142deg, rgba(27,24,24,1) 34%, rgba(214,214,214,1) 34%, rgba(255,255,255,1) 59%, rgba(0,0,0,1) 59%, rgba(0,0,0,1) 84%, rgba(255,255,255,1) 84%, rgba(255,255,255,1) 99%, rgba(0,0,0,1) 99%);
 
@@ -26,14 +30,13 @@ $BKGR-PRIM: linear-gradient(142deg, rgba(0,0,0,1) 33%, rgba(255,255,255,1) 33%, 
 $BKGR-SEC: hsl(240, 19%, 23%);
 $TEXT-PRIM: hsl(0, 0%, 100%);
 
-$ICON-INACTIVE: hsla(210, 26%, 37%, 0.601);
+$CUBIC-BEZ1: 0.6, 0.01, -0.05, 0.95;
 
-$HTML-SHADE1: #e44b25;
-$HTML-SHADE2: #f16427;
-$HTML-FONT-COLOR1: #ebebeb;
-$HTML-FONT-COLOR2: #ffffff;
+$BKGR-POS-START: 75%; 
+$BKGR-SIZE: 350% 350%;
+
+$ICON-INACTIVE: hsla(210, 26%, 37%, 0.601);
 $FONT-BLEND-ALT: difference;
 
-$FONT-ABOUT-PARAGRAPH: 'Uchen', serif;
-$FONT-PAGE-TITLE: 'Glacial Indifference', monospace;
-$FONT-MY-NAME: 'Oleo Script Swash Caps', cursive;
+$FONT-PRIM: 'Glacial Indifference Reg', monospace;
+$FONT-PAGE-TITLE: 'Glacial Indifference Bold', monospace;
