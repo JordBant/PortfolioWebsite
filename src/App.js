@@ -6,6 +6,7 @@ import NavBar from "./components/Nav/nav-bar/nav-bar-component";
 import Projects from "./components/routes/Projects/projects";
 import Contact from "./components/routes/Contact/contact";
 import Loader from "./components/Loader/loader-component";
+import CustomCursor from './components/Custom-Cursor/custom-cursor-components';
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -22,12 +23,12 @@ const App = () => {
   return (
     <>
       <div className="App">
-
         {
           loading 
           ? <Loader/>
           :
           <>
+            <CustomCursor/>
             <NavBar/>
             <About backgroundActive= { backgroundActive }/>
             <Credentials/>

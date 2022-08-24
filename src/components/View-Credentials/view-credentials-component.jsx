@@ -6,7 +6,7 @@ const ViewCredentials = () => {
     <div className="view-credential">
         <p className="title">
             {/* Download Resume PDF */}
-            onHover play Download gif
+            View This Resume
         </p>
         <OptionsList/>
     </div>

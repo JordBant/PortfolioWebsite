@@ -1,11 +1,13 @@
 @use './util-styles/' as util;
-* {
+*{
     box-sizing: border-box;
     margin: 0;
+    cursor: none;
 }
 
 .App{
     @include util.flex(center, center, column, NULL, NULL);
     @include util.size(100vw, NULL, 0, 0);
+
     min-height: 100vh;
 }
