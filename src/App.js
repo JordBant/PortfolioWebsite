@@ -28,7 +28,6 @@ const App = () => {
           ? <Loader/>
           :
           <>
-            <CustomCursor/>
             <NavBar/>
             <About backgroundActive= { backgroundActive }/>
             <Credentials/>
