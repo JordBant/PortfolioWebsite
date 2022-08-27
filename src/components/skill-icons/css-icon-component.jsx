@@ -1,34 +1,34 @@
 const CSSIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="#e8e7e5" className= 'card-face'  viewBox="0 0 296297 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#e8e7e5" className= 'card-face'  viewBox="0 0 296297 333333" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd">
         <defs>
             <linearGradient id="id4" gradientUnits="userSpaceOnUse" x1="54128.7" y1="79355.5" x2="240318" y2="79355.5">
-                <stop offset="0" stop-color="#e8e7e5"/>
-                <stop offset="1" stop-color="#fff"/>
+                <stop offset="0" stopColor="#e8e7e5"/>
+                <stop offset="1" stopColor="#fff"/>
             </linearGradient>
             <linearGradient id="id5" gradientUnits="userSpaceOnUse" x1="62019.3" y1="202868" x2="233515" y2="202868">
-                <stop offset="0" stop-color="#e8e7e5"/>
-                <stop offset="1" stop-color="#fff"/>
+                <stop offset="0" stopColor="#e8e7e5"/>
+                <stop offset="1" stopColor="#fff"/>
             </linearGradient>
             <linearGradient id="id6" gradientUnits="userSpaceOnUse" x1="104963" y1="99616.9" x2="104963" y2="171021">
-                <stop offset="0" stop-color="#d1d3d4"/>
-                <stop offset=".388" stop-color="#d1d3d4"/>
-                <stop offset="1" stop-color="#d1d3d4"/>
+                <stop offset="0" stopColor="#d1d3d4"/>
+                <stop offset=".388" stopColor="#d1d3d4"/>
+                <stop offset="1" stopColor="#d1d3d4"/>
             </linearGradient>
             <linearGradient id="id7" gradientUnits="userSpaceOnUse" x1="194179" y1="61185.8" x2="194179" y2="135407"/>
                 <mask id="id0">
                     <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="104963" y1="99616.9" x2="104963" y2="171021">
-                        <stop offset="0" stop-opacity="0" stop-color="#fff"/>
-                        <stop offset=".388" stop-color="#fff"/>
-                        <stop offset="1" stop-opacity=".831" stop-color="#fff"/>
+                        <stop offset="0" stopOpacity="0" stopColor="#fff"/>
+                        <stop offset=".388" stopColor="#fff"/>
+                        <stop offset="1" stopOpacity=".831" stopColor="#fff"/>
                     </linearGradient>
                     <path fill="url(#id1)" d="M61737 99467h86453v71704H61737z"/>
                 </mask>
                 <mask id="id2">
                     <linearGradient id="id3" gradientUnits="userSpaceOnUse" x1="194179" y1="61185.8" x2="194179" y2="135407">
-                        <stop offset="0" stop-opacity="0" stop-color="#fff"/>
-                        <stop offset=".388" stop-color="#fff"/>
-                        <stop offset="1" stop-opacity=".831" stop-color="#fff"/>
+                        <stop offset="0" stopOpacity="0" stopColor="#fff"/>
+                        <stop offset=".388" stopColor="#fff"/>
+                        <stop offset="1" stopOpacity=".831" stopColor="#fff"/>
                     </linearGradient>
                     <path fill="url(#id3)" d="M147890 61036h92578v74521h-92578z"/>
                 </mask>

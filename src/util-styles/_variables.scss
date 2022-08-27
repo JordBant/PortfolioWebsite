@@ -30,7 +30,7 @@ $BKGR-PRIM: linear-gradient(90deg, rgba(0,0,0,1) 52%, rgba(255,255,255,1) 52%);
 $BKGR-SEC: hsl(240, 19%, 23%);
 $TEXT-PRIM: hsl(0, 0%, 100%);
 
-$CUBIC-BEZ1: 0.6, 0.01, -0.05, 0.95;
+$CUBIC-BEZ1: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 $BKGR-POS-START: 75%; 
 $BKGR-SIZE: 350% 350%;
