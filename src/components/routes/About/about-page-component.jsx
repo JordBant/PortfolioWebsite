@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 
 import './about-page.scss'
 import PageTitle from '../../Page-Title/page-title-component'
+import Particle from '../../Particles'
 
 const AboutCTA = () => {
     const container = {
@@ -62,6 +63,7 @@ const AboutBody = ({backgroundActive}) => {
 
     return(
     <div className={`about-body-container ${backgroundActive}`}>
+        <Particle/>
         <motion.div className="about-body"
         variants={container}
         initial="hidden"
