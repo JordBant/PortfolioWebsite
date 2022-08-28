@@ -1,19 +1,14 @@
 import PageTitle from '../../Page-Title/page-title-component'
-import ViewCredentials from '../../View-Credentials/view-credentials-component'
+import SideTitle from '../../Side-Titles/side-title-component'
 import SkillCard from '../../Skill-Icons/skillCard-component'
-import CustomCursor from '../../Custom-Cursor/custom-cursor-components'
 import './credentials-page.scss'
 
 const Credentials = () => {
   return (
     <section className='tech-skill-wrapper' >
-      <div className="view-credential-container">
-        {/* <CustomCursor /> */}
-        <ViewCredentials />
-      </div>
-
+      <SideTitle/>
+      <PageTitle pageTitleName = 'Skills' />
       <div className="skill-icon-container">
-        <PageTitle pageTitleName = 'Skills' />
 
         <div className="skill-icon-list">
           <SkillCard skillName = 'HTML' />

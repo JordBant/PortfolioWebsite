@@ -3,9 +3,11 @@
 .nav-bar{
     @include util.size(100%, auto, 0, 20px);
     @include util.flex(flex-end, center, NULL, NULL, NULL);
+
+    mix-blend-mode: difference;
     top: 0;
     position: fixed;
-    z-index: 9999;
+    z-index: 9990;
 
     .nav-list{
         @include util.size(45%, auto, 0 100px 0 0, 0);

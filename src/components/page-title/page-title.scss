@@ -14,7 +14,6 @@
         @include util.setFont(10em util.$FONT-PAGE-TITLE, 400, rgba(255, 255, 255, 0.5));
         // min(80px, 10em)
         mix-blend-mode: util.$FONT-BLEND-ALT;
-
         text-align: center;
     }
 }
