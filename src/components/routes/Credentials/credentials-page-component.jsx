@@ -4,9 +4,15 @@ import SkillCard from '../../Skill-Icons/skillCard-component'
 import './credentials-page.scss'
 
 const Credentials = () => {
+  const optionArr = [
+    'download',
+    'print',
+    'spectacle',
+  ]
+
   return (
     <section className='tech-skill-wrapper' >
-      <SideTitle/>
+      <SideTitle iconArr={optionArr} title = 'View My Resume' />
       <PageTitle pageTitleName = 'Skills' />
       <div className="skill-icon-container">
 
