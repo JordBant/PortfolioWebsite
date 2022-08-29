@@ -19,8 +19,6 @@ const OptionListIcon = ({icon, optionText}) => {
         return <Spectacles/>
       case 'video':
         return <Video/>
-      case 'web':
-        return <Internet/>
       case 'code':
         return <Github/>
     }
@@ -30,7 +28,6 @@ const OptionListIcon = ({icon, optionText}) => {
       {
         renderOption(icon)
       }
-      <p className="option-text"> { optionText } </p>
     </li>
   )
 }

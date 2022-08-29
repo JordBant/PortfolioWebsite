@@ -1,5 +1,0 @@
-@use '../../../util-styles/' as util;
-
-.svg-icon svg{
-    @include util.size(100%, 100%, 0, 0);
-}

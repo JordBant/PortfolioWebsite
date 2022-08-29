@@ -2,20 +2,22 @@
 
 .side-title-wrapper{        
     @include util.size(auto, 100%, 0, 15px 0);
-    @include util.flex(center, center, column, NULL, NULL);
+    @include util.flex(flex-start, center, column, NULL, NULL);
     
     background: white;
     position: relative;
     transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: 2px solid brown;
 
     & > *{
         margin: 5px 0;
     }
 
     .title{
-        @include util.size(100%, 100%, 10px 0, 0);
-        @include util.setFont(4em util.$FONT-PRIM, 400, rgb(255, 255, 255));
+        @include util.setFont(250% util.$FONT-PRIM, 400, rgb(255, 255, 255));
 
+        // clamp(55px)
+        white-space: nowrap;
         line-height: 2;
         position: relative;
         writing-mode: vertical-lr;

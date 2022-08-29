@@ -18,17 +18,17 @@
 
 .options-list{
     @include util.size(100px, 0, 0, 0);
-    @include util.flex( flex-start, center, column, NULL, NULL);
+    @include util.flex(flex-start, center, column, NULL, NULL);
 
     mix-blend-mode: difference;
     max-height: 150px;
     list-style: none;
     transition: 0.5s all ease-in-out;
-    overflow: hidden;
+    // overflow: hidden;
+    border: 2px solid;
 
     .options-icon-container{
         @include util.size(auto, 30px, 10px 0, 0);
-        position: relative;
 
         .options-icon{
             @include util.size(100%, 100%, 0, 0);

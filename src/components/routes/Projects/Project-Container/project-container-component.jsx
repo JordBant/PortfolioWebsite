@@ -4,7 +4,8 @@ import './project-container.scss'
 
 const ProjectContainer = () => {
     const optionsArr = [
-        'web', 'code', 'video'
+        'video',
+        'code' 
     ]
   return (
     <div className='project-container'>
