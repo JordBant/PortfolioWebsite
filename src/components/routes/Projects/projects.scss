@@ -3,7 +3,7 @@
 .project-main{
     @include util.size(100%, 100vh, 0, 0);
     position: relative;
-    background: black;
+    background: white;
     
     .project-wrapper{
         @include util.size(75%, 100%, 0, 0);
