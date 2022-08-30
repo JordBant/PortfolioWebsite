@@ -1,12 +1,4 @@
-import CSSIcon from "./css-icon-component"
-import ExpressIcon from "./express-icon-component"
-import GitIcon from "./git-icon-component"
-import GulpIcon from "./gulp-icon-component"
-import HTMLIcon from "./html-icon-component"
-import JSIcon from "./javascript-icon-component"
-import NodeIcon from "./node-icon-component"
-import ReactIcon from "./react-icon-component"
-import SASSIcon from "./sass-icon-component"
+import Icon from "../Icons/Icon-Component/icon-component"
 import './skill-card.scss'
 
 let fontColor
@@ -18,48 +10,46 @@ const SkillCard = ({skillName}) => {
         switch (icon) {
             case 'css':
                 fontColor = '#2062af'
-                return <CSSIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
 
             case 'express.js':
                 fontColor = '#3c9cd7'
-                return <ExpressIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
 
             case 'git':
                 fontColor = '#f05233'
-                return <GitIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
 
             case 'gulp.js':
                 fontColor = '#da4446'
-                return <GulpIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
 
             case 'html':
                 fontColor = '#e44b25'
-                return <HTMLIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
 
             case 'javascript':
                 fontColor = '#f7dd1d'
-                return <JSIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
 
             case 'node.js':
                 fontColor = '#3c873a'
-                return <NodeIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
 
             case 'react.js':
                 fontColor = '#00d9ff'
-                return <ReactIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
                 
             case 'sass':
                 fontColor = '#cf6399'
-                return <SASSIcon/>
+                return <Icon compClass = 'skill-icon' iconName = {`${icon}`}/> 
         }
     }
 
     return (
     <div className="icon-container">
-        <div className="content-wrapper">
-            { renderIcon() }
-            <hr className="y-line" style = {{ background: `${fontColor}` }}/>
-        </div>
+        { renderIcon() }
+        <hr className="y-line" style = {{ background: `${fontColor}` }}/>
         <p className = 'side-text'> {skillName} </p>
     </div>
   )
