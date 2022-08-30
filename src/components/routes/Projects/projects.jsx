@@ -1,6 +1,7 @@
 import React from 'react'
+import Icon from '../../Icons/Icon-Component/icon-component'
 import PageTitle from '../../Page-Title/page-title-component'
-import ProjectContainer from './Project-Container/project-container-component'
+// import ProjectContainer from './Project-Container/project-container-component'
 import './projects.scss'
 
 const Projects = () => {
@@ -8,7 +9,7 @@ const Projects = () => {
     <>
       <div className='project-main'>
         <div className="project-wrapper">
-          <ProjectContainer/>
+          <Icon compClass= 'project-div' iconName = 'print' />
         </div>
         <PageTitle pageTitleName = 'Project' />
       </div>

@@ -7,6 +7,12 @@
     
     .project-wrapper{
         @include util.size(75%, 100%, 0, 0);
-        border: 2px solid red;
+        @include util.flex(center, center, NULL, NULL, NULL);
+        border: 20px solid cyan;
+        .project-div{
+            $icon-size: 500px;
+            @include util.size($icon-size,$icon-size, 0, 0);
+            background: grey;
+        }
     }
 }
