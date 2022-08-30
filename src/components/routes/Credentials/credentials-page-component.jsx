@@ -12,7 +12,7 @@ const Credentials = () => {
 
   return (
     <section className='tech-skill-wrapper' >
-      <SideTitle iconArr={optionArr} title = 'View My Resume' />
+      <SideTitle iconNameArr={optionArr} title = 'View My Resume' />
       <PageTitle pageTitleName = 'Skills' />
       <div className="skill-icon-container">
 

@@ -1,26 +1,31 @@
+/* eslint-disable default-case */
+
 import React, { useState } from 'react'
 import KobabDropdown from './kobab-dropdown-component'
-import OptionListIcon from './options-list-icon-component'
+import Icon from '../Icons/Icon-Component/icon-component';
 import './options-list.scss'
 
-const OptionsList = ({iconArr}) => {
+const OptionsList = ({iconNameArr}) => {
   const [dropdownActive, setDropdownActive] = useState(false);
-  const isActiveDropdown = dropdownActive ? 'list-active' : '' ;
-  const isActiveKobab = dropdownActive ? 'kobab-active' : '' ;
   const handleDropdown = () => setDropdownActive(!dropdownActive)
 
-  return (
-    <>
-      <KobabDropdown activeDropdown = {isActiveKobab} clickEvent = {handleDropdown} />
-      <ul className={`options-list ${isActiveDropdown}`}>
-        {
-          iconArr.map((icon, key) => {
-          return <OptionListIcon key = {key} icon = {icon} />
-          })
-        }
-      </ul>
-    </>
-  )
-}
+  const isActiveDropdown = dropdownActive ? 'list-active' : '' ;
+  const isActiveKobab = dropdownActive ? 'kobab-active' : '' ;
+  
+return (
+  <>
+    <KobabDropdown activeDropdown = {isActiveKobab} clickEvent = {handleDropdown} />
+    <ul className={`options-list ${isActiveDropdown}`}>
+      {
+        iconNameArr.map((iconName, key) => {
+        return (
+        <li key = {key} className = 'option'> 
+          <Icon compClass = 'option-icon' iconName = {iconName} />
+        </li>
+        )})
+      }
+    </ul>
+  </>
+)}
 
 export default OptionsList
