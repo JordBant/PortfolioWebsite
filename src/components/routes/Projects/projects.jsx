@@ -9,7 +9,7 @@ const Projects = () => {
     <>
       <div className='project-main'>
         <div className="project-wrapper">
-          <Icon compClass= 'project-div' iconName = 'print' />
+          <Icon compClass= 'project-div' iconName = 'express' />
         </div>
         <PageTitle pageTitleName = 'Project' />
       </div>
