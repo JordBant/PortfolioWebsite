@@ -4,6 +4,17 @@ import SkillCard from '../../Skill-Icons/skillCard-component'
 import './credentials-page.scss'
 
 const Credentials = () => {
+  const skillIconArr = [
+    'HTML', 
+    'CSS', 
+    'Javascript', 
+    'React.js',
+    'SASS', 
+    'Node.js',
+    'Gulp.js',
+    'Git', 
+    'Express.js'
+  ]
   const optionArr = [
     'download',
     'print',
@@ -17,15 +28,9 @@ const Credentials = () => {
           <PageTitle pageTitleName = 'Skills' />
           <div className="skill-icon-container">
             <div className="skill-icon-list">
-              <SkillCard skillName = 'HTML' />
-              <SkillCard skillName = 'CSS' />
-              <SkillCard skillName = 'Javascript' />
-              <SkillCard skillName = 'React.js' />
-              <SkillCard skillName = 'SASS' />
-              <SkillCard skillName = 'Node.js' />
-              <SkillCard skillName = 'Gulp.js' />
-              <SkillCard skillName = 'Git' />
-              <SkillCard skillName = 'Express.js' />
+              {
+                skillIconArr.map((skill, key) => <SkillCard skillName = {skill} key = {key} />)
+              }
             </div>
           </div>
         </>

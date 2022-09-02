@@ -1,19 +1,19 @@
 import React from 'react'
+import SideTitleLayout from '../../../Layout/Side-Titled-Container/side-titled-container-component'
 import SideTitle from '../../../Side-Titles/side-title-component'
 import './project-container.scss'
 
-const ProjectContainer = () => {
-    const optionsArr = [
-        'video',
-        'code' 
-    ]
+const ProjectContainer = ({projectName, projectLinks}) => {
+  const { webLink, demoLink, codeLink } = projectLinks
+  const optionsArr = [
+    'video',
+    'code',
+    'host'
+  ]
   return (
-    <div className='project-container'>
-        <SideTitle iconArr={optionsArr} title = 'URL Shortener' />
-        <div className="project-div">
-            Hi im a projectc
-        </div>
-    </div>
+    <SideTitleLayout iconNameArr={optionsArr} title = {projectName} >
+
+    </SideTitleLayout>
   )
 }
 
