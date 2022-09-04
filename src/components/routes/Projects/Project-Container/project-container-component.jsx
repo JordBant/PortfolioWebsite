@@ -1,6 +1,5 @@
 import React from 'react'
 import SideTitleLayout from '../../../Layout/Side-Titled-Container/side-titled-container-component'
-import SideTitle from '../../../Side-Titles/side-title-component'
 import './project-container.scss'
 
 const ProjectContainer = ({projectName, projectLinks}) => {
