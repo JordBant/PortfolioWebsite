@@ -1,7 +1,0 @@
-@use '../../../../util-styles/' as util;
-
-.project-container{
-    @include util.size(400px, 100%, 0, 0);
-    @include util.flex(space-between, center, NULL, NULL, NULL);
-    border: 2px solid blue;
-}

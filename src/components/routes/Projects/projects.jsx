@@ -1,11 +1,10 @@
 import React from 'react'
 import PageTitle from '../../Page-Title/page-title-component'
-import SideTitleLayout from '../../../Layout/Side-Titled-Container/side-titled-container-component'
+import SideTitleLayout from '../../Layout/Side-Titled-Container/side-titled-container-component'
 import './projects.scss'
-import './project-container.scss'
 
 const ProjectContainer = ({projectName, projectLinks}) => {
-  const { webLink, demoLink, codeLink } = projectLinks
+  const { link:{webLink, demoLink, codeLink} } = projectLinks
   //  links will be paired to icon by sending a key-valuw pair of icon-type:link-of-icon, 
   const optionsArr = [
     'video',
@@ -38,7 +37,7 @@ const Projects = () => {
       }
     },
     {
-      name: 'Productivity Portal',
+      name:'Productivity Portal',
       link: {
         webLink: '#', 
         demoLink: '#', 
@@ -46,7 +45,7 @@ const Projects = () => {
       }
     },
     {
-      name:'Web Application',
+      name:'Weather App',
       link: {
         webLink: '#', 
         demoLink: '#', 
@@ -58,6 +57,7 @@ const Projects = () => {
   return (
       <div className='project-main'>
         {projects.map((project, key) => {
+          console.log(project)
           return <ProjectContainer key = { key } projectName = {project.name} projectLinks = {project.link} />
           })
         }
