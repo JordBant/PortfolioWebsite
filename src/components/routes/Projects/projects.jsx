@@ -12,9 +12,10 @@ const ProjectContainer = ({projectName, projectLinks}) => {
     'host'
   ]
   return (
-    <SideTitleLayout iconNameArr={optionsArr} title = {projectName} >
+    <section className='project-card'>
+      <SideTitleLayout iconNameArr={optionsArr} title = {projectName} />
+    </section>
 
-    </SideTitleLayout>
   )
 }
 
@@ -56,11 +57,11 @@ const Projects = () => {
 
   return (
       <div className='project-main'>
-        {projects.map((project, key) => {
+        {/* {projects.map((project, key) => {
           console.log(project)
           return <ProjectContainer key = { key } projectName = {project.name} projectLinks = {project.link} />
           })
-        }
+        } */}
         <PageTitle pageTitleName = 'Project' />
       </div>
   )
