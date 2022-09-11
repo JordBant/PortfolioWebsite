@@ -4,7 +4,7 @@ const Internet = () => {
   return (
 	
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 339.033 339.033" fill='black' xmlSpace="preserve">
+	 viewBox="0 0 339.033 339.033" fill = '#ffffff' xmlSpace="preserve">
 	<g>
 		<g>
 			<path d="M169.516,0C76.044,0,0,76.045,0,169.517c0,93.471,76.044,169.516,169.516,169.516s169.516-76.044,169.516-169.516

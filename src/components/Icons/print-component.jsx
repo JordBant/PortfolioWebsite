@@ -5,7 +5,7 @@
 	  return (
 		
 	<svg className='options-icon' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-		viewBox="0 0 455 455" fill = '#000000'>
+		viewBox="0 0 455 455" fill = '#ffffff'>
 		<g>
 			<rect x="77.5" y="7.5" width="300" height="62.5"/>
 			<path d="M92.5,447.5h270V255h-270V447.5z M127.5,295h200v30h-200V295z M127.5,365h200v30h-200V365z"/>

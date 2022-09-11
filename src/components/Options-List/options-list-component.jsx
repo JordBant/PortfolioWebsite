@@ -17,9 +17,9 @@ return (
     <KobabDropdown activeDropdown = {isActiveKobab} clickEvent = {handleDropdown} />
     <ul className={`options-list ${isActiveDropdown}`}>
       {
-        iconNameArr.map((iconName, key) => {
+        iconNameArr.map((iconName) => {
         return (
-        <li key = {key} className = 'option'> 
+        <li key = {iconName} className = 'option'> 
           <Icon compClass = 'option-icon' iconName = {iconName} />
         </li>
         )})

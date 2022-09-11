@@ -1,7 +1,7 @@
 @use '../../util-styles/' as util;
 
 .kobab-container{
-    @include util.size(50%, auto, 0, 0);
+    @include util.size(40%, auto, 0, 0);
     mix-blend-mode: difference;
     transform: rotate(90deg);
     transition: all 0.4s util.$CUBIC-BEZ1;
@@ -25,9 +25,8 @@
     overflow: hidden;
 
     .option{
-        $optionSize: 20%;
+        $optionSize: 35%;
         @include util.size($optionSize, $optionSize, 10px, 0);
-        border: 2px solid blue;
 
         .option-icon{
             @include util.size(100%, 100%, 0, 0);

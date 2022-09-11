@@ -18,13 +18,12 @@ const Credentials = () => {
   const optionArr = [
     'download',
     'print',
-    'spectacle',
+    'spectacle'
   ]
 
   return (
     <section className='credentials-main' >
       <SideTitleLayout iconNameArr = {optionArr} title = 'View My Resume'>
-        <>
           <PageTitle pageTitleName = 'Skills' />
           <div className="skill-icon-container">
             <div className="skill-icon-list">
@@ -33,7 +32,6 @@ const Credentials = () => {
               }
             </div>
           </div>
-        </>
       </SideTitleLayout>
     </section>
   )
