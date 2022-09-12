@@ -13,9 +13,11 @@ const ProjectContainer = ({ projectName }) => {
     'host'
   ]
   return (
-    <section className='project-card'>
-      <SideTitleLayout iconNameArr = { optionsArr } title = { projectName } />
-    </section>
+    <div className="project-card">
+      <SideTitleLayout iconNameArr = { optionsArr } title = { projectName } className = "project-layout">
+        <div className="card-body"/>
+      </SideTitleLayout>
+    </div>
   )
 }
 
