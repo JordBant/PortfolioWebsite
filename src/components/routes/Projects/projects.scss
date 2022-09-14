@@ -15,7 +15,6 @@
             position: relative;
             .card-body{
                 @include util.size(100%, 100%, 0, 0);
-                background: url(../../../assests/placeholder.png) center center/cover no-repeat;
                 filter: blur(5px);
                 z-index: 0;
                 &::before{

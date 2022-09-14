@@ -3,7 +3,7 @@ import PageTitle from '../../Page-Title/page-title-component'
 import SideTitleLayout from '../../Layout/Side-Titled-Container/side-titled-container-component'
 import './projects.scss'
 
-const ProjectContainer = ({ projectName }) => {
+const ProjectContainer = ({ projectName, bgImage }) => {
   // const { link: { webLink, demoLink, codeLink } } = projectLinks
 
   //  links will be paired to icon by sending a key-valuw pair of icon-type:link-of-icon, 
@@ -15,7 +15,10 @@ const ProjectContainer = ({ projectName }) => {
   return (
     <div className="project-card">
       <SideTitleLayout iconNameArr = { optionsArr } title = { projectName } className = "project-layout">
-        <div className="card-body"/>
+        <div className="card-body" style = {{
+          background: 'url(../../../assests/placeholder.png) center center/cover no-repeat;'
+          // {`url(../../../assests/placeholder.png) center center/cover no-repeat`}
+        }} />
       </SideTitleLayout>
     </div>
   )
@@ -62,7 +65,7 @@ const Projects = () => {
         <div className="project-wrapper">
           {/* <ProjectContainer/> */}
           {projects.map((project, key) => {
-            return <ProjectContainer key = { key } projectName = {project.name} projectLinks = {project.link} />
+            return <ProjectContainer bgImage = '../../../assests/placeholder.png' key = { key } projectName = {project.name} projectLinks = {project.link} />
             })
           }
         </div>
