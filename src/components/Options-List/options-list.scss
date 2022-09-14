@@ -25,7 +25,7 @@
     overflow: hidden;
 
     .option{
-        $optionSize: 35%;
+        $optionSize: 30%;
         @include util.size($optionSize, $optionSize, 10px, 0);
 
         .option-icon{
@@ -35,5 +35,5 @@
 }
 
 .list-active{
-    max-height: 900px;
+    max-height: 9000px;
 }

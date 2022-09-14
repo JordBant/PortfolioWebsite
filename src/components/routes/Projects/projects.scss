@@ -12,23 +12,18 @@
 
         .project-card{
             $cardSize: 50%;
-            background: url(../../../assests/placeholder.png) center center/cover no-repeat;
             position: relative;
             .card-body{
                 @include util.size(100%, 100%, 0, 0);
-                border: 2px solid red;
-                // background-color: util.$BKGR-PROJ-CARD;
-                // filter: blur(20px);
-                // &::before{
-                //     @include util.pseudoMask(rgba(255, 255, 255, 0.828));
-                //     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-                //     filter: blur(10px);
-                // }
+                background: url(../../../assests/placeholder.png) center center/cover no-repeat;
+                filter: blur(5px);
+                z-index: 0;
+                &::before{
+                    @include util.pseudoMask(util.$BKGR-PROJ-CARD);
+                    // box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+                    // background-color: util.$BKGR-PROJ-CARD;
+                }
             }
         }
     }
-    // .project-card{
-    //     @include util.size(100px, 100px, 0, 0);
-    //     border: 20px solid cyan;
-    // }
 }
