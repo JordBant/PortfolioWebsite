@@ -1,0 +1,41 @@
+@use '../../../util-styles/' as util;
+
+.layout-wrapper{
+    @include util.size(100%, 100%, 0, 0);
+    @include util.flex(flex-start, center, NULL, NULL, NULL);
+    position: relative;
+
+    .side-title{        
+        @include util.size(100px, 100%, 0, 15px 0);
+        @include util.flex(flex-start, center, column, NULL, NULL);
+
+        background-color: util.$BKGR-PROJ-CARD;
+        position: absolute;
+        transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    
+        & > *{margin: 5px 0;}
+    
+        .title{
+            @include util.setFont(250% util.$FONT-PRIM, 400, rgb(255, 255, 255));
+    
+            white-space: nowrap;
+            line-height: 2; 
+            writing-mode: vertical-lr;
+            mix-blend-mode: difference;
+        }
+    
+        &::before{
+            @include util.pseudoMask(black);
+            transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+            left: -100%;
+        }
+    }
+    &:hover{
+        .side-title::before{
+            left: 0;
+        }
+    }
+}
