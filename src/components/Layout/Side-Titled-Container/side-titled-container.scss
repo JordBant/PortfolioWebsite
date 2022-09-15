@@ -4,11 +4,12 @@
     @include util.size(100%, 100%, 0, 0);
     @include util.flex(flex-start, center, NULL, NULL, NULL);
     position: relative;
-
+    
     .side-title{        
         @include util.size(100px, 100%, 0, 15px 0);
         @include util.flex(flex-start, center, column, NULL, NULL);
-
+        
+        z-index: 9999;
         background-color: white;
         position: relative;
         transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -18,7 +19,10 @@
     
         .title{
             @include util.setFont(250% util.$FONT-PRIM, 400, rgb(255, 255, 255));
-    
+
+            padding-top: 10px;
+            top: 0;
+            position: absolute;
             white-space: nowrap;
             line-height: 2; 
             writing-mode: vertical-lr;
