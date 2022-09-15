@@ -7,10 +7,12 @@ const SideTitleLayout = ({iconNameArr, title, children}) => {
     <div className= "layout-wrapper">
         <div className="side-title">
             <OptionsList iconNameArr = {iconNameArr} />
-            <p className="title">
-                {/* Download Resume PDF */}
-                {title}
-            </p>
+            <div className="tite-container">
+              <p className="title">
+                  {/* Download Resume PDF */}
+                  {title}
+              </p>
+            </div>
         </div>
         {children}
     </div>

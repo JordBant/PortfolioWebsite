@@ -16,13 +16,8 @@
         overflow: hidden;
     
         & > *{margin: 5px 0;}
-    
         .title{
             @include util.setFont(250% util.$FONT-PRIM, 400, rgb(255, 255, 255));
-
-            padding-top: 10px;
-            top: 0;
-            position: absolute;
             white-space: nowrap;
             line-height: 2; 
             writing-mode: vertical-lr;
@@ -34,6 +29,11 @@
             transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
             left: -100%;
         }
+        // --------Kobab Container-------- //
+        .kobab-container{
+            border: green 2px solid;
+        }
+        // ------------------------------ //
     }
     &:hover{
         .side-title::before{
