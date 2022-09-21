@@ -2,27 +2,52 @@
 
 .project-main{
     @include util.size(100%, 100vh, 0, 0);
+    @include util.flex(flex-start, center, row, NULL, NULL);
     position: relative;
     background: white;
+    border: 2px solid green;
 
     .project-wrapper{
         @include util.size(80%, 100vh, 0, 0);
-        display: grid;
-        grid-template: 1fr 1fr / 1fr 1fr ;
-        
-        .project-card{
-            border: 2px solid green;
-            .card-body{
-                @include util.size(100%, 100%, 0, 0);
-                position: relative;
-                border: 2px solid green;
-                background: url(../../../assests/placeholder.png) center center/cover no-repeat;
-                filter: blur(5px);
+        overflow: hidden;
+        position: relative;
 
-                &::before{
-                    @include util.pseudoMask(util.$BKGR-PROJ-CARD);
+        .carousel-container{
+            @include util.size(100vw, 100%, 0, 0);
+            @include util.flex(space-around, center, NULL, NULL, NULL);
+            position: absolute;
+
+            .project-card{
+                @include util.size(370px, 70%, 0, 0);
+                border: 2px solid green;
+                
+                .card-body{
+                    @include util.size(100%, 100%, 0, 0);
+                    position: relative;
+                    background: url(../../../assests/placeholder.png) center no-repeat;
+                    filter: blur(2.5px);
+    
+                    &::before{
+                        @include util.pseudoMask(util.$BKGR-PROJ-CARD);
+                        z-index: -1px;
+                    }
                 }
             }
+        }
+    }
+    .cycler{
+        @include util.size(0, 45%, 0, 0);
+        background-color: rgb(0, 0, 0);
+        transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        border: none;
+    }
+
+    &:hover{
+        .cycler{
+            border-top-right-radius: 200px;
+            border-bottom-right-radius: 200px;
+            background-color: black;
+            width: 55px;
         }
     }
 }

@@ -63,12 +63,15 @@ const Projects = () => {
   return (
       <div className='project-main'>
         <div className="project-wrapper">
-          {/* <ProjectContainer/> */}
-          {projects.map((project, key) => {
-            return <ProjectContainer bgImage = '../../../assests/placeholder.png' key = { key } projectName = {project.name} projectLinks = {project.link} />
-            })
-          }
+          <div className="carousel-container">
+            {/* <ProjectContainer/> */}
+            {projects.map((project, key) => {
+              return <ProjectContainer bgImage = '../../../assests/placeholder.png' key = { key } projectName = {project.name} projectLinks = {project.link} />
+              })
+            }
+          </div>
         </div>
+        <button className="cycler"></button>
         <PageTitle pageTitleName = 'Project' />
       </div>
   )
