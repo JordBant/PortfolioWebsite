@@ -36,17 +36,22 @@
         }
     }
     .cycler{
-        @include util.size(0, 45%, 0, 0 20px);
-        background-color: rgb(0, 0, 0);
+        @include util.size(50px, 0, 0 20px, 0);
         transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        background-color: rgb(0, 0, 0);
         border: none;
+
+        .arrow{
+            @include util.size(100%, 100%, 0, 0);
+            transform: rotate(90deg);
+            mix-blend-mode: difference;
+        }
     }
 
     &:hover{
         .cycler{
             border-radius: 200px;
-            background-color: black;
-            width: 70px;
+            height: 25%;
         }
     }
 }

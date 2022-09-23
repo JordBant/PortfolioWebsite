@@ -1,6 +1,7 @@
 import React from 'react'
 import PageTitle from '../../Page-Title/page-title-component'
 import SideTitleLayout from '../../Layout/Side-Titled-Container/side-titled-container-component'
+import Icon from '../../Icons/Icon-Component/icon-component'
 import './projects.scss'
 
 const ProjectContainer = ({ projectName, bgImage }) => {
@@ -71,7 +72,9 @@ const Projects = () => {
             }
           </div>
         </div>
-        <button className="cycler"></button>
+        <button className="cycler">
+          <Icon compClass = 'arrow' iconName = 'arrow' />
+        </button>
         <PageTitle pageTitleName = 'Project' />
       </div>
   )
