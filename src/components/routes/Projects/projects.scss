@@ -36,7 +36,7 @@
         }
     }
     .cycler{
-        @include util.size(0, 45%, 0, 0);
+        @include util.size(0, 45%, 0, 0 20px);
         background-color: rgb(0, 0, 0);
         transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
         border: none;
@@ -44,10 +44,9 @@
 
     &:hover{
         .cycler{
-            border-top-right-radius: 200px;
-            border-bottom-right-radius: 200px;
+            border-radius: 200px;
             background-color: black;
-            width: 55px;
+            width: 70px;
         }
     }
 }

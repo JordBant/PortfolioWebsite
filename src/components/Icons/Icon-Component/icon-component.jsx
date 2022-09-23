@@ -10,6 +10,7 @@ import JSIcon from '../../Skill-Icons/javascript-icon-component'
 import NodeIcon from '../../Skill-Icons/node-icon-component'
 import ReactIcon from '../../Skill-Icons/react-icon-component'
 import SASSIcon from '../../Skill-Icons/sass-icon-component'
+import Arrow from '../arrow'
 import Download from '../download-component'
 import Github from '../github-component'
 import Internet from '../internet-component'
@@ -26,6 +27,8 @@ const Icon = ({iconName, compClass}) => {
         switch (newIcon) {
             case 'print':
                 return <Print/>
+            case 'arrow':
+                return <Arrow/>
             case 'download':
                 return <Download/>
             case 'spectacle':
