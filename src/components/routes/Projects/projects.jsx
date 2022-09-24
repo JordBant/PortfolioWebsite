@@ -63,6 +63,9 @@ const Projects = () => {
 
   return (
       <div className='project-main'>
+        <button className="cycler">
+          <Icon compClass = 'arrow' iconName = 'arrow' />
+        </button>
         <div className="project-wrapper">
           <div className="carousel-container">
             {/* <ProjectContainer/> */}

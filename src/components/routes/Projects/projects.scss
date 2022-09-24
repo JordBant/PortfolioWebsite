@@ -5,10 +5,9 @@
     @include util.flex(flex-start, center, row, NULL, NULL);
     position: relative;
     background: white;
-    border: 2px solid green;
 
     .project-wrapper{
-        @include util.size(80%, 100vh, 0, 0);
+        @include util.size(75%, 100vh, 0, 0);
         overflow: hidden;
         position: relative;
 
@@ -19,22 +18,34 @@
 
             .project-card{
                 @include util.size(370px, 70%, 0, 0);
-                border: 2px solid green;
+                overflow: hidden;
                 
                 .card-body{
                     @include util.size(100%, 100%, 0, 0);
                     position: relative;
                     background: url(../../../assests/placeholder.png) center no-repeat;
+                    transition: 1.2s all cubic-bezier(0.075, 0.82, 0.165, 1);
                     filter: blur(2.5px);
     
                     &::before{
                         @include util.pseudoMask(util.$BKGR-PROJ-CARD);
-                        z-index: -1px;
+                        transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+                    }
+                }
+                &:hover{
+                    .card-body{
+                        transform: scale(1.1);
+                        filter: blur(15px);
+                    }
+                    .card-body::before{
+                        @include util.pseudoMask(rgba(255, 255, 255, 0.462));
                     }
                 }
             }
         }
     }
+
+    .cycler:first-child .arrow{ transform: rotate(-90deg); }
     .cycler{
         @include util.size(50px, 0, 0 20px, 0);
         transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -51,7 +62,7 @@
     &:hover{
         .cycler{
             border-radius: 200px;
-            height: 25%;
+            height: 17%;
         }
     }
 }

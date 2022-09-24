@@ -9,7 +9,7 @@
         @include util.size(100px, 100%, 0, 15px 0);
         @include util.flex(flex-start, center, column, NULL, NULL);
         
-        z-index: 9999;
+        z-index: 1;
         background-color: white;
         position: relative;
         transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
