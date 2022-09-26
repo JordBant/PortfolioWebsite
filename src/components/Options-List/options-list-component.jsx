@@ -13,9 +13,9 @@ const OptionsList = ({iconNameArr}) => {
   const isActiveKobab = dropdownActive ? 'kobab-active' : '' ;
   
 return (
-  <>
+  <div className={`options-container ${isActiveDropdown}`}>
     <KobabDropdown activeDropdown = {isActiveKobab} clickEvent = {handleDropdown} />
-    <ul className={`options-list ${isActiveDropdown}`}>
+    <ul className='options-list'>
       {
         iconNameArr.map((iconName) => {
         return (
@@ -25,7 +25,7 @@ return (
         )})
       }
     </ul>
-  </>
+  </div>
 )}
 
 export default OptionsList

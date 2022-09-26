@@ -29,13 +29,16 @@
             transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
             left: -100%;
         }
-        // --------Kobab Container-------- //
-        .kobab-container{
-            // border: green 2px solid;
-        }
-        // ------------------------------ //
     }
+    // .kobab-container{
+    //     @include util.size(0, null, 0, 0);
+    // }
     &:hover{
+        // --------Kobab Container-------- //
+        // .kobab-container{
+        //     @include util.size(40%, null, 0, 0);
+        // }
+        // ------------------------------- //
         .side-title::before{
             left: 0;
         }

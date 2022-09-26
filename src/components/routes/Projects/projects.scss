@@ -19,7 +19,7 @@
             .project-card{
                 @include util.size(370px, 70%, 0, 0);
                 transition: 1.2s all cubic-bezier(0.075, 0.82, 0.165, 1);
-                border: 2px solid black;
+                border: 1.7px solid black;
                 border-radius: 10px;
                 overflow: hidden;
                 
@@ -36,7 +36,7 @@
                     }
                 }
                 &:hover{
-                    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.355);
+                    box-shadow: 5px 17px 10px rgba(0, 0, 0, 0.255);
                     transform: translateY(-15px);
 
                     .card-body{
