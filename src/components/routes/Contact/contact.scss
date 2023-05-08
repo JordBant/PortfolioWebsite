@@ -1,7 +1,0 @@
-@use '../../../util-styles/' as util;
-
-.contact-main{
-    @include util.size(100%, 100vh, 0, 0);
-    background: white;
-    position: relative;
-}
