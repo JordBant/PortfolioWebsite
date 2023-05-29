@@ -6,6 +6,18 @@
   padding: 0;
 }
 
+li{
+  color: white
+}
+
+.pages{
+  @include util.flex(center, center, null, null, null);
+  font-size: 80px;
+  min-height: 100vh;
+  min-width: 100%;
+  color: white;
+}
+
 // .logo {
 //   will-change: filter;
 //   transition: filter 300ms;
