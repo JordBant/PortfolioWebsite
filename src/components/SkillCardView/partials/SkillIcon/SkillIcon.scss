@@ -1,0 +1,5 @@
+@use '../../../../styles/partials/index' as utils;
+
+.icon-container > *{
+    @include utils.size(100%, 100%, 0, 0);
+}

@@ -1,26 +1,29 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import { SkillCardCrawler } from './containers/SkillCardCrawler/SkillCrawler'
 import './styles/App.scss'
 
 function App() {
 
   return (
     <>
-    <header>
-      <nav>
-        <ul>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </header>
+      <header>
+        <nav>
+          <ul>
+            <li>About</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </header>
       <div className='pages'>About</div>
       <div className='pages'>Skills</div>
       <div className='pages'>Projects</div>
       <div className='pages'>Contact</div>
+
+      <SkillCardCrawler/>
     </>
       // <div className="about-body-container">
       //   <div className="about-body"
