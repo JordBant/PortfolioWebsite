@@ -1,18 +1,18 @@
 import React, { FC } from 'react'
-import { ICONS } from '../../utils/constants'
-import { SkillCard } from '../../components/SkillCardView/SkillCardView'
+import { ICONS as SKILL_ICONS} from '../../utils/constants'
+import { SkillCardView } from '../../components/SkillCardView/SkillCardView'
 
 export const SkillCardCrawler: FC = () => {
   return (
     <>
     {
-        ICONS.map(icon => {
+        SKILL_ICONS.map(icon => {
             return(
                 <ul>{
-                    <SkillCard 
+                    <SkillCardView
                     iconName={icon.name} 
                     fontColor={icon.fontColor} 
-                    iconElement={icon.iconName}  
+                    iconElement={icon.iconElement}  
                     />}
                 </ul>
             )

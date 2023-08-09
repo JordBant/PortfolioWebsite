@@ -1,6 +1,6 @@
 import React, { FC } from 'react' 
-import './SkillCard.scss'
-import { SkillIcon } from './partials/SkillIcon/SkillIcon'
+import './SkillCardView.scss'
+import { IconView } from '../IconView/IconView'
 
 type SkillCardProps = {
     iconName: string,
@@ -8,10 +8,10 @@ type SkillCardProps = {
     iconElement: JSX.Element
 }
 
-export const SkillCard: FC<SkillCardProps> = ({iconName, fontColor, iconElement}) => {
+export const SkillCardView: FC<SkillCardProps> = ({iconName, fontColor, iconElement}) => {
     return (
         <div className="skill-card-container">
-            <SkillIcon classNames='icon-container' iconElement={iconElement}/>
+            <IconView iconElement={iconElement}/>
             <hr className="y-line" style = {{ background: `${fontColor}` }}/>
             <p className ="side-text"> {iconName} </p>
         </div>
