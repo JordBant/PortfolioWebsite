@@ -2,6 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import { SkillCardCrawler } from './containers/SkillCardCrawler/SkillCrawler'
+import { About } from './pages'
 import './styles/App.scss'
 
 function App() {
@@ -18,11 +19,12 @@ function App() {
           </ul>
         </nav>
       </header>
+      <About/>
+      
       <div className='pages'>About</div>
       <div className='pages'>Skills</div>
       <div className='pages'>Projects</div>
       <div className='pages'>Contact</div>
-
       <SkillCardCrawler/>
     </>
       // <div className="about-body-container">
