@@ -5,7 +5,7 @@ import { IconView } from '../IconView/IconView'
 type SkillCardProps = {
     iconName: string,
     fontColor: string,
-    iconElement: JSX.Element
+    iconElement: React.ReactElement
 }
 
 export const SkillCardView: FC<SkillCardProps> = ({iconName, fontColor, iconElement}) => {

@@ -3,7 +3,7 @@ import './IconView.scss'
 
 type IconViewProps = {
   classNames?: string
-  iconElement: JSX.Element
+  iconElement: React.ReactElement
 }
 
 export const IconView: FC<IconViewProps> = ({classNames ,iconElement}) => {

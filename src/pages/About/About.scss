@@ -26,12 +26,12 @@
             @include util.size(50%, auto, 30px 0, 0);
             mix-blend-mode: util.$FONT-BLEND-ALT;
         }
-        .about-cta{
+        .calls-to-action{
             @include util.flex(center, center, NULL, NULL, NULL);
             @include util.size(auto, auto, NULL, 0);
-            mix-blend-mode: util.$FONT-BLEND-ALT;
-            & > *{
-                margin: 0 10px;
+            // mix-blend-mode: util.$FONT-BLEND-ALT;
+            a > .offsite-button{
+                @include util.size(65px, auto, 30px 0, 0);
             }
         }
     }
