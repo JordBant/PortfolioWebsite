@@ -1,14 +1,21 @@
-import React, { Children, FC } from 'react'
+import React, { FC } from 'react'
+import './SideTitlePage.scss'
 
 type SideTitlePageProps = {
-    pageTitle: string;
+    pageTitle?: string;
     classNames?: string;
+    children?: React.ReactElement
 }
 
-export const SideTitlePage: FC<SideTitlePageProps> = ({pageTitle, classNames}) => {
+export const SideTitlePage: FC<SideTitlePageProps> = ({pageTitle, classNames, children}) => {
   return (
-    <div className={`${classNames}`}>
-        <h1>{pageTitle}</h1>
+    <div className={`page-side-title-wrapper ${classNames}`}>
+        <div className='page-side-container'>
+          {children}
+        </div>
+        <h1 className="page-side-title">
+          {`<${pageTitle}/>`}
+        </h1>
     </div>
   )
 }
