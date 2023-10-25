@@ -5,34 +5,76 @@
     background: util.$BKGR-PRIM;
     background-size: util.$BKGR-SIZE;
   
-    .about-body{
-        @include util.size(auto, 100%, 0, 0 50px);
+    .about_body{
+        @include util.size(auto, 100%, 0, 0 0 0 130px);
         @include util.flex(center, flex-start, column, NULL, NULL);
   
         & > *{ 
             margin: 3px 0; 
         }
-  
-        .about-salutations{
-            @include util.setFont(12.9em util.$FONT-PRIM, 400, util.$TEXT-PRIM);
+
+        .about_salutations{
+            @include util.setFont(util.$TITLE_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
             @include util.size(20%, auto, NULL, 0);
-            // border: 2px solid red;
             line-height: 0.8;
+            opacity: 1;
             mix-blend-mode: util.$FONT-BLEND-ALT;
+            // transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	        animation: SalutationsSpacingAnim 0.7s cubic-bezier(0.075, 0.765, 0.82, 1);
         }
-  
-        .about-body-text{
-            @include util.setFont(1.7em util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-            @include util.size(50%, auto, 30px 0, 0);
+
+        .about_body_text{
+            @include util.setFont(util.$BODY_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
+            @include util.size(55%, auto, 30px 0, 10px 0 0 0);
             mix-blend-mode: util.$FONT-BLEND-ALT;
         }
         .calls-to-action{
             @include util.flex(center, center, NULL, NULL, NULL);
             @include util.size(auto, auto, NULL, 0);
             // mix-blend-mode: util.$FONT-BLEND-ALT;
+            & > * {
+                margin: 0 20px;
+            }
+            .contact-now{
+                @include util.setFont(2.9em util.$FONT-PRIM, 400, NULL);
+                @include util.size(auto, auto, 0, 20px);
+            
+                mix-blend-mode: util.$FONT-BLEND-ALT;
+                border: 2px solid black;
+                background-color: rgb(253, 253, 253);
+                position: relative;
+                overflow: hidden;
+                z-index: 10;
+                transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) all;
+                border: 2px solid white;
+                cursor: pointer;
+            
+                &:hover{
+                    background-color: rgba(253, 253, 253, 0.106);
+                    color: white;
+                }
+            }
+
             a > .offsite-button{
-                @include util.size(65px, auto, 30px 0, 0);
+                @include util.size(90px, auto, 30px 0, 0);
+                transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+                &:hover{
+                    transform: translateY(-7px);
+                }
             }
         }
     }
   }
+
+@keyframes SalutationsSpacingAnim { 
+    0% {
+        opacity: 0;
+        line-height: 0.52;
+	}
+
+    100% {
+        opacity: 1;
+        line-height: 0.8;		
+	}
+}
+  

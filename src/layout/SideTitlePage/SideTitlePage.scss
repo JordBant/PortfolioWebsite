@@ -5,21 +5,20 @@
     @include util.flex(center, center, null, null, null);
 
     position: relative;
-    background: util.$BKGR-PRIM;
+    background-color: util.$BKGR-PRIM;
     background-size: util.$BKGR-SIZE;
-
     border: red 2px solid;
 
     .page-side-container{
-    @include util.size(100%, 100%, 0, 0);
-
-    border: cyan 2px solid;
+        @include util.size(100%, 100%, 0, 0);
+        border: cyan 2px solid;
     }
     .page-side-title{
-        @include util.setFont(util.$DYNAMIC-SIDE-TITLE util.$FONT-PRIM, 300, rgba(255, 255, 255, 0.233));
+        @include util.setFont(util.$SIDE-PAGE_TITLE_DYNAMIC util.$SIDE_PAGE_TITLE_FONT, 300, util.$SIDE_PAGE_TITLE_COLOR);
         inset-block-end: 0;
         position: absolute;
         writing-mode: vertical-lr;
+        mix-blend-mode: difference;
         margin: 0;
     }
 }

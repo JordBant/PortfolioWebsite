@@ -20,10 +20,11 @@ function App() {
           </ul>
         </nav>
       </header>
-      <About/>
       
       {/* <div className='pages'>About</div> */}
-      <SideTitlePage pageTitle='Contact'/>
+      <About/>
+      <SideTitlePage pageTitle='Projects'/>
+      <SideTitlePage pageTitle='Contacts'/>
       <div className='pages'>Skills</div>
       <div className='pages'>Projects</div>
       {/* <div className='pages'>Contact</div> */}
