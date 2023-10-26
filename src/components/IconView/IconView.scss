@@ -1,5 +1,9 @@
 @use '../../styles/partials/index' as utils;
 
-.icon-container > svg{
-    @include utils.size(100%, 100%, 0, 0);
+.icon-container{
+    padding: 0;
+    margin: 0;
+    & > svg{
+        @include utils.size(100%, 100%, 0, 0);
+    }
 }

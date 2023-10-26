@@ -1,4 +1,4 @@
-@use '../../styles/partials' as util;
+@use '../../../../styles/partials/index' as util;
 
 .skill-card-container{
     @include util.size(auto, 200px, 0, 0);

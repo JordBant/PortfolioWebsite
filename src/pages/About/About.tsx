@@ -16,13 +16,13 @@ export const About = () => {
           I build robust & performant web applications for businesses, corporations and other organizations.
         </p>
         <div className="calls-to-action">
+        <button className="contact-now">Contact Now</button>
           <a target='blank' href='https://github.com/JordBant'>
             <IconView classNames='offsite-button' iconElement={IconMap["GITHUB"]}/>
           </a>
           <a target='blank' href='https://linkedin.com/in/jbantin'>
             <IconView classNames='offsite-button' iconElement={IconMap["LINKEDIN"]}/>
           </a>
-          <button className="contact-now">Contact Now</button>
         </div>
       </div>
       {/* <a href="https://vitejs.dev" target="_blank">

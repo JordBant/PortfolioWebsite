@@ -1,6 +1,6 @@
 import React, { FC } from 'react' 
 import './SkillCardView.scss'
-import { IconView } from '../IconView/IconView'
+import { IconView } from '../../../IconView/IconView'
 
 type SkillCardProps = {
     iconName: string,
