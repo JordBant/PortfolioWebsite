@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import { SkillCardCrawler } from './components/SkillCardCrawler/SkillCrawler'
+import { SkillCrawl } from './components/SkillCrawl/SkillCrawl'
 import { SideTitlePage } from './layout/SideTitlePage/SideTitlePage'
 import { About } from './pages'
 import './styles/App.scss'
@@ -23,10 +23,10 @@ function App() {
       
       {/* <div className='pages'>About</div> */}
       <About/>
+      <SkillCrawl/>
       <SideTitlePage pageTitle='Projects'/>
       <SideTitlePage pageTitle='Contacts'/>
       {/* <div className='pages'>Contact</div> */}
-      <SkillCardCrawler/>
     </>
       // <div className="about-body-container">
       //   <div className="about-body"

@@ -1,2 +1,2 @@
 export * from './IconView/IconView'
-export * from './SkillCardCrawler/partials/SkillCardView/SkillCardView'
+export * from './SkillCrawl/partials/SkillCard/SkillCard'
