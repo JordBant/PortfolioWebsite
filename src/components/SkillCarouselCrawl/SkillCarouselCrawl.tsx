@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { SkillCards } from './partials/SkillCards/SkillCards'
-import './SkillCrawl.scss'
+import './SkillCarouselCrawl.scss'
 
-export const SkillCrawl: FC = (): React.ReactElement => {
+export const SkillCarouselCrawl: FC = (): React.ReactElement => {
   return (
     <div className="ticker__wrapper">
       <div className="ticker">

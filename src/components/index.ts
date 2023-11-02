@@ -1,2 +1,2 @@
 export * from './IconView/IconView'
-export * from './SkillCrawl/partials/SkillCard/SkillCard'
+export * from './SkillCarouselCrawl/partials/SkillCard/SkillCard';
