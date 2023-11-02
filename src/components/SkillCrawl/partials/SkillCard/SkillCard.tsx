@@ -10,9 +10,9 @@ type SkillCardProps = {
 
 export const SkillCard: FC<SkillCardProps> = ({iconName, fontColor, iconElement}) => {
     return (
-        <div className={`skill-card-container`}>
-            <IconView iconElement={iconElement}/>
-            <hr className="y-line" style = {{ background: `${fontColor}` }}/>
+        <div className={`skill-card`}>
+            <IconView classNames='skill-icon'  iconElement={iconElement}/>
+            {/* <hr className="y-line" style = {{ background: `${fontColor}` }}/> */}
             {/* <p className ="side-text"> {iconName} </p> */}
         </div>
     )

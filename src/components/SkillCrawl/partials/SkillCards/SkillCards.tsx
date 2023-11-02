@@ -1,9 +1,10 @@
 import { SKILL_ICONS } from '../../../../utils/constants'
 import { SkillCard } from '../SkillCard/SkillCard'
+import './SkillCards.scss'
 
 export const SkillCards = () => {
   return (
-    <div className="ticker__item skill-card-wrapper">
+    <div className="skill-card-container">
       {
         SKILL_ICONS.map(icon => {
         return(

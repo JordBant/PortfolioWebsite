@@ -7,8 +7,6 @@
     src: url('../../../Fonts/glacial-indifference/GlacialIndifference-Bold.otf');
 }
 
-// $BKGR-INIT: #e5e1e1;
-// $BKGR-PROJ-CARD: rgba(255, 255, 255, 0.5);
 $BKGR-PRIM: linear-gradient(90deg, rgba(0,0,0,1) 52%, rgba(255,255,255,1) 52%);
 $BKGR-LANDING: #0c0c0f;
 
@@ -35,9 +33,12 @@ $SIDE_PAGE_TITLE_FONT: 'Glacial Indifference Bold';
 
 $PRIM-PARAGRAPH-COLOR: #888;
 
+// Skill Crawler //
+$ICON_SIZE: 7.7vw;
+
 // Animations
 
-$TICKER_CRAWL: ticker 20s;
+$TICKER_CRAWL_ANIMATION: ticker;
 
 @-webkit-keyframes ticker {
     0% {
@@ -54,8 +55,6 @@ $TICKER_CRAWL: ticker 20s;
 @keyframes ticker {
     0% {
         -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        visibility: visible;
     }
     100% {
         -webkit-transform: translate3d(-100%, 0, 0);
