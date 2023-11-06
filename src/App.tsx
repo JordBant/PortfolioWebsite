@@ -4,6 +4,7 @@
 import { SkillCarouselCrawl } from './components/SkillCarouselCrawl/SkillCarouselCrawl'
 import { SideTitlePage } from './layout/SideTitlePage/SideTitlePage'
 import { About } from './pages'
+import { Projects } from './pages/Projects/Projects'
 import './styles/App.scss'
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
       {/* <div className='pages'>About</div> */}
       <About/>
       <SkillCarouselCrawl/>
-      <SideTitlePage pageTitle='Projects'/>
+      <Projects/>
       <SideTitlePage pageTitle='Contacts'/>
       {/* <div className='pages'>Contact</div> */}
     </>

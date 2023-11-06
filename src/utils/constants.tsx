@@ -1,10 +1,65 @@
-import { Icon, IconMapping } from "./constants.type";
+import { SkillIcon, IconMapping } from "./constants.type";
+
+/**
+ * Icons for sidebar section of each project-display card
+ */
+export const SIDEBAR_ICONS = [
+    'VIDEO',
+    'GITHUB',
+    'SPECTACLES',
+] as const
 
 /**
  * All SVGs will be hosted here.
  * Not all icons are going to be used for the same purpose
  */
 export const IconMap: IconMapping = {
+    VIDEO: (
+        <svg width="24px" fill = '#ffffff' height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.75 4.5a.25.25 0 00-.25.25v14.5c0 
+            .138.112.25.25.25h20.5a.25.25 0 00.25-.25V4.75a.25.25 
+            0 00-.25-.25H1.75zM0 4.75C0 3.784.784 3 1.75 3h20.5c.966 
+            0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0122.25 21H1.75A1.75 
+            1.75 0 010 19.25V4.75z"/>
+            <path d="M9 15.584V8.416a.5.5 0 01.77-.42l5.576 3.583a.5.5 0 010 .842L9.77 16.005a.5.5 0 01-.77-.42z"/>
+        </svg>
+      ),
+    PRINT: (
+        <svg className='options-icon' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            viewBox="0 0 455 455" fill = '#ffffff'>
+            <g>
+                <rect x="77.5" y="7.5" width="300" height="62.5"/>
+                <path d="M92.5,447.5h270V255h-270V447.5z M127.5,295h200v30h-200V295z M127.5,365h200v30h-200V365z"/>
+                <path d="M0,100v280h62.5V225h330v155H455V100H0z M377.5,175c-8.284,0-15-6.716-15-15c0-8.284,6.716-15,15-15s15,6.716,15,15
+                    C392.5,168.284,385.784,175,377.5,175z"/>
+            </g>
+        </svg>
+          ),
+    SPECTACLES: (
+        <svg className='options-icon' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+           width="379.125px" fill='white' height="379.124px" viewBox="0 0 379.125 379.124">
+              <g>
+                  <path d="M374.772,322.235L264.964,212.429c31.707-55.131,22.968-125.203-22.759-170.928c-55.333-55.334-145.368-55.334-200.704,0
+              c-55.334,55.336-55.334,145.371,0,200.708c45.724,45.722,115.797,54.461,170.927,22.756l109.807,109.808
+              c5.804,5.805,15.211,5.799,21.016,0l31.521-31.521C380.573,337.448,380.573,328.038,374.772,322.235z M195.975,195.978
+              c-29.841,29.836-78.399,29.84-108.239,0c-29.842-29.844-29.842-78.402,0-108.242c29.84-29.844,78.398-29.844,108.239,0
+              C225.814,117.578,225.814,166.133,195.975,195.978z"/>
+              </g>
+        </svg>
+      
+        ),
+    KOBAB: (
+        <svg className='kobab' width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white" d="M6 0h4v4h-4v-4z"></path>
+            <path fill="white" d="M6 6h4v4h-4v-4z"></path>
+            <path fill="white" d="M6 12h4v4h-4v-4z"></path>
+        </svg>
+    ),
+    ARROW: (
+        <svg width="32px" height="32px" viewBox="0 0 32 32" fill='white'>
+            <path d="M30 20 L16 8 2 20" />
+        </svg>
+      ),
     GIT: (
         <svg className= 'card-face' fill="#f05233" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.88 122.87">
         <g><path d="M120.56,55.96L66.91,2.32c-3.09-3.09-8.1-3.09-11.19,0L44.58,13.46l14.13,14.13c3.29-1.11,7.05-0.37,9.67,2.25 c2.63,2.63,3.37,6.43,2.23,9.73l13.62,13.62c3.3-1.14,7.1-0.4,9.73,2.23c3.68,3.68,3.68,9.64,0,13.31c-3.68,3.68-9.64,3.68-13.32,0 c-2.77-2.77-3.45-6.83-2.05-10.24l-12.7-12.7l0,33.43c0.9,0.44,1.74,1.04,2.49,1.78c3.68,3.68,3.68,9.64,0,13.32 c-3.68,3.68-9.64,3.68-13.31,0c-3.68-3.68-3.68-9.64,0-13.32c0.91-0.91,1.96-1.59,3.08-2.05V45.21c-1.12-0.46-2.17-1.14-3.08-2.05 c-2.79-2.78-3.46-6.87-2.03-10.29L39.1,18.93L2.32,55.72c-3.09,3.09-3.09,8.1,0,11.19l53.65,53.65c3.09,3.09,8.1,3.09,11.19,0 l53.4-53.39C123.65,64.07,123.65,59.06,120.56,55.96L120.56,55.96L120.56,55.96z M120.56,55.96L120.56,55.96L120.56,55.96 L120.56,55.96z"/>
@@ -163,7 +218,7 @@ export const IconMap: IconMapping = {
 /**
  * All Icons used in skill carousel
  */
-export const SKILL_ICONS: Icon[] = [
+export const SKILL_ICONS: SkillIcon[] = [
     {
         name: "REACT",
         fontColor: "#00d9ff",

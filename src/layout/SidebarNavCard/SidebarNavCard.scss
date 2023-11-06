@@ -1,0 +1,12 @@
+@use '../../styles/partials/_index.scss' as util;
+
+.sidebar-wrapper{
+    @include util.size(475px, 730px, 0, 0);
+
+    background-color: wheat;
+    border: 4px solid lime;
+    &__content{
+    @include util.size(275px, 100%, 0, 0);
+    background-color: cyan;
+    }
+}

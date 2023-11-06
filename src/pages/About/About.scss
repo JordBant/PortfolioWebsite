@@ -1,7 +1,6 @@
 @use '../../styles/partials/' as util ;
 
 .about-body-container{
-    @include util.size(100vw, 100vh, 0, 0);
     background: util.$BKGR-PRIM;
     background-size: util.$BKGR-SIZE;
   
