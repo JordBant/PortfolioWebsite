@@ -6,17 +6,21 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 li{
   color: white
 }
 
-.pages{
-  @include util.flex(center, center, null, null, null);
-  font-size: 80px;
-  min-height: 100vh;
-  min-width: 100%;
-  color: white;
-}
+// .pages{
+//   @include util.flex(center, center, null, null, null);
+//   font-size: 80px;
+//   min-height: 100vh;
+//   min-width: 100%;
+//   color: white;
+// }
 
 // .logo {
 //   will-change: filter;
@@ -44,45 +48,45 @@ li{
 //   }
 // }
 
-.read-the-docs {
-  color: #888;
-}
+// .read-the-docs {
+//   color: #888;
+// }
 
 //About Page
 
-.about-body-container{
-  @include util.size(100vw, 100vh, 0, 0);
-  background: util.$BKGR-PRIM;
-  background-size: util.$BKGR-SIZE;
+// .about-body-container{
+//   @include util.size(100vw, 100vh, 0, 0);
+//   background: util.$BKGR-PRIM;
+//   background-size: util.$BKGR-SIZE;
 
-  .about-body{
-      @include util.size(auto, 100%, 0, 0 50px);
-      @include util.flex(center, flex-start, column, NULL, NULL);
+//   .about-body{
+//       @include util.size(auto, 100%, 0, 0 50px);
+//       @include util.flex(center, flex-start, column, NULL, NULL);
 
-      & > *{ 
-          margin: 3px 0; 
-      }
+//       & > *{ 
+//           margin: 3px 0; 
+//       }
 
-      .about-salutations{
-          @include util.setFont(12.9em util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-          @include util.size(20%, auto, NULL, 0);
-          // border: 2px solid red;
-          line-height: 0.8;
-          mix-blend-mode: util.$FONT-BLEND-ALT;
-      }
+//       .about-salutations{
+//           @include util.setFont(12.9em util.$FONT-PRIM, 400, util.$TEXT-PRIM);
+//           @include util.size(20%, auto, NULL, 0);
+//           // border: 2px solid red;
+//           line-height: 0.8;
+//           mix-blend-mode: util.$FONT-BLEND-ALT;
+//       }
 
-      .about-body-text{
-          @include util.setFont(1.7em util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-          @include util.size(50%, auto, 30px 0, 0);
-          mix-blend-mode: util.$FONT-BLEND-ALT;
-      }
-      .about-cta{
-          @include util.flex(center, center, NULL, NULL, NULL);
-          @include util.size(auto, auto, NULL, 0);
-          mix-blend-mode: util.$FONT-BLEND-ALT;
-          & > *{
-              margin: 0 10px;
-          }
-      }
-  }
-}
+//       .about-body-text{
+//           @include util.setFont(1.7em util.$FONT-PRIM, 400, util.$TEXT-PRIM);
+//           @include util.size(50%, auto, 30px 0, 0);
+//           mix-blend-mode: util.$FONT-BLEND-ALT;
+//       }
+//       .about-cta{
+//           @include util.flex(center, center, NULL, NULL, NULL);
+//           @include util.size(auto, auto, NULL, 0);
+//           mix-blend-mode: util.$FONT-BLEND-ALT;
+//           & > *{
+//               margin: 0 10px;
+//           }
+//       }
+//   }
+// }

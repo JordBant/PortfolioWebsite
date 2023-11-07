@@ -1,4 +1,4 @@
-import { SKILL_ICONS } from '../../../../utils/constants'
+import { SKILL_ICONS } from '../../../../store/constants'
 import { SkillCard } from '../SkillCard/SkillCard'
 import './SkillCards.scss'
 
@@ -10,8 +10,7 @@ export const SkillCards = () => {
         return(
             <SkillCard
               iconName={icon.name} 
-              fontColor={icon.fontColor} 
-              iconElement={icon.iconElement()}
+              fontColor={icon.fontColor}
             />
         )})
       }

@@ -1,11 +1,12 @@
 import React, { FC } from 'react' 
 import './SkillCard.scss'
 import { IconView } from '../../../IconView/IconView'
+import { Icons } from '../../../../store/constants.type'
 
 type SkillCardProps = {
     iconName: string,
     fontColor: string,
-    iconElement: React.ReactElement
+    iconElement: Icons
 }
 
 export const SkillCard: FC<SkillCardProps> = ({iconName, fontColor, iconElement}) => {

@@ -1,21 +1,23 @@
+import { PageTitle } from '../../store/constants.type';
 import React, { FC } from 'react'
 import './SideTitlePage.scss'
 
 type SideTitlePageProps = {
+    pageId?: PageTitle;
     pageTitle?: string;
     classNames?: string;
     children?: React.ReactElement
 }
 
-export const SideTitlePage: FC<SideTitlePageProps> = ({pageTitle, classNames, children}) => {
+export const SideTitlePage: FC<SideTitlePageProps> = ({pageTitle, classNames, children, pageId}) => {
   return (
-    <div className={`page-side-title-wrapper ${classNames}`}>
+    <section id={`${pageId}`} className={`page-side-title-wrapper ${classNames}`}>
         <div className='page-side-container'>
           {children}
         </div>
         <h1 className="page-side-title">
           {`<${pageTitle}/>`}
         </h1>
-    </div>
+    </section>
   )
 }

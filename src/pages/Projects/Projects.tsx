@@ -4,7 +4,7 @@ import './Projects.scss';
 
 // type Props = {}
 
-export const Projects = (props: Props) => {
+export const Projects = () => {
   return (
     <SideTitlePage pageTitle='Projects' classNames='projects-container'>
       <div className='project-display-board'>

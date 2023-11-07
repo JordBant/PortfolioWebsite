@@ -1,4 +1,14 @@
-import { SkillIcon, IconMapping } from "./constants.type";
+import { SkillIcon, IconMapping, PageTitle, Icons } from "./constants.type";
+
+/**
+ * Page titles being used
+ * ids and the page titles
+ */
+export const PAGE_TITLES: Readonly<PageTitle[]> = [
+    'About',
+    'Projects',
+    'Contact',
+] as const
 
 /**
  * Icons for sidebar section of each project-display card
@@ -13,7 +23,7 @@ export const SIDEBAR_ICONS = [
  * All SVGs will be hosted here.
  * Not all icons are going to be used for the same purpose
  */
-export const IconMap: IconMapping = {
+export const IconMap = {
     VIDEO: (
         <svg width="24px" fill = '#ffffff' height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.75 4.5a.25.25 0 00-.25.25v14.5c0 
@@ -222,57 +232,29 @@ export const SKILL_ICONS: SkillIcon[] = [
     {
         name: "REACT",
         fontColor: "#00d9ff",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "SASS",
         fontColor: "#cf6399",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "CSS",
         fontColor: "#2062af",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "HTML",
         fontColor: "#e44b25",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "NODE",
         fontColor: "#3c873a",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "GIT",
         fontColor: "#f05233",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "EXPRESS",
         fontColor: "#3c9cd7",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "GULP",
         fontColor: "#da4446",
-        iconElement(){
-            return IconMap[this.name];
-        }
     },{
         name: "JAVASCRIPT",
         fontColor: "#f7dd1d",
-        iconElement(){
-            return IconMap[this.name];
-        }
     }
-    
 ]

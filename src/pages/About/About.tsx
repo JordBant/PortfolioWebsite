@@ -1,6 +1,5 @@
-import React from 'react'
 import { IconView } from '../../components'
-import { IconMap } from '../../utils/constants'
+import { IconMap } from '../../store/constants'
 import './About.scss';
 import { SideTitlePage } from '../../layout/SideTitlePage/SideTitlePage';
 
@@ -8,7 +7,7 @@ import { SideTitlePage } from '../../layout/SideTitlePage/SideTitlePage';
 
 export const About = () => {
   return (
-    <SideTitlePage pageTitle="About"  classNames="about-body-container">
+    <SideTitlePage pageTitle="About" classNames="about-body-container">
       <div className="about_body">
         <h1 className="about_salutations"> I'm Jordon </h1>
         <p className="about_body_text">
@@ -18,10 +17,10 @@ export const About = () => {
         <div className="calls-to-action">
         <button className="contact-now">Contact Now</button>
           <a target='blank' href='https://github.com/JordBant'>
-            <IconView classNames='offsite-button' iconElement={IconMap["GITHUB"]}/>
+            <IconView classNames='offsite-button' iconElement={"GITHUB"}/>
           </a>
           <a target='blank' href='https://linkedin.com/in/jbantin'>
-            <IconView classNames='offsite-button' iconElement={IconMap["LINKEDIN"]}/>
+            <IconView classNames='offsite-button' iconElement={"LINKEDIN"}/>
           </a>
         </div>
       </div>

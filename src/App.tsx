@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import { Navbar } from './components/Navbar/Navbar'
 import { SkillCarouselCrawl } from './components/SkillCarouselCrawl/SkillCarouselCrawl'
 import { SideTitlePage } from './layout/SideTitlePage/SideTitlePage'
 import { About } from './pages'
@@ -11,23 +12,11 @@ function App() {
 
   return (
     <>
-      <header>
-        <nav>
-          <ul>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-      </header>
-      
-      {/* <div className='pages'>About</div> */}
+      <Navbar/>
       <About/>
       <SkillCarouselCrawl/>
       <Projects/>
       <SideTitlePage pageTitle='Contacts'/>
-      {/* <div className='pages'>Contact</div> */}
     </>
       // <div className="about-body-container">
       //   <div className="about-body"
