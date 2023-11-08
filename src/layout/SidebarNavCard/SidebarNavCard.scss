@@ -1,12 +1,51 @@
 @use '../../styles/partials/_index.scss' as util;
 
-.sidebar-wrapper{
-    @include util.size(475px, 730px, 0, 0);
+.sidebar-card{
+    @include util.size(475px, 70%, 0, 0);
+    position: relative;
+    background-color: rgb(236, 231, 221);
 
-    background-color: wheat;
-    border: 4px solid lime;
-    &__content{
-    @include util.size(275px, 100%, 0, 0);
-    background-color: cyan;
+    &__sidebar{
+        @include util.size(70px, 100%, 0, 0);
+        @include util.flex(start, center, column, null, null);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &__options-btn{
+        @include util.size(4vw, auto, 7px 0 0, 0);
+        rotate: 90deg;
+        mix-blend-mode: difference;
+        transition: util.$TRANS-1;
+        z-index: 2;
+        &:hover{
+            rotate: 0deg;
+        }
+    }
+    &__idk{
+        @include util.size(100%, 0, 20px 0 0, 0);
+        background-color: red;
+        z-index: 2;
+        transition: util.$TRANS-1;
+    }
+    &__options-list{
+        @include util.size(100%, 100%, 0, 0);
+        position: absolute;
+        left: -100px;
+        background-color: rgb(40, 40, 40);
+        transition: util.$TRANS-1;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
+    &__active-menu{
+        left: 0;
+    }
+
+    &__active-options-list{
+        height: 100%;
     }
 }

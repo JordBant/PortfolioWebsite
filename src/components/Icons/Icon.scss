@@ -1,8 +1,10 @@
 @use '../../styles/partials/index' as util;
 
-.projects-container{
+.icon-container{
     @include util.flex(center, center, null, null, null);
-    .project-display-board{
+    padding: 0;
+    margin: 0;
+    & > svg{
         @include util.size(100%, 100%, 0, 0);
     }
 }

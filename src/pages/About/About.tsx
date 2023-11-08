@@ -1,7 +1,7 @@
-import { IconView } from '../../components'
 import { IconMap } from '../../store/constants'
 import './About.scss';
 import { SideTitlePage } from '../../layout/SideTitlePage/SideTitlePage';
+import { Icon } from '../../components';
 
 // type Props = {};
 
@@ -17,10 +17,10 @@ export const About = () => {
         <div className="calls-to-action">
         <button className="contact-now">Contact Now</button>
           <a target='blank' href='https://github.com/JordBant'>
-            <IconView classNames='offsite-button' iconElement={"GITHUB"}/>
+            <Icon classNames='offsite-button' iconElement={"GITHUB"}/>
           </a>
           <a target='blank' href='https://linkedin.com/in/jbantin'>
-            <IconView classNames='offsite-button' iconElement={"LINKEDIN"}/>
+            <Icon classNames='offsite-button' iconElement={"LINKEDIN"}/>
           </a>
         </div>
       </div>

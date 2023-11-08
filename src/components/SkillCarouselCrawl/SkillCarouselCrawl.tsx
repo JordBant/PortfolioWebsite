@@ -3,18 +3,22 @@ import { SkillCards } from './partials/SkillCards/SkillCards'
 import './SkillCarouselCrawl.scss'
 
 export const SkillCarouselCrawl: FC = (): React.ReactElement => {
+  const mapComponentsByClassName = [
+  "ticker__initial", 
+  "ticker__next", 
+  "ticker__next"
+]
+
   return (
     <div className="ticker__wrapper">
       <div className="ticker">
-        <div className="ticker__initial">
-            <SkillCards/>
-        </div>
-        <div className="ticker__next">
-            <SkillCards/>
-        </div>
-        <div className="ticker__next">
-            <SkillCards/>
-        </div>
+        {
+          mapComponentsByClassName.map((className) => (
+            <div className={`${className}`}>
+              <SkillCards/>
+            </div>
+          ))
+        }
       </div>
     </div>
   )

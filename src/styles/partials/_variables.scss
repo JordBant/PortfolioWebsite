@@ -34,10 +34,14 @@ $SIDE_PAGE_TITLE_FONT: 'Glacial Indifference Bold';
 $PRIM-PARAGRAPH-COLOR: #888;
 
 // Skill Crawler //
-$ICON_SIZE: 7.7vw;
+$ICON_SIZE: 5.4vw;
+
+// Card w/ Sidebar //
+$OPTIONS_BTN: clamp(1.3vw, 7.8%, 2.9vw);
+
 
 // Animations
-
+$TRANS-1: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 $TICKER_CRAWL_ANIMATION: ticker;
 
 @-webkit-keyframes ticker {
