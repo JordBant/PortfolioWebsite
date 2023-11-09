@@ -7,6 +7,10 @@
     height: $fillHeight-height;
 }
 
+@mixin cubicBezDuration($seconds){
+   transition: all $seconds cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
 @mixin flex($justify-justify, $align-align, $direction-direction, $self-self_ju, $self-self_al){
     display: flex;
     justify-content: $justify-justify;
