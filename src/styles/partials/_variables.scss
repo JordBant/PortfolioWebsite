@@ -12,6 +12,7 @@ $BKGR-LANDING: #0c0c0f;
 
 $TITLE_DYNAMIC_FONT_SIZE: 9vw;
 $BODY_DYNAMIC_FONT_SIZE: clamp(1.5vw, 1.9vw, 80px);
+$PROJECT_CARD_TITLE_FONT_SIZE: clamp(1.9vw, 2.7vw, 100px);
 $OFFSITE_BUTTON_SIZE: 4vw;
 
 $SIDE_PAGE_TITLE_COLOR: rgba(255, 255, 255, 0.233);
@@ -30,6 +31,7 @@ $FONT-BLEND-ALT: difference;
 
 $FONT-PRIM: 'Glacial Indifference Reg';
 $SIDE_PAGE_TITLE_FONT: 'Glacial Indifference Bold';
+$INV_FONT_COLOR: rgb(236, 231, 221);
 
 $PRIM-PARAGRAPH-COLOR: #888;
 
@@ -40,10 +42,11 @@ $ICON_SIZE: 5.4vw;
 $OPTIONS_BTN: clamp(1.3vw, 7.8%, 2.9vw);
 $SIDEBAR-COLOR: rgb(40, 40, 40);
 
+$TRANS-1: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+$TRANS-2: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) all;
+;
 
 // Animations
-$TRANS-1: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-$TRANS-2: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 $TICKER_CRAWL_ANIMATION: ticker;
 
 @-webkit-keyframes ticker {

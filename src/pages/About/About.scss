@@ -30,8 +30,7 @@
         .calls-to-action{
             @include util.flex(space-between, center, NULL, NULL, NULL);
             @include util.size(auto, auto, NULL, 0);
-            // border: 2px solid red;
-            // mix-blend-mode: util.$FONT-BLEND-ALT;
+
             & > * {
                 margin: 0 0 0 1.7vw;
             }
@@ -42,7 +41,7 @@
                 mix-blend-mode: util.$FONT-BLEND-ALT;
                 border: 2px solid black;
                 background-color: rgb(253, 253, 253);
-                transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) all;
+                transition: util.$TRANS-2;
                 border: 2px solid white;
                 cursor: pointer;
             

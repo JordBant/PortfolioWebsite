@@ -8,7 +8,10 @@ export const Projects = () => {
   return (
     <SideTitlePage pageTitle='Projects' classNames='projects-container'>
       <div className='project-display-board'>
-        <SidebarNavCard/>
+        {
+          ["Grid container", "Grid container", "Grid container", "Grid container", "Grid container",].map((word) => <div>{word}</div>)
+        }
+        {/* <SidebarNavCard/> */}
       </div>
     </SideTitlePage>
   )
