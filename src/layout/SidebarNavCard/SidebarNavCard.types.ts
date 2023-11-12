@@ -4,5 +4,6 @@ export type SidebarOptionsProps = {
 }
 
 export type SidebarNavCardProps = {
-    projectName: string;
+    projectName?: string;
+    classNames?: string;
 }

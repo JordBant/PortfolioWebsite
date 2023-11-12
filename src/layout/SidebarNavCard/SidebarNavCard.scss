@@ -1,7 +1,7 @@
 @use '../../styles/partials/_index.scss' as util;
 
 .sidebar-card{
-    @include util.size(475px, 70%, 0, 0);
+    @include util.size(100%, 100%, 0, 0);
     @include util.flex(start, null, null, null, null);
 
     position: relative;
@@ -10,6 +10,7 @@
     &__sidebar{
         @include util.size(auto, 100%, 0, 0 7px 0);
         @include util.flex(space-between, center, column, null, null);
+        overflow: hidden;
         
         position: relative;
 

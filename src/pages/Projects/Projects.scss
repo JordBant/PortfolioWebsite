@@ -4,14 +4,18 @@
     @include util.flex(center, center, null, null, null);
     .project-display-board{
         @include util.size(88%, 100%, 0, 0);
-        border: 2px solid red;
 
         display: grid;
-        
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-row: 2 / span auto;
 
         & > div{
-            border: 2px solid green;
-            color: aliceblue;    
+            color: aliceblue;
+        }
+        .grid-span-column{
+            grid-row: 1;
+            grid-row-end: 3;
         }
     }
 }

@@ -13,6 +13,7 @@
     }
     .page-side-title{
         @include util.setFont(util.$SIDE-PAGE_TITLE_DYNAMIC util.$SIDE_PAGE_TITLE_FONT, 300, util.$SIDE_PAGE_TITLE_COLOR);
+        // @include util.setFont(util.$SIDE-PAGE_TITLE_DYNAMIC util.$SIDE_PAGE_TITLE_FONT, 300, util.$SIDE_PAGE_TITLE_COLOR);
         // border: 2px solid red;
         text-align: center;
         inset-block-end: 0;

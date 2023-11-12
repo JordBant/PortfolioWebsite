@@ -4,7 +4,7 @@ import { Icon } from '../../components';
 import { SidebarNavCardProps } from './SidebarNavCard.types';
 import { SidebarOptions } from './partials/SidebarOptions';
 
-export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName}) => {
+export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName = 'Project Name', classNames}) => {
   const [isClicked, setisClicked] = useState(false);
   const isClickedHandler = useCallback((toggleTo: boolean): undefined => {
     setisClicked(toggleTo)
@@ -13,7 +13,7 @@ export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName}) => {
   const activeMask: '' | 'sidebar-card__active-mask' = isClicked ? 'sidebar-card__active-mask' : ''
 
   return (
-    <div className='sidebar-card'>
+    <div className={`sidebar-card ${classNames}`}>
       <div className={`sidebar-card__sidebar ${activeMenuClassName} ${activeMask}`}>
         <div className='sidebar-card__options-wrapper'>
           <Icon classNames={`sidebar-card__options-trigger ${activeMenuClassName}`} iconElement='KOBAB' onClick={() => isClickedHandler(!isClicked)} />
@@ -21,7 +21,7 @@ export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName}) => {
         </div>
         {
           isClicked && <h2 className="sidebar-card__project-name">
-            Project Name
+            {projectName}
           </h2>
         }
       </div>
