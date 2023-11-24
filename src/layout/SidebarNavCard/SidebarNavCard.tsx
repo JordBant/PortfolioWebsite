@@ -5,22 +5,37 @@ import { SidebarNavCardProps } from './SidebarNavCard.types';
 import { SidebarOptions } from './partials/SidebarOptions';
 
 export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName = 'Project Name', classNames}) => {
-  const [isClicked, setisClicked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  /**
+   * Function signature is undefined because onHover callback
+   * returns undefined values
+   */
+  const isHoveredHandler = useCallback((toggleTo: boolean): undefined => {
+    setIsHovered(toggleTo)
+  }, []);
+  /**
+   * Function signature is undefined because onHover callback
+   * returns undefined values
+   */
   const isClickedHandler = useCallback((toggleTo: boolean): undefined => {
-    setisClicked(toggleTo)
+    setIsClicked(toggleTo)
   }, []);
   const activeMenuClassName: '' | 'sidebar-card__active-menu' = isClicked ? 'sidebar-card__active-menu' : ''
-  const activeMask: '' | 'sidebar-card__active-mask' = isClicked ? 'sidebar-card__active-mask' : ''
+  const activeMask: '' | 'sidebar-card__active-mask' = isHovered ? 'sidebar-card__active-mask' : ''
 
   return (
-    <div className={`sidebar-card ${classNames}`}>
+    <div className={`sidebar-card ${classNames}`} onMouseEnter={() => isHoveredHandler(true)} onMouseLeave={() => {
+      isHoveredHandler(false)
+      if(isClicked) isClickedHandler(false)
+      }}>
       <div className={`sidebar-card__sidebar ${activeMenuClassName} ${activeMask}`}>
         <div className='sidebar-card__options-wrapper'>
-          <Icon classNames={`sidebar-card__options-trigger ${activeMenuClassName}`} iconElement='KOBAB' onClick={() => isClickedHandler(!isClicked)} />
+          <Icon classNames={`sidebar-card__options-trigger ${activeMenuClassName}`} onClick={() => isClickedHandler(!isClicked)} iconElement='KOBAB' />
           <SidebarOptions isClicked={isClicked} />
         </div>
         {
-          isClicked && <h2 className="sidebar-card__project-name">
+          isHovered && <h2 className="sidebar-card__project-name">
             {projectName}
           </h2>
         }

@@ -3,7 +3,7 @@ import { SIDEBAR_ICONS } from '../../../store/constants'
 import { Icon } from '../../../components'
 import { SidebarOptionsProps } from '../SidebarNavCard.types'
 
-export const SidebarOptions: FC<SidebarOptionsProps> = ({classNames, isClicked}) => {
+export const SidebarOptions: FC<SidebarOptionsProps> = ({ isClicked}) => {
   const activeOptionListClassName: '' | 'sidebar-card__active-options-list' = isClicked ? 'sidebar-card__active-options-list' : ''
 
   return (
