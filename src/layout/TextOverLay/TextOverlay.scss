@@ -1,20 +1,29 @@
 @use '../../styles/partials/index' as util;
 
 .text-overlay-wrapper{
-    // @include util.size(auto, auto, 0, 0)
+    // @include util.size(auto, auto, 0, 0);
     @include util.size(300px, 300px, 0, 0);
-    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-    // border: 2px solid yellow;
     position: relative;
-    
+
     &::after{
         content: '';
-        @include util.pseudoMask();
+        @include util.size(100%, 100%, 0, 0);
         opacity: 0;
+        inset: 0 0 0 0;
+        position: absolute;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        filter: drop-shadow(0 0 0.75rem cyan);
+        backdrop-filter: blur(5.2px);
+        -webkit-backdrop-filter: blur(5.2px);
+        z-index: 100;
+        transition: all 0.23s ease-in-out;
+
     }
 }
 
 .text-overlay-wrapper:hover::after{
+    content: '';
     opacity: 1;
 }
