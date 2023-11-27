@@ -8,7 +8,7 @@
     container-type: size;
 
     position: relative;
-    background-color: #ece7dd;
+    background-color: util.$BKGR-PAGE;
 
     &__sidebar{
         @include util.size(auto, 100%, 0, 0 7px 0);
@@ -30,7 +30,7 @@
         }
         
         .sidebar-card__options-trigger{
-            @include util.size(2.7vw, auto, 0.6vw 0 2vw 0, 0);
+            @include util.size(0, 0, 0, 0);
             rotate: 90deg;
             mix-blend-mode: difference;
             transition: util.$TRANS-1;
@@ -43,7 +43,7 @@
     }
 
     &__options-btn{
-        @include util.size(2.3vw, auto, 0, 0);
+        @include util.size(1.7vw, auto, 0, 0);
         background-color: transparent;
         transition: util.$TRANS-2;
         z-index: 2;
@@ -60,12 +60,13 @@
         max-height: 0;
         transition: all 0.9s ease-in-out;
         overflow: hidden;
+
         
         top: 0%;
         cursor: pointer;
 
-        & > *:not(:first-child){
-            margin: 1.3vw 0 0;
+        & > *{
+            margin: 0 0 20px;
         }
 
         & > *:hover{
@@ -76,13 +77,18 @@
     &__project-name{
         @include util.setFont(util.$PROJECT_CARD_TITLE_FONT_SIZE util.$FONT-PRIM, 300, util.$INV_FONT_COLOR);
         justify-self: flex-start;
-        margin: 10px 0 20px;
+        margin: 10px 0 0;
         z-index: 2;
         text-wrap: nowrap;
         writing-mode: vertical-rl;
+        overflow: hidden;
     }
 
 //======| Active Classes |======//
+
+    .sidebar-card__hover-options-trigger{
+        @include util.size(clamp(25px, 2.3vw, 45px), auto, 10px 0 10px, 0);
+    }
 
     .sidebar-card__active-menu{
         left: 0;
@@ -94,13 +100,13 @@
     }
 
     &__active-options-list{
-        max-height: 1000px;
-        transition: all 0.9s ease-in-out;
+        max-height: 500px;
+        transition: all 0.3s ease-in-out;
     }
 }
 
-@container sidebar-title (height < 400px) {
+@container sidebar-title (height < 100vh) {
     .sidebar-card__project-name{
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
 }

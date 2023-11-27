@@ -2,6 +2,7 @@
 
 .projects-container{
     @include util.flex(center, center, null, null, null);
+    background-color: util.$BKGR-PAGE;
     .project-display-board{
         @include util.size(88%, 100%, 0, 0);
 

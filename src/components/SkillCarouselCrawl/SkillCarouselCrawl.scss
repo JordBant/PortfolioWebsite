@@ -2,7 +2,7 @@
 
 .ticker__wrapper {
     @include util.size(100%, auto, 0, 10px 0 10px);
-    background-color: rgba(231, 227, 227, 0.9);
+    background-color: util.$BKGR-PAGE;
     position: relative;
     overflow: hidden;
     // background-color: rgba(0, 0, 0, 0.9);

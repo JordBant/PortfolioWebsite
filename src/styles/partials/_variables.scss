@@ -9,10 +9,11 @@
 
 $BKGR-PRIM: linear-gradient(90deg, rgba(0,0,0,1) 52%, rgba(255,255,255,1) 52%);
 $BKGR-LANDING: #0c0c0f;
+$BKGR-PAGE: #ece7dd;
 
 $TITLE_DYNAMIC_FONT_SIZE: 9vw;
 $BODY_DYNAMIC_FONT_SIZE: clamp(1.5vw, 1.9vw, 80px);
-$PROJECT_CARD_TITLE_FONT_SIZE: clamp(35px, 4vw, 50px);
+$PROJECT_CARD_TITLE_FONT_SIZE: clamp(1.9vw, 4vw, 50px);
 $OFFSITE_BUTTON_SIZE: 4vw;
 
 $SIDE_PAGE_TITLE_COLOR: rgba(255, 255, 255, 0.233);

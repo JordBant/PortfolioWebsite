@@ -1,0 +1,20 @@
+@use '../../styles/partials/index' as util;
+
+.text-overlay-wrapper{
+    // @include util.size(auto, auto, 0, 0)
+    @include util.size(300px, 300px, 0, 0);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    // border: 2px solid yellow;
+    position: relative;
+    
+    &::after{
+        content: '';
+        @include util.pseudoMask();
+        opacity: 0;
+    }
+}
+
+.text-overlay-wrapper:hover::after{
+    opacity: 1;
+}

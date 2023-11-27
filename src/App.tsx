@@ -3,9 +3,7 @@
 // import viteLogo from '/vite.svg'
 import { Navbar } from './components/Navbar/Navbar'
 import { SkillCarouselCrawl } from './components/SkillCarouselCrawl/SkillCarouselCrawl'
-import { SideTitlePage } from './layout/SideTitlePage/SideTitlePage'
-import { About } from './pages'
-import { Projects } from './pages/Projects/Projects'
+import { About, Contact, Projects } from './pages'
 import './styles/App.scss'
 
 function App() {
@@ -16,7 +14,7 @@ function App() {
       <About/>
       <SkillCarouselCrawl/>
       <Projects/>
-      <SideTitlePage pageTitle='Contacts'/>
+      <Contact/>
     </>
       // <div className="about-body-container">
       //   <div className="about-body"
