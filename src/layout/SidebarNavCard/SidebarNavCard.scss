@@ -4,14 +4,16 @@
     @include util.size(100%, 100%, 0, 0);
     @include util.flex(start, null, null, null, null);
 
+    container-name: sidebar-title;
+    container-type: size;
+
     position: relative;
     background-color: #ece7dd;
 
     &__sidebar{
         @include util.size(auto, 100%, 0, 0 7px 0);
-        @include util.flex(space-between, center, column, null, null);
+        @include util.flex(start, center, column, null, null);
         overflow: hidden;
-        
         position: relative;
 
         &::after{
@@ -20,45 +22,46 @@
             
             position: absolute;
             background-color: util.$SIDEBAR-COLOR;
+            
             z-index: 1;
             left: -100%;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
-    }
-
-    &__options-trigger{
-        @include util.size(3.4vw, auto, 0.6vw 0 2vw, 0);
-        rotate: 90deg;
-        mix-blend-mode: difference;
-        transition: util.$TRANS-1;
-        z-index: 2;
-        &:hover{
-            cursor: pointer;
+        
+        .sidebar-card__options-trigger{
+            @include util.size(2.7vw, auto, 0.6vw 0 2vw 0, 0);
+            rotate: 90deg;
+            mix-blend-mode: difference;
+            transition: util.$TRANS-1;
+            z-index: 2;
+            &:hover{
+                cursor: pointer;
+            }
+            
         }
     }
+
     &__options-btn{
         @include util.size(2.3vw, auto, 0, 0);
-        // @include util.size(2.3vw, auto, 0, 0);
         background-color: transparent;
         transition: util.$TRANS-2;
         z-index: 2;
+        mix-blend-mode: difference;
 
         &:hover{
             transform: translateY(4px); 
         }
     }
-    &__options-wrapper{
-        @include util.flex(start, center, column, null, null);
-    }
+
     &__options-list{
         @include util.flex(start, center, column, start, null);
-        @include util.size(auto, 0, 0, 0);
-        max-height: auto;
-        z-index: 2;
+        @include util.size(100%, null, 0, 0);
+        max-height: 0;
+        transition: all 0.9s ease-in-out;
         overflow: hidden;
-        position: absolute;
-        mix-blend-mode: difference;
+        
+        top: 0%;
         cursor: pointer;
 
         & > *:not(:first-child){
@@ -72,28 +75,32 @@
     
     &__project-name{
         @include util.setFont(util.$PROJECT_CARD_TITLE_FONT_SIZE util.$FONT-PRIM, 300, util.$INV_FONT_COLOR);
-        margin: 0 0 5px 2.5px;
-        padding: 0;
-        position: absolute;
+        justify-self: flex-start;
+        margin: 10px 0 20px;
         z-index: 2;
         text-wrap: nowrap;
-        mix-blend-mode: difference;
-        bottom: 0;
         writing-mode: vertical-rl;
     }
 
 //======| Active Classes |======//
 
-    &__active-menu{
+    .sidebar-card__active-menu{
         left: 0;
         rotate: 0deg;
     }
-    
+
     &__active-mask::after{
         left: 0;
     }
 
     &__active-options-list{
-        height: 100%;
+        max-height: 1000px;
+        transition: all 0.9s ease-in-out;
+    }
+}
+
+@container sidebar-title (height < 400px) {
+    .sidebar-card__project-name{
+        font-size: 2vw;
     }
 }

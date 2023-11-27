@@ -4,7 +4,7 @@ import { Icon } from '../../components';
 import { SidebarNavCardProps } from './SidebarNavCard.types';
 import { SidebarOptions } from './partials/SidebarOptions';
 
-export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName = 'Project Name', classNames}) => {
+export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName = 'Project Name', classNames = ''}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   /**
@@ -22,6 +22,9 @@ export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName = 'Project 
     setIsClicked(toggleTo)
   }, []);
   const activeMenuClassName: '' | 'sidebar-card__active-menu' = isClicked ? 'sidebar-card__active-menu' : ''
+  /**
+   * Trigger mask onHover
+   */
   const activeMask: '' | 'sidebar-card__active-mask' = isHovered ? 'sidebar-card__active-mask' : ''
 
   return (
@@ -30,15 +33,13 @@ export const SidebarNavCard: FC<SidebarNavCardProps> = ({projectName = 'Project 
       if(isClicked) isClickedHandler(false)
       }}>
       <div className={`sidebar-card__sidebar ${activeMenuClassName} ${activeMask}`}>
-        <div className='sidebar-card__options-wrapper'>
-          <Icon classNames={`sidebar-card__options-trigger ${activeMenuClassName}`} onClick={() => isClickedHandler(!isClicked)} iconElement='KOBAB' />
-          <SidebarOptions isClicked={isClicked} />
-        </div>
-        {
-          isHovered && <h2 className="sidebar-card__project-name">
-            {projectName}
-          </h2>
-        }
+        <Icon classNames={`sidebar-card__options-trigger ${activeMenuClassName}`} onClick={() => isClickedHandler(!isClicked)} iconElement='KOBAB' />
+        <SidebarOptions isClicked={isClicked} />
+      {
+        isHovered && <h2 className="sidebar-card__project-name">
+          {projectName}
+        </h2>
+      }
       </div>
     </div>
   )
