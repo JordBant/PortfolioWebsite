@@ -16,6 +16,8 @@
             @include util.size(0, 0, auto, auto);
             @include util.flex(center, center, null, null, null);
             overflow: hidden;
+            container-name: overlayContainer;
+            container-type: size;
 
             .overlay-text {
                 font-size: 2.5vw;
@@ -38,8 +40,8 @@
         position: absolute;
         box-sizing: border-box;
         background: rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
         backdrop-filter: blur(5.2px);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         -webkit-backdrop-filter: blur(5.2px);
         z-index: 99;
         transition: all 0.23s ease-in-out;
@@ -49,4 +51,10 @@
 .overlay-wrapper:hover::after {
     content: '';
     opacity: 1;
+}
+
+@container overlayContainer {
+    .overlay-text {
+        font-size: 1.7vh;
+    }
 }

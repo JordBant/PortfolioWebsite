@@ -1,6 +1,6 @@
 export type TextOverLayProps = {
-    title?: string;
+    title: string;
     children?: React.ReactElement;
     verticalLineColor?: string;
-    classNames: string;
+    classNames?: string;
 };

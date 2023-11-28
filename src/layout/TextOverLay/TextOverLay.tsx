@@ -35,7 +35,6 @@ export const TextOverLay: FC<TextOverLayProps> = ({
           <h2 className="overlay-text">{title}</h2>
         </div>
       </div>
-      <Icon iconElement={"VIDEO"} />
       {children}
     </div>
   );
