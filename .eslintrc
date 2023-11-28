@@ -19,7 +19,6 @@
     "space-before-function-paren": "error",
     "no-multiple-empty-lines": "error",
     "no-multi-spaces": "error",
-    "quotes": ["warn", "single"],
     "no-trailing-spaces": "error",
     "object-curly-spacing": "off",
     "no-mixed-spaces-and-tabs": "error",
