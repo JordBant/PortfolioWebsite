@@ -2,7 +2,9 @@
 
 .overlay-wrapper {
     // @include util.size(auto, auto, 0, 0);
-    @include util.size(300px, auto, 0, 0);
+    @include util.size(100px, auto, 0, 0);
+    container: overlayContainer size;
+
     position: relative;
 
     .overlay-container {
@@ -16,18 +18,18 @@
             @include util.size(0, 0, auto, auto);
             @include util.flex(center, center, null, null, null);
             overflow: hidden;
-            container-name: overlayContainer;
-            container-type: size;
 
             .overlay-text {
-                font-size: 2.5vw;
-                margin-left: 10px;
+                font-family: util.$SIDE_PAGE_TITLE_FONT;
+                font-size: 1.2vw;
+                margin-left: 4px;
                 text-wrap: nowrap;
             }
         }
 
         .wrapper-hovered {
-            animation: 0.5s util.$TEXT_OVERLY_SHOW_ANIME forwards;
+            
+            animation: 0.7s util.$TEXT_OVERLY_SHOW_ANIME forwards ease-in-out;
         }
     }
 
@@ -39,11 +41,10 @@
         inset: 0 0 0 0;
         position: absolute;
         box-sizing: border-box;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.2px);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         -webkit-backdrop-filter: blur(5.2px);
-        z-index: 99;
         transition: all 0.23s ease-in-out;
     }
 }
@@ -53,8 +54,9 @@
     opacity: 1;
 }
 
-@container overlayContainer {
+@container overlayContainer (width < 80px) {
     .overlay-text {
-        font-size: 1.7vh;
+        font-size: 3px;
+        color: blue;
     }
 }

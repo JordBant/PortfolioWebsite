@@ -1,6 +1,6 @@
-@use '../../styles/partials/index' as util ;
+@use '../../styles/partials/index' as util;
 
-.page-side-title-wrapper{
+.page-side-title-wrapper {
     @include util.size(100vw, 100vh, 0, 0);
     @include util.flex(center, center, null, null, null);
 
@@ -8,11 +8,12 @@
     background-color: util.$BKGR-PRIM;
     background-size: util.$BKGR-SIZE;
 
-    .page-side-container{
+    .page-side-container {
         @include util.size(100%, 100%, 0, 0);
     }
-    .page-side-title{
-        @include util.setFont(util.$SIDE-PAGE_TITLE_DYNAMIC util.$SIDE_PAGE_TITLE_FONT, 300, util.$SIDE_PAGE_TITLE_COLOR);
+
+    .page-side-title {
+        @include util.setFont(util.$SIDE-PAGE_TITLE_DYNAMIC util.$FONT-PRIM, 300, util.$SIDE_PAGE_TITLE_COLOR);
         // @include util.setFont(util.$SIDE-PAGE_TITLE_DYNAMIC util.$SIDE_PAGE_TITLE_FONT, 300, util.$SIDE_PAGE_TITLE_COLOR);
         // border: 2px solid red;
         text-align: center;

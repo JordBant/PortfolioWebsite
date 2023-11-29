@@ -17,7 +17,7 @@ $BODY_DYNAMIC_FONT_SIZE: clamp(1.5vw, 1.9vw, 80px);
 $PROJECT_CARD_TITLE_FONT_SIZE: clamp(1.9vw, 4vw, 50px);
 $OFFSITE_BUTTON_SIZE: 4vw;
 
-$SIDE_PAGE_TITLE_COLOR: rgba(255, 255, 255, 0.233);
+$SIDE_PAGE_TITLE_COLOR: rgba(255, 255, 255, 0.114);
 $SIDE-PAGE_TITLE_DYNAMIC: 8.5vw;
 
 $BKGR-SEC: hsl(240, 19%, 23%);
@@ -84,12 +84,12 @@ $TEXT_OVERLY_SHOW_ANIME: text_overly_show;
 
     50% {
         max-width: 0;
-        min-height: 30%;
+        min-height: min(55%, 45px);
     }
 
     100% {
         width: auto;
         max-width: 300px;
-        min-height: 30%;
+        min-height: min(55%, 45px);
     }
 }

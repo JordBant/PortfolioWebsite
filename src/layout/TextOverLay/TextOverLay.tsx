@@ -30,11 +30,12 @@ export const TextOverLay: FC<TextOverLayProps> = ({
       <div className="overlay-container">
         <div
           className={`overlay ${textContainerClass} ${classNames}`}
-          style={{ borderLeft: `7px solid ${verticalLineColor}` }}
+          style={{ borderLeft: `2px solid ${verticalLineColor}` }}
         >
           <h2 className="overlay-text">{title}</h2>
         </div>
       </div>
+      {/* <Icon iconElement={"REACT"} /> */}
       {children}
     </div>
   );

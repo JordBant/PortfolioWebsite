@@ -1,9 +1,10 @@
 @use '../../styles/partials/index' as util;
 
-.projects-container{
+.projects-container {
     @include util.flex(center, center, null, null, null);
     background-color: util.$BKGR-PAGE;
-    .project-display-board{
+
+    .project-display-board {
         @include util.size(88%, 100%, 0, 0);
 
         display: grid;
@@ -11,12 +12,16 @@
         grid-template-rows: repeat(2, auto);
         grid-row: 2 / span auto;
 
-        & > div{
+        & > div {
             color: aliceblue;
+            box-shadow: 0 0 0.8px 0 inset black;
         }
-        .grid-span-column{
+
+        .grid-span-column {
+            gap: 20px;
             grid-row: 1;
             grid-row-end: 3;
         }
+
     }
 }
