@@ -1,6 +1,6 @@
-export type TextOverLayProps = {
+export type FlippableCardProps = {
     title: string;
     children?: React.ReactElement;
-    verticalLineColor?: string;
+    colorTheme?: string;
     classNames?: string;
 };

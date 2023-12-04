@@ -1,6 +1,6 @@
 import { Icon } from "../../components";
 import { SideTitlePage } from "../../layout/SideTitlePage/SideTitlePage";
-import { TextOverLay } from "../../layout/TextOverLay/TextOverLay";
+import { TextOverLay } from "../../layout/FlippableCard/FlippableCard";
 
 // type Props = {}
 

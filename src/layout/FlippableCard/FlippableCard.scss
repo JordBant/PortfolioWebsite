@@ -1,0 +1,35 @@
+@use '../../styles/partials/index' as util;
+
+.scene {
+    @include util.size(200px, 260px, 0, 0);
+    perspective: 600px;
+
+    .card {
+        @include util.size(100%, 100%, 0, 0);
+        position: relative;
+        transition: transform 0.59s;
+        transform-style: preserve-3d;
+
+        .card-face {
+            @include util.size(100%, 100%, 0, 0);
+
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .back {
+            // background: blue;
+            transform: rotateY(180deg);
+
+            .card-text {
+                font-family: util.$SIDE_PAGE_TITLE_FONT;
+                font-size: 1.4vw;
+                // text-shadow: ;
+            }
+        }
+
+        &:hover {
+            transform: rotateY(180deg);
+        }
+    }
+}
