@@ -1,7 +1,6 @@
-import { IconMap } from '../../store/constants'
-import './About.scss';
-import { SideTitlePage } from '../../layout/SideTitlePage/SideTitlePage';
-import { Icon } from '../../components';
+import { Icon } from "../../components";
+import { SideTitlePage } from "../../layout/SideTitlePage/SideTitlePage";
+import "./About.scss";
 
 // type Props = {};
 
@@ -11,16 +10,16 @@ export const About = () => {
       <div className="about_body">
         <h1 className="about_salutations"> I'm Jordon </h1>
         <p className="about_body_text">
-          I'm a Web Developer with a Bachelors of Science in Computer Science. 
-          I build robust & performant web applications for businesses, corporations and other organizations.
+          I'm a Web Developer with a Bachelors of Science in Computer Science. I build robust & performant web
+          applications for businesses, corporations and other organizations.
         </p>
         <div className="calls-to-action">
-        <button className="contact-now">Contact Now</button>
-          <a target='blank' href='https://github.com/JordBant'>
-            <Icon classNames='offsite-button' iconElement={"GITHUB"}/>
+          <button className="contact-now">Contact Now</button>
+          <a target="blank" href="https://github.com/JordBant">
+            <Icon classNames="offsite-button" iconElement={"GITHUB"} />
           </a>
-          <a target='blank' href='https://linkedin.com/in/jbantin'>
-            <Icon classNames='offsite-button' iconElement={"LINKEDIN"}/>
+          <a target="blank" href="https://linkedin.com/in/jbantin">
+            <Icon classNames="offsite-button" iconElement={"LINKEDIN"} />
           </a>
         </div>
       </div>
@@ -31,5 +30,5 @@ export const About = () => {
         <img src={reactLogo} className="logo react" alt="React logo" />
       </a> */}
     </SideTitlePage>
-  )
-}
+  );
+};

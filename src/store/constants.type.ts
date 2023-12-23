@@ -1,4 +1,4 @@
-import { CLASSNAME_IN_USE, IconMap } from "./constants"
+import { CAROUSEL_ICON_MAP, CLASSNAME_IN_USE } from "./constants"
 
 export type SkillIcon = {
     name: string,
@@ -13,5 +13,5 @@ export type IconMapIndexSignature = {
     [key: string]: JSX.Element
 }
 
-export type Icons = keyof typeof IconMap
+export type Icons = keyof typeof CAROUSEL_ICON_MAP
 export type PageTitle = 'About' | 'Projects' | 'Contact'

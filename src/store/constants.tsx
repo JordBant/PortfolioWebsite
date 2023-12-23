@@ -21,8 +21,11 @@ export const SIDEBAR_ICONS = ["VIDEO", "GITHUB", "SPECTACLES"] as const;
 /**
  * All SVGs will be hosted here.
  * Not all icons are going to be used for the same purpose
+ *
+ * When adding new Icons to the carousel be sure to
+ * add the className of "card-face" to the svg element
  */
-export const IconMap = {
+export const CAROUSEL_ICON_MAP = {
   VIDEO: (
     <svg width="24px" fill="#ffffff" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -125,6 +128,7 @@ export const IconMap = {
   ),
   GRAPHQL: (
     <svg
+      className="card-face"
       width="800px"
       height="800px"
       viewBox="-16 0 288 288"
@@ -339,6 +343,7 @@ export const IconMap = {
   ),
   VUE: (
     <svg
+      className="card-face"
       width="800px"
       height="800px"
       viewBox="0 -17.5 256 256"
@@ -466,6 +471,7 @@ export const IconMap = {
   ),
   WEBPACK: (
     <svg
+      className="card-face"
       width="800px"
       height="800px"
       viewBox="-17 0 290 290"
