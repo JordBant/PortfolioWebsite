@@ -1,9 +1,10 @@
+import { FC } from "react";
 import { Icon } from "../../components";
-import { SideTitlePage } from "../../layout/SideTitlePage/SideTitlePage";
+import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 
 // type Props = {}
 
-export const Contact = () => {
-  return <SideTitlePage pageTitle="Contact"></SideTitlePage>;
+export const Contact: FC = () => {
+  return <SideTitlePage pageId="Contact" pageTitle="Contact"></SideTitlePage>;
 };
 

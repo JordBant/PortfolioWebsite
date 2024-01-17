@@ -1,12 +1,13 @@
+import { FC } from "react";
 import { Icon } from "../../components";
-import { SideTitlePage } from "../../layout/SideTitlePage/SideTitlePage";
+import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./About.scss";
 
 // type Props = {};
 
-export const About = () => {
+export const About: FC = () => {
   return (
-    <SideTitlePage pageTitle="About" classNames="about-body-container">
+    <SideTitlePage pageTitle="About" pageId={"About"} classNames="about-body-container">
       <div className="about_body">
         <h1 className="about_salutations"> I'm Jordon </h1>
         <p className="about_body_text">
@@ -32,3 +33,4 @@ export const About = () => {
     </SideTitlePage>
   );
 };
+

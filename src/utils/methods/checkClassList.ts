@@ -8,7 +8,6 @@ import { CLASSNAME_IN_USE } from "../../store/constants";
  * @returns
  */
 export function classNamesChecker (classList: string) {
-    console.log(classList);
     const checkClasses = classList.includes(" ") ? classList.split(" ") : [ classList ];
     checkClasses.some((name) => CLASSNAME_IN_USE.includes(name));
 }

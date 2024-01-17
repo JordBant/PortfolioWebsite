@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FlippableCard } from "../../../../layout";
+import { FlippableCard } from "../../../../layouts";
 import { Icon } from "../../../Icons/Icon";
 import { SkillCardProps } from "../../SkillCarouselCrawl.types";
 import "./SkillCard.scss";

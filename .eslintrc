@@ -16,7 +16,6 @@
     "no-irregular-whitespace": "error",
     "no-empty-function": "error",
     "require-await": "error",
-    "space-before-function-paren": "error",
     "no-multiple-empty-lines": "error",
     "no-multi-spaces": "error",
     "no-trailing-spaces": "error",

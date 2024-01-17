@@ -1,14 +1,13 @@
-import { SidebarNavCard } from "../../layout/SidebarNavCard/SidebarNavCard";
-import { SideTitlePage } from "../../layout/SideTitlePage/SideTitlePage";
+import { FC } from "react";
+import { SidebarNavCard } from "../../layouts/SidebarNavCard/SidebarNavCard";
+import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./Projects.scss";
 
-// type Props = {}
-
-export const Projects = () => {
+export const Projects: FC = () => {
   let compatibleNum = 3;
 
   return (
-    <SideTitlePage pageTitle="Projects" classNames="projects-container">
+    <SideTitlePage pageTitle="Projects" pageId="Projects" classNames="projects-container">
       <div className="project-display-board">
         {["Grid container", "Grid container", "Grid container", "Grid container", "Grid container"].map(
           (word, idx) => {
@@ -16,17 +15,14 @@ export const Projects = () => {
             const isIntervaled = truePosition - compatibleNum === 5;
             if (isIntervaled || idx + 1 === 3) {
               compatibleNum = truePosition;
-              return <SidebarNavCard classNames="grid-span-column" />;
+              return <SidebarNavCard classNames="grid-span-column" key={`00${idx}--${word}`} />;
             } else {
-              return <SidebarNavCard />;
+              return <SidebarNavCard key={`00${idx}--${word}`} />;
             }
           },
         )}
-        {/* <SidebarNavCard/> */}
       </div>
     </SideTitlePage>
   );
 };
-
-// SidebarNavCard
 

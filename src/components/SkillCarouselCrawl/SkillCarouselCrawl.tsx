@@ -9,8 +9,8 @@ export const SkillCarouselCrawl: FC = (): React.ReactElement => {
   return (
     <div className="ticker__wrapper">
       <div className="ticker">
-        {mapComponentsByClassName.map((className) => (
-          <div className={`${className}`}>
+        {mapComponentsByClassName.map((className, idx) => (
+          <div className={`${className}`} key={`${idx}--card`}>
             <SkillCards />
           </div>
         ))}
