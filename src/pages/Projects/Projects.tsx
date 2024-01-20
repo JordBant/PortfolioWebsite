@@ -7,7 +7,7 @@ export const Projects: FC = () => {
   let compatibleNum = 3;
 
   return (
-    <SideTitlePage pageTitle="Projects" pageId="Projects" classNames="projects-container">
+    <SideTitlePage pageTitle="Projects" pageId="projects" classNames="projects-container">
       <div className="project-display-board">
         {["Grid container", "Grid container", "Grid container", "Grid container", "Grid container"].map(
           (word, idx) => {

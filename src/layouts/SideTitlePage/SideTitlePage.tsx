@@ -3,10 +3,10 @@ import { PageTitle } from "../../store/constants.type";
 import "./SideTitlePage.scss";
 
 type SideTitlePageProps = {
-  pageId?: PageTitle;
-  pageTitle?: string;
+  pageId?: string;
+  pageTitle: PageTitle;
   classNames?: string;
-  children?: React.ReactElement;
+  children: React.ReactElement;
 };
 
 export const SideTitlePage: FC<SideTitlePageProps> = ({ pageTitle, classNames, children, pageId }) => {

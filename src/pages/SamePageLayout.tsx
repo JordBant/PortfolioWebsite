@@ -13,6 +13,13 @@ export const SamePageLayout = () => {
   const location = useLocation();
 
   useEffect(() => {
+    const section = location.pathname.slice(1); // Remove the leading '/'
+    const targetRef = getSectionRef(section);
+
+    if (targetRef) {
+      targetRef?.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
@@ -27,30 +34,22 @@ export const SamePageLayout = () => {
         goToSection("/contact");
       }
     };
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [goToSection]);
-
-  useEffect(() => {
-    // Handle direct navigation to a section via URL
-    const section = location.pathname.slice(1); // Remove the leading '/'
-    const targetRef = getSectionRef(section);
-    if (targetRef) {
-      targetRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
+  }, []);
 
   const getSectionRef = (section: string) => {
     switch (section) {
-      case "/projects":
+      case "projects":
         return projectsRef;
-      case "/contact":
+      case "contact":
         return contactRef;
       case "":
-      case "/about":
+      case "about":
         return aboutRef;
     }
   };

@@ -23,16 +23,6 @@
     "no-mixed-spaces-and-tabs": "error",
     "array-bracket-spacing": "off",
     "no-var": "error",
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": true,
-        "ignoreDeclarationSort": false,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["all", "multiple", "single", "none"],
-        "allowSeparatedGroups": true
-      }
-    ],
     "comma-dangle": [
       "error",
       {

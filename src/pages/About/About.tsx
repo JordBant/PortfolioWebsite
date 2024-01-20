@@ -7,7 +7,7 @@ import "./About.scss";
 
 export const About: FC = () => {
   return (
-    <SideTitlePage pageTitle="About" pageId={"About"} classNames="about-body-container">
+    <SideTitlePage pageTitle="About" pageId="about" classNames="about-body-container">
       <div className="about_body">
         <h1 className="about_salutations"> I'm Jordon </h1>
         <p className="about_body_text">

@@ -5,6 +5,10 @@ import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 // type Props = {}
 
 export const Contact: FC = () => {
-  return <SideTitlePage pageId="Contact" pageTitle="Contact"></SideTitlePage>;
+  return (
+    <SideTitlePage pageId="contact" pageTitle="Contact">
+      <></>
+    </SideTitlePage>
+  );
 };
 
