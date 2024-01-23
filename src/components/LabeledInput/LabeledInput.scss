@@ -1,0 +1,25 @@
+@use '../../styles/partials/index' as util;
+
+.form-input-container {
+    @include util.size(100%, auto, 0, 10px);
+
+    box-sizing: border-box;
+    border: 2px solid red;
+
+    & > * {
+        font-size: 2.4vw;
+        line-height: 1.75rem;
+    }
+
+    .form-label {
+        color: util.$FORM_INPUT_BKGRD_COLOR;
+    }
+
+    .form-input {
+        box-sizing: border-box;
+
+        @include util.size(100%, 70px, 0, 10px);
+        color: white;
+        background-color: util.$FORM_INPUT_BKGRD_COLOR;
+    }
+}

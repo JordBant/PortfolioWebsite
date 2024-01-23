@@ -15,7 +15,14 @@ export const About: FC = () => {
           applications for businesses, corporations and other organizations.
         </p>
         <div className="calls-to-action">
-          <button className="contact-now">Contact Now</button>
+          <button
+            className="contact-now"
+            onClick={() => {
+              document.getElementById(`#contact`)?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Contact Now
+          </button>
           <a target="blank" href="https://github.com/JordBant">
             <Icon classNames="offsite-button" iconElement={"GITHUB"} />
           </a>

@@ -13,13 +13,20 @@ export const SamePageLayout = () => {
   const location = useLocation();
 
   useEffect(() => {
+    /**
+     * When accessing the site, extract the pathname and navigate to
+     * that section via its ref
+     */
     const section = location.pathname.slice(1); // Remove the leading '/'
     const targetRef = getSectionRef(section);
 
     if (targetRef) {
       targetRef?.current?.scrollIntoView({ behavior: "smooth" });
     }
-
+    /**
+     * Update and navigate to a given "route"
+     * depending on your scroll position
+     */
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
@@ -41,7 +48,9 @@ export const SamePageLayout = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  /**
+   * Get section ref depending on pathname
+   */
   const getSectionRef = (section: string) => {
     switch (section) {
       case "projects":

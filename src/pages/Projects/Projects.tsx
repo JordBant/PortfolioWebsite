@@ -8,7 +8,7 @@ export const Projects: FC = () => {
 
   return (
     <SideTitlePage pageTitle="Projects" pageId="projects" classNames="projects-container">
-      <div className="project-display-board">
+      <section className="project-display-board">
         {["Grid container", "Grid container", "Grid container", "Grid container", "Grid container"].map(
           (word, idx) => {
             const truePosition = idx + 1;
@@ -21,7 +21,7 @@ export const Projects: FC = () => {
             }
           },
         )}
-      </div>
+      </section>
     </SideTitlePage>
   );
 };
