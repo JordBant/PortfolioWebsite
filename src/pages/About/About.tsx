@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Icon } from "../../components";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./About.scss";
+import { MyParticles } from "../../components/MyParticles/MyParticles";
 
 // type Props = {};
 
@@ -9,6 +10,7 @@ export const About: FC = () => {
   return (
     <SideTitlePage pageTitle="About" pageId="about" classNames="about-body-container">
       <div className="about_body">
+        <MyParticles />
         <h1 className="about_salutations"> I'm Jordon </h1>
         <p className="about_body_text">
           I'm a Web Developer with a Bachelors of Science in Computer Science. I build robust & performant web

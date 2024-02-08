@@ -5,18 +5,20 @@ import "./LabeledInput.scss";
 export const LabeledInput: FC<LabeledInputProps> = ({
   inputType = "text",
   inputLabelName,
-  onInputChange,
+  onInputChange = () => {},
   placeholder,
   classNames,
 }) => {
   return (
     <div className={`form-input-container ${classNames}`}>
-      <label className="form-label" htmlFor={`${inputLabelName.toLocaleLowerCase()}`}>{inputLabelName}</label>
+      <label className="form-label" htmlFor={`${inputLabelName.toLocaleLowerCase()}`}>
+        {inputLabelName}
+      </label>
       <input
         id={inputLabelName.toLocaleLowerCase()}
         className="form-input"
         placeholder={placeholder}
-        onChange={onInputChange}
+        onChange={(e) => onInputChange(e)}
         type={inputType}
       />
     </div>

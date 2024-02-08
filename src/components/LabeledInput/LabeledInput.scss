@@ -4,7 +4,7 @@
     @include util.size(100%, auto, 0, 10px);
 
     box-sizing: border-box;
-    border: 2px solid red;
+    // border: 2px solid red;
 
     & > * {
         font-size: 2.4vw;

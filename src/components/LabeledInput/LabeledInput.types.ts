@@ -4,6 +4,6 @@ export type LabeledInputProps = {
     inputLabelName: string;
     placeholder?: string;
     inputType?: HTMLInputTypeAttribute;
-    onInputChange?: () => void;
+    onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     classNames?: string;
 };

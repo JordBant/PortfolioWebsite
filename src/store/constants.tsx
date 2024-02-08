@@ -1,11 +1,5 @@
 import { PageTitle, SkillIcon } from "./constants.type";
 
-export const CLASSNAME_IN_USE: Readonly<string[]> = [
-  "wrapper-hovered",
-  "sidebar-card__active-menu",
-  "sidebar-card__active-mask",
-  "sidebar-card__hover-options-trigger",
-] as const;
 /**
  * Page titles being used
  * ids and the page titles
