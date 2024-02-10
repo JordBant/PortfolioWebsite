@@ -1,76 +1,83 @@
-@use '../../styles/partials/' as util ;
+@use '../../styles/partials/' as util;
 
-.about-body-container{
+.about-body-container {
     background: util.$BKGR-PRIM;
     background-size: util.$BKGR-SIZE;
-  
-    .about_body{
+
+    .about_body {
         @include util.size(auto, 100%, 0 0 0 3vw, 0);
         @include util.flex(center, flex-start, column, NULL, NULL);
-  
-        & > *{ 
-            margin: 3px 0; 
+
+        & > * {
+            margin: 3px 0;
         }
 
-        .about_salutations{
+        .about_salutations {
             @include util.setFont(util.$TITLE_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
             @include util.size(20%, auto, NULL, 0);
             line-height: 0.8;
             opacity: 1;
             mix-blend-mode: util.$FONT-BLEND-ALT;
             // transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-	        animation: SalutationsSpacingAnim 0.83s cubic-bezier(0.075, 0.765, 0.82, 1);
+            animation: SalutationsSpacingAnim 0.83s cubic-bezier(0.075, 0.765, 0.82, 1);
         }
 
-        .about_body_text{
+        .about_body_text {
             @include util.setFont(util.$BODY_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-            @include util.size(55%, auto, 2vw 0, 0 );
+            @include util.size(55%, auto, 2vw 0, 0);
             mix-blend-mode: util.$FONT-BLEND-ALT;
         }
-        .calls-to-action{
+
+        .calls-to-action {
             @include util.flex(space-between, center, NULL, NULL, NULL);
             @include util.size(auto, auto, NULL, 0);
 
             & > * {
                 margin: 0 0 0 1.7vw;
             }
-            .contact-now{
+
+            .contact-now {
                 @include util.setFont(2vw util.$FONT-PRIM, 400, NULL);
                 @include util.size(auto, 4vw, 0, 0 0.7vw);
-            
+
                 mix-blend-mode: util.$FONT-BLEND-ALT;
                 border: 2px solid black;
                 background-color: rgb(253, 253, 253);
                 transition: util.$TRANS-2;
                 border: 2px solid white;
-                cursor: pointer;
-            
-                &:hover{
+                cursor: none;
+
+                &:hover {
                     background-color: rgba(253, 253, 253, 0.106);
                     color: white;
                 }
             }
 
-            a > .offsite-button{
+            a {
+                z-index: 9999;
+            }
+
+            a > .offsite-button {
                 @include util.size(util.$OFFSITE_BUTTON_SIZE, auto, 0, 0);
                 transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
-                &:hover{
+
+                &:hover {
                     transform: translateY(-7px);
+                    cursor: none;
                 }
             }
         }
     }
-  }
+}
 
-@keyframes SalutationsSpacingAnim { 
+@keyframes SalutationsSpacingAnim {
     0% {
         opacity: 0;
         line-height: 0.52;
-	}
+    }
 
     100% {
         opacity: 1;
-        line-height: 0.8;		
-	}
+        line-height: 0.8;
+    }
 }
-  

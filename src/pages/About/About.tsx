@@ -25,10 +25,10 @@ export const About: FC = () => {
           >
             Contact Now
           </button>
-          <a target="blank" href="https://github.com/JordBant">
+          <a target="_blank" href="https://github.com/JordBant">
             <Icon classNames="offsite-button" iconElement={"GITHUB"} />
           </a>
-          <a target="blank" href="https://linkedin.com/in/jbantin">
+          <a target="_blank" href="https://linkedin.com/in/jbantin">
             <Icon classNames="offsite-button" iconElement={"LINKEDIN"} />
           </a>
         </div>

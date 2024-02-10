@@ -4,6 +4,7 @@
 import { Route, Routes } from "react-router-dom";
 import { SamePageLayout } from "./pages/SamePageLayout";
 import "./styles/App.scss";
+import { CustomCursor } from "./components/CustomCursor/CustomCursor";
 
 function App() {
   return (

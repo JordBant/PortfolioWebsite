@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Navbar } from "../components/Navbar/Navbar";
 import { SkillCarouselCrawl } from "../components";
+import { CustomCursor } from "../components/CustomCursor/CustomCursor";
 
 export const SamePageLayout = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -66,6 +67,7 @@ export const SamePageLayout = () => {
   return (
     <>
       <Navbar />
+      <CustomCursor />
       <div ref={aboutRef}>
         <About />
       </div>
