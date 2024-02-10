@@ -1,25 +1,7 @@
-// import React, { useEffect, useRef } from "react";
-// import { useFolllowCursor } from "../../hooks/useFolllowCursor";
 import classNames from "classnames";
 import "./CustomCursor.scss";
 
 import { useEffect, useState } from "react";
-
-// export const CustomCursor = () => {
-//   const cursorDiv = useRef(null);
-//   const { x, y } = useFolllowCursor(cursorDiv);
-//   useEffect(() => {
-//     const element = cursorDiv.current as unknown as HTMLDivElement;
-//     element.style.left = x + "px";
-//     element.style.top = y + "px";
-//   }, [x, y]);
-
-//   return (
-//     <div ref={cursorDiv} className="cursor">
-//       CustomCursor
-//     </div>
-//   );
-// };
 
 export const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
