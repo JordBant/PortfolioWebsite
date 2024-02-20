@@ -3,7 +3,10 @@ import { Icon } from "../../components";
 import { SidebarNavCardProps } from "./SidebarNavCard.types";
 import { SidebarOptions } from "./partials/SidebarOptions";
 import "./SidebarNavCard.scss";
-
+/**
+ * Card layout with background image of project to
+ * display
+ */
 export const SidebarNavCard: FC<SidebarNavCardProps> = ({
   projectName = "Project Name",
   classNames = "",

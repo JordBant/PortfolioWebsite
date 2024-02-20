@@ -4,23 +4,28 @@ import "./Navbar.scss";
 
 export const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        {PAGE_TITLES.map((title, idx) => {
-          const endpoint = title === "About" ? "/" : `${title.toLowerCase()}`;
-          return (
-            <li
-              key={`00${idx}--nav-item`}
-              onClick={() => {
-                document.getElementById(`#${endpoint}`)?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              <Link to={endpoint}>{title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+    <header className="header-menu">
+      <nav className="navbar">
+        <ul>
+          {PAGE_TITLES.map((title, idx) => {
+            const endpoint = title === "About" ? "/" : `${title.toLowerCase()}`;
+            return (
+              <li
+                key={`00${idx}--nav-item`}
+                style={{ textDecoration: "none" }}
+                onClick={() => {
+                  document.getElementById(`#${endpoint}`)?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <Link to={endpoint}>
+                  <p className="nav-option">{title}</p>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </header>
   );
 };
 

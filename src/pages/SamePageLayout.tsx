@@ -1,7 +1,6 @@
 import { About, Contact, Projects } from ".";
 import React, { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Navbar } from "../components/Navbar/Navbar";
 import { SkillCarouselCrawl } from "../components";
 import { CustomCursor } from "../components/CustomCursor/CustomCursor";
 
@@ -66,19 +65,17 @@ export const SamePageLayout = () => {
 
   return (
     <>
-      <Navbar />
       <CustomCursor />
-      <div ref={aboutRef}>
+      <section ref={aboutRef}>
         <About />
-      </div>
+      </section>
       <SkillCarouselCrawl />
-      <div ref={projectsRef}>
+      <section ref={projectsRef}>
         <Projects />
-      </div>
-      <div ref={contactRef}>
+      </section>
+      <section ref={contactRef}>
         <Contact />
-      </div>
+      </section>
     </>
   );
 };
-
