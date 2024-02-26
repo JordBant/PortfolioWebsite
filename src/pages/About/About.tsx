@@ -13,7 +13,7 @@ export const About: FC = () => {
       <>
         <Navbar />
         <div className="about_body">
-          {/* <MyParticles /> */}
+          <MyParticles />
           <h1 className="about_salutations"> I'm Jordon </h1>
           <p className="about_body_text">
             I'm a Web Developer with a Bachelors of Science in Computer Science. I build robust & performant

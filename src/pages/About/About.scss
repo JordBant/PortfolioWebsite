@@ -1,7 +1,7 @@
 @use '../../styles/partials/' as util;
 
 .about-body-container {
-    background: util.$BKGR-PRIM;
+    background: util.$BKGR-PAGE-BLK;
     background-size: util.$BKGR-SIZE;
 
     .about_body {
@@ -51,10 +51,6 @@
                     background-color: rgba(253, 253, 253, 0.106);
                     color: white;
                 }
-            }
-
-            a {
-                z-index: 9999;
             }
 
             a > .offsite-button {

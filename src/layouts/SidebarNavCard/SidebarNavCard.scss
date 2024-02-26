@@ -8,7 +8,6 @@
     container-type: size;
 
     position: relative;
-    background-color: util.$BKGR-PAGE;
 
     &__sidebar {
         @include util.size(auto, 100%, 0, 0 7px 0);

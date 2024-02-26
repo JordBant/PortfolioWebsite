@@ -6,11 +6,12 @@ export const Navbar = () => {
   return (
     <header className="header-menu">
       <nav className="navbar">
-        <ul>
+        <ul className="navbar-container">
           {PAGE_TITLES.map((title, idx) => {
             const endpoint = title === "About" ? "/" : `${title.toLowerCase()}`;
             return (
               <li
+                className="nav-option-container"
                 key={`00${idx}--nav-item`}
                 style={{ textDecoration: "none" }}
                 onClick={() => {

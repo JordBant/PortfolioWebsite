@@ -2,27 +2,35 @@
 
 .header-menu {
     @include util.size(100vw, auto, 0, 0);
-
+    @include util.flex(center, center, null, null, null);
+    mix-blend-mode: difference;
     position: fixed;
-    border: 2px solid red;
-    z-index: 99995;
+    z-index: 9999;
 }
 
 .navbar {
-    z-index: 99999;
+    @include util.size(30%, auto, 0, 0);
+
     text-decoration: none;
     list-style: none;
-    mix-blend-mode: difference;
 
-    .nav-option {
-        list-style: none;
-        text-decoration: none;
-        color: white;
-        mix-blend-mode: difference;
+    .navbar-container {
+        @include util.flex(space-between, center, null, null, null);
+        padding: 0px;
+
+        .nav-option {
+            @include util.setFont(util.$NAV_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
+            list-style: none;
+            color: white;
+        }
     }
+
 }
 
 .navbar > ul {
     list-style: none;
-    z-index: 99998;
+
+    li {
+        border: 2px sold green;
+    }
 }

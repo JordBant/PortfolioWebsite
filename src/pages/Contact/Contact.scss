@@ -1,11 +1,10 @@
 @use '../../styles/partials/index' as util;
 
 .contact-page-container {
-    background-color: util.$BKGR-PAGE;
+    background-color: util.$BKGR-PAGE-BLK;
 
     .contact-form-container {
         @include util.size(80%, 100%, 0, 40px);
-        // border: 2px solid red;
         box-sizing: border-box;
 
 
@@ -21,14 +20,6 @@
 
         .form-submit-btn {
             @include util.size(100%, null, null, 0.75rem 0 0.75rem);
-
-            // font-size: 1.25rem;
-            // line-height: 1.75rem;
-            // background-color: #2563EB;
-
-            // &:hover {
-            //     background-color: #1D4ED8;
-            // }
         }
 
     }
