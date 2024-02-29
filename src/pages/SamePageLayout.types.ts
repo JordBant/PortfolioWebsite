@@ -1,3 +1,3 @@
-export interface PageSections extends string {
-    PageSections "about" | "projects" | "contact";
-}
+import { PageTitle } from "../store";
+
+export type ActivePageName = Lowercase<PageTitle> | '';

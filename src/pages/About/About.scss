@@ -15,11 +15,16 @@
         .about_salutations {
             @include util.setFont(util.$TITLE_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
             @include util.size(20%, auto, NULL, 0);
+
             line-height: 0.8;
             opacity: 1;
             mix-blend-mode: util.$FONT-BLEND-ALT;
-            // transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
             animation: SalutationsSpacingAnim 0.83s cubic-bezier(0.075, 0.765, 0.82, 1);
+
+            & > span {
+                @include util.orangeFontGradient();
+                font-weight: 900;
+            }
         }
 
         .about_body_text {
@@ -53,12 +58,17 @@
                 }
             }
 
+            & > a {
+                z-index: 99;
+                cursor: none;
+            }
+
             a > .offsite-button {
                 @include util.size(util.$OFFSITE_BUTTON_SIZE, auto, 0, 0);
                 transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
 
                 &:hover {
-                    transform: translateY(-7px);
+                    transform: translateY(-12.9px);
                     cursor: none;
                 }
             }

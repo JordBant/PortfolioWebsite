@@ -4,17 +4,24 @@ import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./About.scss";
 import { MyParticles } from "../../components/MyParticles/MyParticles";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { ActivePageName } from "../SamePageLayout.types";
 
 // type Props = {};
 
-export const About: FC = () => {
+export const About: FC<{
+  setActivePage: (activePage: ActivePageName) => void;
+  activePage: ActivePageName;
+}> = (props) => {
   return (
     <SideTitlePage pageTitle="About" pageId="about" classNames="about-body-container">
       <>
-        <Navbar />
+        <Navbar {...props} />
         <div className="about_body">
           <MyParticles />
-          <h1 className="about_salutations"> I'm Jordon </h1>
+          <h1 className="about_salutations">
+            {" "}
+            I'm <span>Jordon</span>
+          </h1>
           <p className="about_body_text">
             I'm a Web Developer with a Bachelors of Science in Computer Science. I build robust & performant
             web applications for businesses, corporations and other organizations.

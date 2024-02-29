@@ -19,10 +19,11 @@ $PROJECT_CARD_TITLE_FONT_SIZE: clamp(1.9vw, 4vw, 50px);
 $OFFSITE_BUTTON_SIZE: 4vw;
 
 $SIDE_PAGE_TITLE_COLOR: rgba(255, 255, 255, 0.114);
+$ORANGE_GRADIENT: linear-gradient(135deg, #e74e4e 5%, #f4e6a0 45%, #e72222 110%);
 $SIDE-PAGE_TITLE_DYNAMIC: 8.5vw;
 
 $BKGR-SEC: hsl(240, 19%, 23%);
-$TEXT-PRIM: hsl(0, 0%, 100%);
+$TEXT-PRIM: rgb(255, 255, 255);
 
 $CUBIC_BEZ1: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -44,7 +45,7 @@ $ICON_SIZE: 5.4vw;
 
 // Card w/ Sidebar //
 $OPTIONS_BTN: clamp(1.3vw, 7.8%, 2.9vw);
-$SIDEBAR-COLOR: rgb(237, 238, 229);
+$SIDEBAR-COLOR: #ededed;
 
 $TRANS-1: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 $TRANS-2: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) all;

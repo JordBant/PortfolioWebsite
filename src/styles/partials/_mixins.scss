@@ -1,68 +1,47 @@
 @use './variables' as vars;
 
-@mixin size($fillWidth-width, $fillHeight-height, $margin-margin, $padding-padding){
+@mixin size($fillWidth-width, $fillHeight-height, $margin-margin, $padding-padding) {
     margin: $margin-margin;
     padding: $padding-padding;
     width: $fillWidth-width;
     height: $fillHeight-height;
 }
 
-@mixin cubicBezDuration($seconds){
-   transition: all $seconds cubic-bezier(0.075, 0.82, 0.165, 1)
+@mixin cubicBezDuration($seconds) {
+    transition: all $seconds cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
-@mixin flex($justify-justify, $align-align, $direction-direction, $self-self_ju, $self-self_al){
+@mixin flex($justify-justify, $align-align, $direction-direction, $self-self_ju, $self-self_al) {
     display: flex;
     justify-content: $justify-justify;
     align-items: $align-align;
     flex-direction: $direction-direction;
     justify-self: $self-self_ju;
-    align-self: $self-self_al; 
+    align-self: $self-self_al;
 }
 
-@mixin setFont($family-size, $weight, $font-color){
+@mixin setFont($family-size, $weight, $font-color) {
     font: $family-size;
     font-weight: $weight;
     color: $font-color;
 }
 
-@mixin pseudoMask(){
-        content: '';
-        @include size(100%, 100%, 0, 0);
-        opacity: 1;
-        position: absolute;
-        box-sizing: border-box;
-        inset: 0 0 0 0;
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.2px);
-        -webkit-backdrop-filter: blur(5.2px);
+@mixin pseudoMask() {
+    content: '';
+    @include size(100%, 100%, 0, 0);
+    opacity: 1;
+    position: absolute;
+    box-sizing: border-box;
+    inset: 0 0 0 0;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
 }
 
-// @mixin altCursor($content){
-    
-// }
-
-// Mixin should be applied on the highest level parent svg tag 
-
-
-/* 
---------------------------------
-General Skill card mixin should:
---------------------------------
-
-1.) Set color of icon to a light blueish-gray
-2.) Set all icons to be the same responsive size
-3.) Set the cards to all have the flip animation
-
-------------------------
-Animation mixin should:
-------------------------
-
-1.) Change color of icon to brand color and grow by scale(1.2)
-2.) Flip along its X-axis to reveal the name of the technology and a left-side growing 
-    underline under the text in 
-    the same color of its brand color
-
-*/
+@mixin orangeFontGradient() {
+    background: vars.$ORANGE_GRADIENT;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

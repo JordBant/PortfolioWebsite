@@ -22,7 +22,6 @@
     z-index: 9999;
     mix-blend-mode: difference;
     transition: all 150ms ease;
-    pointer-events: none;
     transition-property: opacity, background-color, transform, mix-blend-mode;
 }
 

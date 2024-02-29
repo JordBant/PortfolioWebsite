@@ -1,8 +1,9 @@
 import { About, Contact, Projects } from ".";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { SkillCarouselCrawl } from "../components";
 import { CustomCursor } from "../components/CustomCursor/CustomCursor";
+import { ActivePageName } from "./SamePageLayout.types";
 
 export const SamePageLayout = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -12,12 +13,20 @@ export const SamePageLayout = () => {
   const goToSection = useNavigate();
   const location = useLocation();
 
+  const [activePage, setActivePage] = useState<ActivePageName>(location.pathname.slice(1) as ActivePageName);
+
   useEffect(() => {
     /**
      * When accessing the site, extract the pathname and navigate to
      * that section via its ref
+     *
+     * Remove the leading '/'
      */
-    const section = location.pathname.slice(1); // Remove the leading '/'
+    const section = location.pathname.slice(1);
+    /**
+     * Update page as soon as user lands on page
+     */
+    setActivePage(section as ActivePageName);
     const targetRef = getSectionRef(section);
 
     if (targetRef) {
@@ -32,13 +41,22 @@ export const SamePageLayout = () => {
 
       if (scrollPosition >= aboutRef.current!.offsetTop && scrollPosition < projectsRef.current!.offsetTop) {
         goToSection("/");
+        if (activePage !== "about") {
+          setActivePage("about");
+        }
       } else if (
         scrollPosition >= projectsRef.current!.offsetTop &&
         scrollPosition < contactRef.current!.offsetTop
       ) {
         goToSection("/projects");
+        if (activePage !== "projects") {
+          setActivePage("projects");
+        }
       } else if (scrollPosition >= contactRef.current!.offsetTop) {
         goToSection("/contact");
+        if (activePage !== "contact") {
+          setActivePage("contact");
+        }
       }
     };
 
@@ -67,7 +85,7 @@ export const SamePageLayout = () => {
     <>
       <CustomCursor />
       <section ref={aboutRef}>
-        <About />
+        <About activePage={activePage} setActivePage={setActivePage} />
       </section>
       <SkillCarouselCrawl />
       <section ref={projectsRef}>
@@ -79,3 +97,4 @@ export const SamePageLayout = () => {
     </>
   );
 };
+
