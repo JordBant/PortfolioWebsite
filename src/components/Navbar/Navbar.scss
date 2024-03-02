@@ -21,6 +21,10 @@
         list-style: none;
 
         .nav-option-container {
+            transition: 0.2s ease-in-out all;
+            position: relative;
+            opacity: 0.4;
+
             .link-react-component {
                 text-decoration: none;
 
@@ -29,23 +33,34 @@
                 }
             }
 
-            .active-nav-option-container {
-                @include util.orangeFontGradient();
-            }
-
             &:hover {
                 cursor: none;
             }
         }
 
         .active-nav-option-container {
-            @include util.orangeFontGradient();
+            opacity: 1;
+        }
+
+        .active-nav-option-container::before {
+            content: '';
+
+            @include util.size(calc(100%), 4px, 0, 0);
+            border-radius: 50px;
+            border: 0.5px solid rgba(255, 119, 0, 0.7);
+            bottom: 0;
+            position: absolute;
+            // background: util.$ORANGE_GRADIENT;
+            opacity: 0.97;
+
         }
 
         .nav-option {
             @include util.setFont(util.$NAV_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
+            margin-bottom: 14px;
             list-style: none;
             color: white;
+
         }
     }
 }
