@@ -10,8 +10,8 @@ export const SamePageLayout = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  const goToSection = useNavigate();
   const location = useLocation();
+  const goToSection = useNavigate();
 
   const [activePage, setActivePage] = useState<ActivePageName>(location.pathname.slice(1) as ActivePageName);
 
@@ -23,10 +23,6 @@ export const SamePageLayout = () => {
      * Remove the leading '/'
      */
     const section = location.pathname.slice(1);
-    /**
-     * Update page as soon as user lands on page
-     */
-    setActivePage(section as ActivePageName);
     const targetRef = getSectionRef(section);
 
     if (targetRef) {
@@ -40,23 +36,17 @@ export const SamePageLayout = () => {
       const scrollPosition = window.scrollY;
 
       if (scrollPosition >= aboutRef.current!.offsetTop && scrollPosition < projectsRef.current!.offsetTop) {
-        goToSection("/");
-        if (activePage !== "about") {
-          setActivePage("about");
-        }
+        setActivePage("about");
+        goToSection("/about");
       } else if (
         scrollPosition >= projectsRef.current!.offsetTop &&
         scrollPosition < contactRef.current!.offsetTop
       ) {
+        setActivePage("projects");
         goToSection("/projects");
-        if (activePage !== "projects") {
-          setActivePage("projects");
-        }
-      } else if (scrollPosition >= contactRef.current!.offsetTop) {
+      } else if (scrollPosition + 5 > contactRef.current!.offsetTop) {
+        setActivePage("contact");
         goToSection("/contact");
-        if (activePage !== "contact") {
-          setActivePage("contact");
-        }
       }
     };
 
@@ -70,12 +60,12 @@ export const SamePageLayout = () => {
    * Get section ref depending on pathname
    */
   const getSectionRef = (section: string) => {
+    console.log(section);
     switch (section) {
       case "projects":
         return projectsRef;
       case "contact":
         return contactRef;
-      case "":
       case "about":
         return aboutRef;
     }

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { PAGE_TITLES } from "../../store/constants";
 import "./Navbar.scss";
-import { FC, useState } from "react";
+import { FC } from "react";
 import { ActivePageName } from "../../pages/SamePageLayout.types";
 
 export const Navbar: FC<{
@@ -14,14 +14,16 @@ export const Navbar: FC<{
       <nav className="navbar">
         <ul className="navbar-container">
           {PAGE_TITLES.map((title, idx) => {
-            const endpoint = title === "About" ? "/" : `${title.toLowerCase()}`;
+            console.log("here", title);
+            const endpoint = title === "About" ? "about" : `${title.toLowerCase()}`;
             if (title.toLowerCase() === pageName) {
               return (
                 <li
                   className={`nav-option-container active-nav-option-container`}
                   key={`00${idx}--nav-item`}
                   style={{ textDecoration: "none" }}
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     document.getElementById(`#${endpoint}`)?.scrollIntoView({ behavior: "smooth" });
                     /**
                      * Setting the index of the

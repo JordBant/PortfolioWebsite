@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Icon } from "../../components";
+import { Icon, SkillCarouselCrawl } from "../../components";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./About.scss";
 import { MyParticles } from "../../components/MyParticles/MyParticles";
@@ -30,7 +30,7 @@ export const About: FC<{
             <button
               className="contact-now"
               onClick={() => {
-                document.getElementById(`#contact`)?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById(`#contact`)?.scrollIntoView({ behavior: "smooth", block: "end" });
               }}
             >
               Contact Now

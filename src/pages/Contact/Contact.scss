@@ -1,6 +1,7 @@
 @use '../../styles/partials/index' as util;
 
 .contact-page-container {
+    padding-top: 50px;
     background-color: util.$BKGR-PAGE-BLK;
 
     .contact-form-container {

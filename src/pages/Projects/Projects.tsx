@@ -2,12 +2,14 @@ import { FC } from "react";
 import { SidebarNavCard } from "../../layouts/SidebarNavCard/SidebarNavCard";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./Projects.scss";
+import { SkillCarouselCrawl } from "../../components";
 
 export const Projects: FC = () => {
   let compatibleNum = 3;
 
   return (
     <SideTitlePage pageTitle="Projects" pageId="projects" classNames="projects-container">
+      {/* <SkillCarouselCrawl /> */}
       <section className="project-display-board">
         {["Grid container", "Grid container", "Grid container", "Grid container", "Grid container"].map(
           (word, idx) => {

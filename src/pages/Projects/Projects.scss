@@ -2,6 +2,8 @@
 
 .projects-container {
     @include util.flex(center, center, null, null, null);
+    padding-top: 50px;
+
     background-color: util.$BKGR-PAGE-BLK;
     // background-color: util.$BKGR-PAGE;
 
