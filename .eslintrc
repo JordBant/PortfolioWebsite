@@ -4,7 +4,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
@@ -31,10 +31,10 @@
         "objects": "always-multiline",
         "imports": "always-multiline",
         "exports": "always-multiline",
-        "functions": "ignore"
-      }
+        "functions": "ignore",
+      },
     ],
-    "react-refresh/only-export-components": "warn"
-  }
+    "react-refresh/only-export-components": "warn",
+  },
 }
 

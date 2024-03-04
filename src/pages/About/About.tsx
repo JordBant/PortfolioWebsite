@@ -17,7 +17,7 @@ export const About: FC<{
       <>
         <Navbar {...props} />
         <div className="about_body">
-          <MyParticles />
+          {/* <MyParticles /> */}
           <h1 className="about_salutations">
             {" "}
             I'm <span>Jordon</span>

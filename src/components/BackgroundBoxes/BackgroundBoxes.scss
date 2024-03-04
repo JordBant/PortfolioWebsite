@@ -1,0 +1,33 @@
+@use '../../styles/partials/index' as util;
+
+.background-boxes-wrapper {
+    @include util.size(100%, 100%, 1rem, null);
+    transform: translate(-40%, -60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0);
+    display: flex;
+    position: absolute;
+    top: -25%;
+    left: 25%;
+    z-index: 9999;
+
+    .background-boxes-rows {
+        @include util.size(4rem, 2rem, null, null);
+
+        position: relative;
+        border-left-width: 1px;
+
+        .background-boxes-columns {
+            @include util.size(4rem, 2rem, null, null);
+
+            position: relative;
+            border-top-width: 1px;
+            border-right-width: 1px;
+
+            .background-boxes {
+                @include util.size(2.5rem, 1.5rem, null, null);
+
+                position: absolute;
+                pointer-events: none;
+            }
+        }
+    }
+}

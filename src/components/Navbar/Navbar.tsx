@@ -14,7 +14,6 @@ export const Navbar: FC<{
       <nav className="navbar">
         <ul className="navbar-container">
           {PAGE_TITLES.map((title, idx) => {
-            console.log("here", title);
             const endpoint = title === "About" ? "about" : `${title.toLowerCase()}`;
             if (title.toLowerCase() === pageName) {
               return (

@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { SkillCarouselCrawl } from "../components";
 import { CustomCursor } from "../components/CustomCursor/CustomCursor";
 import { ActivePageName } from "./SamePageLayout.types";
+import { BoxesCore } from "../components/BackgroundBoxes/BackgroundBoxes";
 
 export const SamePageLayout = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -60,7 +61,6 @@ export const SamePageLayout = () => {
    * Get section ref depending on pathname
    */
   const getSectionRef = (section: string) => {
-    console.log(section);
     switch (section) {
       case "projects":
         return projectsRef;
