@@ -40,8 +40,23 @@
     -webkit-backdrop-filter: blur(5.2px);
 }
 
+@mixin glassMask() {
+    /* From https://css.glass */
+    background: rgba(34, 33, 33, 0.18);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.9px);
+    -webkit-backdrop-filter: blur(12.9px);
+}
+
 @mixin orangeFontGradient() {
     background: vars.$ORANGE_GRADIENT;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@mixin glidingColorGradient() {
+    animation: vars.$GLIDING_FONT_GRADIENT 1.5s linear infinite;
 }

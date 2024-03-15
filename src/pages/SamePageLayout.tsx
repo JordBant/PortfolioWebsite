@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { SkillCarouselCrawl } from "../components";
 import { CustomCursor } from "../components/CustomCursor/CustomCursor";
 import { ActivePageName } from "./SamePageLayout.types";
-import { BoxesCore } from "../components/BackgroundBoxes/BackgroundBoxes";
 
 export const SamePageLayout = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -14,6 +13,7 @@ export const SamePageLayout = () => {
   const location = useLocation();
   const goToSection = useNavigate();
 
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [activePage, setActivePage] = useState<ActivePageName>(location.pathname.slice(1) as ActivePageName);
 
   useEffect(() => {
@@ -34,27 +34,44 @@ export const SamePageLayout = () => {
      * depending on your scroll position
      */
     const handleScroll = () => {
+      /**
+       * Instantiating variables for ref's
+       * offsets and scroll position
+       */
       const scrollPosition = window.scrollY;
+      const aboutRefOffset = aboutRef.current!.offsetTop;
+      const projectsRefOffset = projectsRef.current!.offsetTop;
+      const contactRefOffset = contactRef.current!.offsetTop;
 
-      if (scrollPosition >= aboutRef.current!.offsetTop && scrollPosition < projectsRef.current!.offsetTop) {
+      if (scrollPosition >= aboutRefOffset && scrollPosition < projectsRefOffset) {
         setActivePage("about");
         goToSection("/about");
-      } else if (
-        scrollPosition >= projectsRef.current!.offsetTop &&
-        scrollPosition < contactRef.current!.offsetTop
-      ) {
+      } else if (scrollPosition >= projectsRefOffset && scrollPosition < contactRefOffset) {
         setActivePage("projects");
         goToSection("/projects");
-      } else if (scrollPosition + 5 > contactRef.current!.offsetTop) {
+      } else if (scrollPosition > contactRefOffset) {
         setActivePage("contact");
         goToSection("/contact");
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", () => {
+      if (window.scrollY <= aboutRef.current!.offsetTop) {
+        setIsTopOfPage(true);
+      } else {
+        setIsTopOfPage(false);
+      }
+      handleScroll();
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", () => {
+        if (window.scrollY <= aboutRef.current!.offsetTop + 300) {
+          setIsTopOfPage(true);
+        } else {
+          setIsTopOfPage(false);
+        }
+        handleScroll();
+      });
     };
   }, []);
   /**
@@ -73,9 +90,9 @@ export const SamePageLayout = () => {
 
   return (
     <>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <section ref={aboutRef}>
-        <About activePage={activePage} setActivePage={setActivePage} />
+        <About isTopOfPage={isTopOfPage} activePage={activePage} setActivePage={setActivePage} />
       </section>
       <SkillCarouselCrawl />
       <section ref={projectsRef}>

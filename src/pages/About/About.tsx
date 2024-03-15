@@ -5,17 +5,20 @@ import "./About.scss";
 import { MyParticles } from "../../components/MyParticles/MyParticles";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { ActivePageName } from "../SamePageLayout.types";
+import { BackgroundBoxes } from "../../components/BackgroundBoxes/BackgroundBoxes";
 
 // type Props = {};
 
 export const About: FC<{
   setActivePage: (activePage: ActivePageName) => void;
   activePage: ActivePageName;
+  isTopOfPage: boolean;
 }> = (props) => {
   return (
     <SideTitlePage pageTitle="About" pageId="about" classNames="about-body-container">
       <>
         <Navbar {...props} />
+        <BackgroundBoxes />
         <div className="about_body">
           {/* <MyParticles /> */}
           <h1 className="about_salutations">
@@ -44,12 +47,6 @@ export const About: FC<{
           </div>
         </div>
       </>
-      {/* <a href="https://vitejs.dev" target="_blank">
-        <img src={viteLogo} className="logo" alt="Vite logo" />–
-      </a>
-      <a href="https://react.dev" target="_blank">
-        <img src={reactLogo} className="logo react" alt="React logo" />
-      </a> */}
     </SideTitlePage>
   );
 };
