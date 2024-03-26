@@ -54,8 +54,15 @@ export const SamePageLayout = () => {
         goToSection("/contact");
       }
     };
+
     window.addEventListener("scroll", () => {
-      if (window.scrollY <= aboutRef.current!.offsetTop) {
+      // const offset = aboutRef.current!.offsetTop + 300;
+      /**
+       * Using 250 since its always going
+       * to be near the top of the page
+       * (aboutRef.current!.offsetTop + 250 = 250)
+       */
+      if (window.scrollY <= 250) {
         setIsTopOfPage(true);
       } else {
         setIsTopOfPage(false);

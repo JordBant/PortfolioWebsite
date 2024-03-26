@@ -24,7 +24,7 @@
 
             & > span {
                 @include util.orangeFontGradient();
-                animation: GlidingColorFontGradient 8.4s linear infinite;
+                // animation: GlidingColorFontGradient 8.4s linear infinite;
                 background-size: 200% auto;
                 font-weight: 900;
                 z-index: 99;

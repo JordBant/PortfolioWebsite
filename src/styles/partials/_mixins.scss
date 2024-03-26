@@ -27,27 +27,14 @@
 }
 
 @mixin pseudoMask() {
-    content: '';
     @include size(100%, 100%, 0, 0);
-    opacity: 1;
     position: absolute;
     box-sizing: border-box;
     inset: 0 0 0 0;
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.2px);
-    -webkit-backdrop-filter: blur(5.2px);
-}
-
-@mixin glassMask() {
     /* From https://css.glass */
-    background: rgba(34, 33, 33, 0.18);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12.9px);
-    -webkit-backdrop-filter: blur(12.9px);
+    // box-shadow: 0 4px 30px rgba(2, 2, 2, 0.864);
 }
 
 @mixin orangeFontGradient() {

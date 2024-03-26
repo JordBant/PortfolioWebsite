@@ -4,16 +4,9 @@ import "./styles/App.scss";
 
 function App() {
   return (
-    <>
-      {/* <div className="app-wrapper">
-        <div className="app-container">
-          <BackgroundBoxes />
-        </div>
-      </div> */}
-      <Routes>
-        <Route path="*" element={<SamePageLayout />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="*" element={<SamePageLayout />} />
+    </Routes>
   );
 }
 
