@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import { LabeledInput } from "../../components/LabeledInput";
 import "./Contact.scss";
+import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
 
 type FormBody = {
   name: string;
@@ -23,41 +24,48 @@ export const Contact: FC = () => {
   };
 
   return (
-    <SideTitlePage pageId="contact" pageTitle="Contact" classNames="contact-page-container">
-      <section className="contact-form-container">
-        <form className="contact-form">
-          <div className="input-container">
-            <LabeledInput
-              inputLabelName={"Name"}
-              onInputChange={(e) => changeFormValues({ name: e.target.value })}
-            />
-            <LabeledInput
-              inputLabelName={"Affiliation / Company"}
-              onInputChange={(e) => changeFormValues({ affiliation: e.target.value })}
-            />
-          </div>
+    <SideTitlePage
+      pageId="contact"
+      pageTitle="Contact"
+      classNames="contact-page-container"
+      containerClassNames="contact-form-container"
+    >
+      <form className="contact-form">
+        <section className="input-container">
           <LabeledInput
-            inputLabelName={"Subject"}
-            onInputChange={(e) => changeFormValues({ subject: e.target.value })}
+            cssStyles={{ marginRight: "59px" }}
+            inputLabelName={"Name"}
+            onInputChange={(e) => changeFormValues({ name: e.target.value })}
           />
           <LabeledInput
-            inputLabelName={"Message"}
-            onInputChange={(e) => changeFormValues({ message: e.target.value })}
+            inputLabelName={"Affiliation / Company"}
+            onInputChange={(e) => changeFormValues({ affiliation: e.target.value })}
           />
-          <button
-            className="form-submit-btn"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = `mailto:jaybdev25@gmail.com`;
-              // `mailto:jaybdev25@gmail.com?Subject=${encodeURI(formValues.subject)}${encodeURI(
-              //   `( ${formValues.name} | `,
-              // )}${encodeURI(`${formValues.affiliation} )`)}&Body=${encodeURI(formValues.message)}`,
-            }}
-          >
-            Submit Message via Email
-          </button>
-        </form>
-      </section>
+        </section>
+        <LabeledInput
+          cssStyles={{ margin: "50px 0 0" }}
+          inputLabelName={"Subject"}
+          onInputChange={(e) => changeFormValues({ subject: e.target.value })}
+        />
+        <LabeledInput
+          cssStyles={{ margin: "50px 0 0" }}
+          inputLabelName={"Message"}
+          inputType="textarea"
+          onInputChange={(e) => changeFormValues({ message: e.target.value })}
+        />
+        <button
+          className="form-submit-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = `mailto:jaybdev25@gmail.com`; /**it is window.location theat opens mail client */
+            // `mailto:jaybdev25@gmail.com?Subject=${encodeURI(formValues.subject)}${encodeURI(
+            //   `( ${formValues.name} | `,
+            // )}${encodeURI(`${formValues.affiliation} )`)}&Body=${encodeURI(formValues.message)}`,
+          }}
+        >
+          Submit Message via Email
+        </button>
+      </form>
     </SideTitlePage>
   );
 };

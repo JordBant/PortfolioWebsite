@@ -14,7 +14,7 @@ $BKGR-PAGE: #ece7dd;
 
 $TITLE_DYNAMIC_FONT_SIZE: 9vw;
 $BODY_DYNAMIC_FONT_SIZE: clamp(1.5vw, 1.9vw, 80px);
-$NAV_DYNAMIC_FONT_SIZE: clamp(22px, 1.4vw, 1.8vw);
+$NAV_DYNAMIC_FONT_SIZE: clamp(28px, 1.49vw, 1.8vw);
 $PROJECT_CARD_TITLE_FONT_SIZE: clamp(1.9vw, 4vw, 50px);
 $OFFSITE_BUTTON_SIZE: 4vw;
 
@@ -24,7 +24,7 @@ $ORANGE_GRADIENT: linear-gradient(0.82turn, #ef7410, #f8ce79, #e79522, #e79522, 
 $SIDE-PAGE_TITLE_DYNAMIC: 8.5vw;
 
 $BKGR-SEC: hsl(240, 19%, 23%);
-$TEXT-PRIM: rgb(255, 255, 255);
+$TEXT-PRIM: rgba(245, 245, 245, 0.919);
 
 $CUBIC_BEZ1: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -37,9 +37,11 @@ $FONT-BLEND-ALT: difference;
 $FONT-PRIM: 'Glacial Indifference Reg';
 $SIDE_PAGE_TITLE_FONT: 'Glacial Indifference Bold';
 $INV_FONT_COLOR: rgb(22, 21, 21);
-$BKGR-PAGE-BLK: rgba(12, 12, 12, 0.9);
+$BKGR-PAGE-BLK: rgba(12, 12, 12, 1);
 
 $PRIM-PARAGRAPH-COLOR: #888;
+
+$BORDER-COLOR: rgba(255, 255, 255, 0.075);
 
 // Skill Crawler //
 $ICON_SIZE: 5.4vw;
@@ -53,7 +55,7 @@ $TRANS-2: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) all;
 ;
 
 // Contact section
-$FORM_INPUT_BKGRD_COLOR: #111827;
+$FORM_INPUT_BKGRD_COLOR: rgba(80, 69, 69, 0.169);
 
 // Animations
 $TICKER_CRAWL_ANIMATION: ticker;

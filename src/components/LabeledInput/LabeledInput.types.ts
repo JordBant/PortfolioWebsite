@@ -3,7 +3,8 @@ import { HTMLInputTypeAttribute } from "react";
 export type LabeledInputProps = {
     inputLabelName: string;
     placeholder?: string;
-    inputType?: HTMLInputTypeAttribute;
-    onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    inputType?: HTMLInputTypeAttribute | 'textarea';
+    onInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     classNames?: string;
+    cssStyles?: React.CSSProperties;
 };

@@ -31,6 +31,7 @@
     position: absolute;
     box-sizing: border-box;
     inset: 0 0 0 0;
+    
     /* From https://css.glass */
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -46,4 +47,11 @@
 
 @mixin glidingColorGradient() {
     animation: vars.$GLIDING_FONT_GRADIENT 1.5s linear infinite;
+}
+
+@mixin textOutline($thickness: none, $outline-color: white) {
+    text-shadow: (-$thickness) (-$thickness) 0 $outline-color, $thickness (
+        -$thickness) 0 $outline-color,
+        (-$thickness) $thickness 0 $outline-color,
+        $thickness $thickness 0 $outline-color;
 }

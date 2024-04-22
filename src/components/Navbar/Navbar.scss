@@ -1,7 +1,7 @@
 @use '../../styles/partials/index' as util;
 
 .header-menu {
-    @include util.size(50%, 120px, 0 auto, 0 0 10px);
+    @include util.size(100%, 120px, 0 auto, 0 0 10px);
     @include util.flex(center, center, null, null, null);
     left: 0;
     right: 0;
@@ -16,30 +16,32 @@
         content: '';
         @include util.pseudoMask();
         top: -100%;
-        background-color:  util.$BKGR-PAGE-BLK;
+        left: 100;
+        background: util.$BKGR-PAGE-BLK;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
 
-        border-bottom-left-radius: 20px;
+        border-bottom-left-radius: 0px;
         border-bottom-right-radius: 20px;
         transition: 0.44s all ease-in-out;
     }
 }
 
 .scrolled-past-about-page {
-    width: 40%;
+    width: 100%;
     height: 100px;
-    backdrop-filter: blur(25.8px);
-    -webkit-backdrop-filter: blur(25.8px);
-
+    background: util.$BKGR-PAGE-BLK;
 
     &::before {
         content: '';
         top: 0;
+        border-bottom: 2px solid util.$BORDER-COLOR;
+
     }
 }
 
 
 .navbar {
-    @include util.size(100%, auto, 0, 0 50px 10px);
+    @include util.size(40%, auto, 0, 0 50px 10px);
 
     text-decoration: none;
     list-style: none;
@@ -51,8 +53,16 @@
         padding: 0px;
         list-style: none;
 
+        .nav-option {
+            @include util.setFont(util.$NAV_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, white);
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            list-style: none;
+        }
+
         .nav-option-container {
             transition: 0.2s ease-in-out all;
+
             position: relative;
             opacity: 0.27;
 
@@ -61,12 +71,17 @@
             }
 
             &:hover {
-                text-shadow: rgb(255, 255, 255) 0 0 10px;
+                text-shadow: white 0 0 10px;
             }
         }
 
         .active-nav-option-container {
             opacity: 1;
+
+            .nav-option {
+                color: util.$TEXT-PRIM;
+                letter-spacing: 0;
+            }
         }
 
         .active-nav-option-container::before {
@@ -77,17 +92,7 @@
             border: 0.5px solid rgba(255, 119, 0, 0.7);
             bottom: 0;
             position: absolute;
-            // background: util.$ORANGE_GRADIENT;
             opacity: 0.97;
-
-        }
-
-        .nav-option {
-            @include util.setFont(util.$NAV_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-            margin-bottom: 14px;
-            list-style: none;
-            color: white;
-
         }
     }
 }
