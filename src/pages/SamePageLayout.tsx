@@ -101,10 +101,10 @@ export const SamePageLayout = () => {
       <section ref={aboutRef}>
         <About isTopOfPage={isTopOfPage} activePage={activePage} setActivePage={setActivePage} />
       </section>
-      <SkillCarouselCrawl />
       <section ref={projectsRef}>
         <Projects />
       </section>
+      <SkillCarouselCrawl />
       <section ref={contactRef}>
         <Contact />
       </section>
