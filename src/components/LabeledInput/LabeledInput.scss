@@ -2,8 +2,7 @@
 
 .form-input-container {
     @include util.size(100%, auto, 0, 0);
-
-    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
 
     & > * {
         font-size: 2.4vw;
@@ -21,7 +20,7 @@
         border-bottom: 8px solid util.$BORDER_COLOR;
 
         .form-input {
-            @include util.size(100%, auto, 20px 0 0, 1.3rem 0.7rem);
+            @include util.size(100%, auto, 20px 0 0, 1.3rem 1.1rem);
             display: flex;
             outline: none;
             border: none;
@@ -33,10 +32,18 @@
         }
 
         .form-textarea {
-            @include util.size(100%, null, 20px 0 0, 0);
+            @include util.size(100%, 25vh, 20px 0 0, 25px 20px 0);
             border: 5px solid util.$BORDER_COLOR;
             border-radius: 30px;
+            outline: none;
             background-color: transparent;
+            background-color: rgba(45, 45, 45, 0.153);
+            color: util.$SIDEBAR-COLOR;
+            font-size: calc(1.8rem);
         }
     }
+}
+
+.active-input-container {
+    border-bottom-color: white;
 }

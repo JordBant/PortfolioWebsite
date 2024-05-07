@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { LabeledInputProps } from "./LabeledInput.types";
 import "./LabeledInput.scss";
+import { act } from "react-dom/test-utils";
 
 export const LabeledInput: FC<LabeledInputProps> = ({
   inputType = "text",
@@ -11,8 +12,19 @@ export const LabeledInput: FC<LabeledInputProps> = ({
   classNames,
   cssStyles,
 }) => {
+  const [activeInput, setActiveInput] = useState<boolean>();
+
   return (
-    <div className={`form-input-container ${classNames}`} style={cssStyles ?? {}}>
+    <div
+      className={`form-input-container ${activeInput ? "active-input-container" : ""} ${classNames ?? ""}`}
+      onMouseEnter={() => {
+        setActiveInput(true);
+      }}
+      onMouseLeave={() => {
+        setActiveInput(false);
+      }}
+      style={cssStyles ?? {}}
+    >
       <label className="form-label" htmlFor={`${inputLabelName.toLocaleLowerCase()}`}>
         {inputLabelName}
       </label>
@@ -30,7 +42,7 @@ export const LabeledInput: FC<LabeledInputProps> = ({
         ) : (
           <input
             id={inputLabelName.toLocaleLowerCase()}
-            className={"form-input"}
+            className={`form-input`}
             placeholder={placeholder}
             onChange={(e) => onInputChange(e)}
             type={inputType}
