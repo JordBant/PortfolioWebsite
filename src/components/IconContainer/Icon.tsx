@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
-import { CAROUSEL_ICON_MAP } from "../../store/constants";
+import { ICON_MAP } from "../../store/constants";
 import { IconProps } from "./Icon.types";
 import "./Icon.scss";
 
@@ -8,7 +8,7 @@ export const Icon: FC<
 > = ({ classNames = "", iconElement, ...props }) => {
   return (
     <div className={`icon-container ${classNames}`} {...props}>
-      {CAROUSEL_ICON_MAP[iconElement]}
+      {ICON_MAP[iconElement]}
     </div>
   );
 };

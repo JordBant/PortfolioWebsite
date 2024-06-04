@@ -3,6 +3,8 @@
 .projects-container {
     @include util.flex(center, center, null, null, null);
     
+    height: 90vh;
+
     background-color: util.$BKGR-PAGE-BLK;
     border-top: 2px solid util.$BORDER-COLOR;
     border-bottom: 2px solid util.$BORDER-COLOR;

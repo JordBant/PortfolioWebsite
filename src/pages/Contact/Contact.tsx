@@ -1,8 +1,9 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import { LabeledInput } from "../../components/LabeledInput";
 import "./Contact.scss";
 import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
+import { Icon } from "../../components";
 
 type FormBody = {
   name: string;
@@ -20,13 +21,11 @@ export const Contact: FC = () => {
   };
 
   const [formValues, setFormValues] = useState<FormBody>(DEFAULT_FORM_VALUES);
+  const [showSubmitButton, setShowSubmitButton] = useState<boolean>(false);
+
   const changeFormValues = (input: Partial<FormBody>, defaultFormValues: FormBody = formValues) => {
     setFormValues({ ...defaultFormValues, ...input });
   };
-
-  useEffect(() => {
-    console.log(formValues);
-  }, [formValues]);
 
   return (
     <SideTitlePage
@@ -52,23 +51,40 @@ export const Contact: FC = () => {
           inputLabelName={"Subject"}
           onInputChange={(e) => changeFormValues({ subject: e.target.value })}
         />
-        <LabeledInput
-          cssStyles={{ margin: "50px 0 0" }}
-          inputLabelName={"Message"}
-          inputType="textarea"
-          onInputChange={(e) => changeFormValues({ message: e.target.value })}
-        />
-        <button
-          className="form-submit-btn"
-          onClick={(e) => {
-            e.preventDefault();
-            /**it is window.location theat opens mail client */
-            window.location.href = `
-            mailto:jaybdev25@gmail.com?body=${formValues.message}&subject=${encodeURI(formValues.subject ?? "")}${encodeURI(` | ` + formValues.name ?? "")}${encodeURI(` from ` + formValues.affiliation ?? "")}`;
-          }}
-        >
-          Submit Message via Email
-        </button>
+        <div className="textarea-container">
+          <LabeledInput
+            cssStyles={{ margin: "50px 0 0" }}
+            inputLabelName={"Message"}
+            inputType="textarea"
+            labelIcon={
+              <button
+                className={`form-submit-btn ${showSubmitButton ? "show-submit-button" : ""}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  /**
+                   * window.location that opens mail client
+                   */
+                  window.location.href = `
+              mailto:jaybdev25@gmail.com?body=${formValues.message}&subject=${encodeURI(formValues.subject ?? "")}${encodeURI(` | ` + formValues.name ?? "")}${encodeURI(` from ` + formValues.affiliation ?? "")}`;
+                }}
+              >
+                <div className="inner-button-body">
+                  Send Email
+                  <Icon classNames="submit-arrow" iconElement="SUBMIT_ARROW" />
+                </div>
+              </button>
+            }
+            classNames="textarea-box"
+            onInputChange={(e) => {
+              changeFormValues({ message: e.target.value });
+              if (e.target.value) {
+                setShowSubmitButton(true);
+              } else {
+                setShowSubmitButton(false);
+              }
+            }}
+          />
+        </div>
       </form>
     </SideTitlePage>
   );

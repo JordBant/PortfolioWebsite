@@ -6,6 +6,7 @@ import { act } from "react-dom/test-utils";
 export const LabeledInput: FC<LabeledInputProps> = ({
   inputType = "text",
   inputLabelName,
+  labelIcon,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   onInputChange = (): void => {},
   placeholder,
@@ -25,9 +26,12 @@ export const LabeledInput: FC<LabeledInputProps> = ({
       }}
       style={cssStyles ?? {}}
     >
-      <label className="form-label" htmlFor={`${inputLabelName.toLocaleLowerCase()}`}>
-        {inputLabelName}
-      </label>
+      <div className="label-container">
+        <label className="form-label" htmlFor={`${inputLabelName.toLocaleLowerCase()}`}>
+          {inputLabelName}
+        </label>
+        {labelIcon && <>{labelIcon}</>}
+      </div>
       <div className="input-container">
         {inputType === "textarea" ? (
           <textarea

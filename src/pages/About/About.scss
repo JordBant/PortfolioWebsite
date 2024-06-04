@@ -4,6 +4,7 @@
     background: util.$BKGR-PAGE-BLK;
     background-size: util.$BKGR-SIZE;
     overflow: hidden;
+    height: 120vh;
 
     .about_body {
         @include util.size(auto, 100%, 0 0 0 3vw, 0);
@@ -49,9 +50,9 @@
                 @include util.setFont(2vw util.$FONT-PRIM, 400, NULL);
                 @include util.size(auto, 4vw, 0, 0 0.7vw);
 
+                transition: util.$TRANS-2;
                 border: 2px solid black;
                 background-color: rgb(253, 253, 253);
-                transition: util.$TRANS-2;
                 border: 2px solid white;
 
                 &:hover {
