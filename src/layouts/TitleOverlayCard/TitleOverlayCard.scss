@@ -1,0 +1,8 @@
+@use '../../styles/partials/' as util;
+
+.opaque-overlay {
+    @include util.size(100%, 100%, 0, 0);
+    inset: 0 0 0 0;
+    position: absolute;
+
+}

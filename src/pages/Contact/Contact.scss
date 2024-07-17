@@ -36,7 +36,6 @@
                 border-left: 7px solid;
                 border-color: rgba(0, 0, 0, 0);
 
-
                 .inner-button-body {
                     @include util.size(auto, 100%, 0 0 0 20px, 0);
                     @include util.flex(space-between, center, null, null, null);
@@ -46,7 +45,7 @@
                     & > .submit-arrow {
                         justify-self: end;
                         height: 50%;
-                        padding-right: 7px;
+                        padding-right: 12px;
                     }
                 }
 
@@ -60,6 +59,18 @@
                 background-color: util.$BORDER-COLOR;
                 border-color: util.$BORDER-COLOR;
                 width: 200px;
+
+                .submit-arrow {
+                    transition: all 0.48s ease-in-out;
+                }
+
+                &:hover {
+                    background-color: #ef7410c1;
+
+                    .submit-arrow {
+                        translate: 5.7px
+                    }
+                }
             }
         }
     }
