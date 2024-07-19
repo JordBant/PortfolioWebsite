@@ -3,16 +3,19 @@ import { FlippableCard } from "../../../../layouts";
 import { Icon } from "../../../IconContainer/Icon";
 import { SkillCardProps } from "../../SkillCarouselCrawl.types";
 import "./SkillCard.scss";
+import { TitleOverlayCard } from "../../../../layouts/TitleOverlayCard/TitleOverlayCard";
 
 export const SkillCard: FC<SkillCardProps> = ({ iconName, fontColor, iconElement }) => {
   return (
-    <FlippableCard title={iconName} colorTheme={fontColor}>
+    <TitleOverlayCard text={"Test overlay"}>
+      {/* <FlippableCard title={iconName} colorTheme={fontColor}> */}
       <div className={`skill-card`}>
         <Icon classNames="skill-icon" iconElement={iconElement} />
         {/* <hr className="y-line" style = {{ background: `${fontColor}` }}/> */}
         {/* <p className ="side-text"> {iconName} </p> */}
       </div>
-    </FlippableCard>
+      {/* </FlippableCard> */}
+    </TitleOverlayCard>
   );
 };
 
