@@ -1,8 +1,8 @@
-import { FC, useCallback, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import { LabeledInput } from "../../components/LabeledInput";
 import "./Contact.scss";
-import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
+// import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
 import { Icon } from "../../components";
 
 type FormBody = {

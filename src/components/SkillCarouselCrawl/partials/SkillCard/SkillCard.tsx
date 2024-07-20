@@ -1,11 +1,13 @@
 import { FC } from "react";
-import { FlippableCard } from "../../../../layouts";
 import { Icon } from "../../../IconContainer/Icon";
 import { SkillCardProps } from "../../SkillCarouselCrawl.types";
 import "./SkillCard.scss";
 import { TitleOverlayCard } from "../../../../layouts/TitleOverlayCard/TitleOverlayCard";
 
-export const SkillCard: FC<SkillCardProps> = ({ iconName, fontColor, iconElement }) => {
+export const SkillCard: FC<SkillCardProps> = ({
+  // TODO iconName, fontColor,
+  iconElement,
+}) => {
   return (
     <TitleOverlayCard text={"Test overlay"}>
       {/* <FlippableCard title={iconName} colorTheme={fontColor}> */}

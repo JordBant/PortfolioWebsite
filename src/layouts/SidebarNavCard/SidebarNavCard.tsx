@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from "react";
+import { FC, useCallback, useState } from "react";
 import { Icon } from "../../components";
 import { SidebarNavCardProps } from "./SidebarNavCard.types";
 import { SidebarOptions } from "./partials/SidebarOptions";

@@ -7,7 +7,11 @@ type TitleOverlayCardProps = {
   children: React.ReactElement;
 };
 
-export const TitleOverlayCard: FC<TitleOverlayCardProps> = ({ text, backgroundColor, children }) => {
+export const TitleOverlayCard: FC<TitleOverlayCardProps> = ({
+  text,
+  // backgroundColor,
+  children,
+}) => {
   return (
     <div className="opaque-overlay">
       <div className="text-overlay">

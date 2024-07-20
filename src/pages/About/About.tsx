@@ -1,8 +1,11 @@
 import { FC } from "react";
-import { Icon, SkillCarouselCrawl } from "../../components";
+import {
+  Icon,
+  // SkillCarouselCrawl
+} from "../../components";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./About.scss";
-import { MyParticles } from "../../components/MyParticles/MyParticles";
+// import { MyParticles } from "../../components/MyParticles/MyParticles";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { ActivePageName } from "../SamePageLayout.types";
 import { BackgroundBoxes } from "../../components/BackgroundBoxes/BackgroundBoxes";

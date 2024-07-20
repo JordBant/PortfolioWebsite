@@ -1,7 +1,6 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import { LabeledInputProps } from "./LabeledInput.types";
 import "./LabeledInput.scss";
-import { act } from "react-dom/test-utils";
 
 export const LabeledInput: FC<LabeledInputProps> = ({
   inputType = "text",

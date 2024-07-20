@@ -1,12 +1,11 @@
-import React, { FC, useState } from "react";
-import { Icon } from "../../components";
+import { FC } from "react";
 
 import { FlippableCardProps } from "./FlippableCard.types";
 import "./FlippableCard.scss";
 
 export const FlippableCard: FC<FlippableCardProps> = ({
   children,
-  classNames,
+  // classNames,
   colorTheme = "#fa9595",
   title = "Technology",
 }) => {

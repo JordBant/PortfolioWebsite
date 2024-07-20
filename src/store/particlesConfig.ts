@@ -80,6 +80,8 @@ const particlesConfig: IParticlesOptions = {
         enable: false,
         mode: "bubble",
       },
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       resize: true,
     },
     modes: {

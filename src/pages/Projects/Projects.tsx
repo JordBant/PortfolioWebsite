@@ -2,7 +2,7 @@ import { FC } from "react";
 import { SidebarNavCard } from "../../layouts/SidebarNavCard/SidebarNavCard";
 import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
 import "./Projects.scss";
-import { SkillCarouselCrawl } from "../../components";
+// import { SkillCarouselCrawl } from "../../components";
 
 export const Projects: FC = () => {
   let compatibleNum = 3;

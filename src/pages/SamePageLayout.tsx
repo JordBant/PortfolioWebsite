@@ -1,8 +1,8 @@
 import { About, Contact, Projects } from ".";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { SkillCarouselCrawl } from "../components";
-import { CustomCursor } from "../components/CustomCursor/CustomCursor";
+// import { CustomCursor } from "../components/CustomCursor/CustomCursor";
 import { ActivePageName } from "./SamePageLayout.types";
 
 export const SamePageLayout = () => {

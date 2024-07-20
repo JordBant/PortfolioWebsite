@@ -1,11 +1,9 @@
-import { ICON_MAP, CLASSNAME_IN_USE } from "./constants";
+import { ICON_MAP } from "./constants";
 
 export type SkillIcon = {
     name: string,
     fontColor: string,
 };
-
-export type ClassesInUse = (typeof CLASSNAME_IN_USE)[ keyof typeof CLASSNAME_IN_USE ];
 
 export type IconMapping = Record<Icons, React.ReactElement> & IconMapIndexSignature;
 
